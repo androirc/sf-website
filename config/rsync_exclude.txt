@@ -1,4 +1,5 @@
 # Project files
+/config/databses.yml
 /cache/*
 /log/*
 /web/*_dev.php
