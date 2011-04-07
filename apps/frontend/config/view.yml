@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        AndroIRC - Android IRC Client
+    description:  AndroIRC is an Android IRC client which can connect to several server (secured or not) at the same time. Features: mIRC colors, auto join channels on startup, themes (black or white), nickserv auth, sasl auth, android notifications, copy & paste, logging, easy access menu to kick, ban .. and much more!
+    keywords:     android, irc, client, free, app, mirc, androirc, market, logging, sasl, authentication, blowfish, plain, identification, nickserv, themes, smartphone, application, apps, ircd, communication, internet, relay, chat, server, freenode, epiknet, quakenet, efnet, undernet, ident, nick, nickname, chan, channel, kick, ban, op, halfop, voice
+    language:     en
+    robots:       index, follow
+
+  stylesheets:    [main.css]
+
+  javascripts:    [jquery-1.4.4.min.js, twitter.js, simpleviewer.js]
+
+  has_layout:     true
+  layout:         layout

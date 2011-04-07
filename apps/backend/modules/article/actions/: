@@ -1,0 +1,50 @@
+<?php
+
+require_once dirname(__FILE__).'/../lib/articleGeneratorConfiguration.class.php';
+require_once dirname(__FILE__).'/../lib/articleGeneratorHelper.class.php';
+
+/**
+ * article actions.
+ *
+ * @package    androirc
+ * @subpackage article
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class articleActions extends autoArticleActions
+{
+    protected function processForm(sfWebRequest $request, sfForm $form)
+    {
+        $formParam = $request->getParameter($form->getName());
+        
+        if ($form->isNew())
+        {
+            $formParam['sf_guard_user_id'] = $this->getUser()->getGuardUser()->getId();
+            $request->setParameter($form->getName(), $formParam);
+
+            $access_token = "148425478546528|BgV3h4mmd6A7330l1DvEpZGoB-Q";            
+
+            // Facebook
+            $facebook = new Facebook(array(
+              'appId' => 'eaf95f47f17d718b80b119d31a595701',
+              'secret' => '1ad5dd25d45a1ad85620d50d725ae433',
+              'cookie' => true
+            ));
+
+            
+            $me = $facebook->api('/me');
+            var_dump($me);
+            if (is_null($facebook->getUser())) {
+              
+error_log('Redirecting to: ' . $facebook->getLoginUrl(array('req_perms' => 'user_status,publish_stream,user_photos,manage_pages','canvas' => 0, 'fbconnect' => 0)));
+//$this->redirect($facebook->getLoginUrl(array('req_perms' => 'user_status,publish_stream,user_photos,manage_pages','canvas' => 0, 'fbconnect' => 0)));
+
+            }
+
+            $status = $facebook->api('/me/feed', 'POST', array('message' => 'this is a test...', 'link' => 'http://www.google.fr', 'name' => 'link name'));
+            //var_dump($status);
+        }
+            
+        return parent::processForm($request, $form);
+    }
+}

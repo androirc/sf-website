@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Article
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          article
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        sf_guard_user:
+            label: User
+        sf_guard_user_id:
+            label: User
+        is_visible:
+          label: Visible 
+      list:
+        display: [sf_guard_user, =title, is_visible]
+        max_per_page: 5
+        sort: [created_at, desc]
+      filter:
+        display: [sf_guard_user_id, title, is_visible]
+      form:
+        display: [title, is_visible, content]
+      edit:    ~
+      new: ~

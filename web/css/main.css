@@ -1,0 +1,465 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #8A8A8A;
+}
+
+#donatebox {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    line-height: 200%;
+}
+
+#donatebox img {
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #026995;
+}
+
+h1 { font-size: 44px; }
+
+h2 { font-size: 18px;}
+
+.eula {
+    margin: 15px 0;
+}
+
+#donate {
+    position: relative;
+    top: 10px;
+    left: 25px;
+}
+
+h3 { }
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 240%;
+	text-align: justify;
+}
+
+a { color: #026995; }
+
+a:hover { text-decoration: none; }
+
+
+
+#up {
+	background-image: url("/images/up.png");
+	height: 202px;
+}
+
+#header {
+	width: 800px;
+	margin: auto;
+	height: 115px;
+}
+
+#twitter{
+	margin-top: 20px;
+}
+
+#twitter {
+	float: left;
+}
+
+#last_tweet ul {
+    line-height: 1.8;
+}
+
+#last_tweet .twitter_time {
+    font-style:italic;
+}
+
+#informations {
+	float: left;
+	margin: 35px 0 0 10px;
+    width: 400px;
+}
+
+#logo {
+	width: 284px;
+	height: 75px;
+	float: right;
+    margin: 20px 10px 0 0;
+    position: relative;
+}
+
+#logo span {
+    position: absolute;
+    top: 62px;
+    right:10px;
+}
+
+#menu {
+	width: 800px;
+	height: 43px;
+	margin: auto;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0;
+	padding: 13px 30px 0px 30px;
+	background: url("/images/border.png") no-repeat left top;
+	text-decoration: none;
+	text-align: center;
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#menu .last {
+    background: url("/images/border.png") no-repeat right top;
+}
+
+#middle {
+	width:800px;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#ads {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+#sidebar {
+	float: left;
+	width: 240px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#sidebar li {
+	margin-bottom: 30px;
+	padding: 0 0 10px 0px;
+}
+
+#sidebar li ul {
+	margin: 0px 14px;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding: 12px 0px;
+	border-bottom: 1px solid #E9E8DD;
+}
+
+#sidebar li li a {
+	padding: 0px 0px 0px 20px;
+	font-weight: normal;
+	color: #026995;
+}
+
+#sidebar li li a:hover {
+	color: #026995;
+}
+
+#sidebar p {
+	margin: 0;
+	padding: 0px 14px;
+}
+
+#sidebar h2 {
+	height: 30px;
+	margin: 0 0 10px 0px;
+	padding: 6px 0 2px 14px;
+	text-transform: capitalize;
+	font-size: 18px;
+	font-weight: normal;
+	color: #026995;
+}
+
+.bigtitle {
+    color: #026995;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.reponse {
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 200%;
+}
+
+#sidebar p {
+	line-height: 200%;
+}
+
+#sidebar a {
+	text-align: left;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.post {
+    margin-bottom: 5px;
+}
+
+.comments {
+    float: right;
+}
+
+.comments img {
+    position: relative;
+    top: 4px;
+}
+
+.post .title {
+	height: 44px;
+	padding-left: 15px;
+}
+
+.post .title a {
+	text-decoration: none;
+	font-size: 30px;
+	color: #026995;
+}
+
+.post .date {
+}
+
+.post .meta {
+	margin-top: -8px;
+	margin-left: 2px;
+	padding: 0px 30px 2px 15px;
+	border-bottom: 1px solid #D4D8CB;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 10px;
+	color: #66665E;
+}
+
+.post .meta span {
+	display: block;
+	margin-top: -10px;
+}
+
+.post .meta a { }
+
+.post .entry {
+	margin-bottom: 10px;
+	padding: 10px 15px 10px 15px;
+}
+
+#page {
+	width: 800px;
+	margin: 0 auto;
+	padding: 30px 0px 0px 0px;
+}
+
+#footer {
+	width: 100%;
+	height: 120px;
+	margin: 20px auto 0 auto;
+	padding: 0;
+	background: #E1E1E1;
+}
+
+#footer-bgcontent {
+}
+
+#footer p {
+	margin: 0;
+	padding: 30px 0px 0px 0px;
+	text-align: center;
+	line-height: normal;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+#footer a {
+}
+
+#content {
+	float: right;
+	width: 550px;
+}
+
+.tweet {
+    float: right;
+    margin: 10px 5px 0 0;
+}
+
+#content ul {
+	margin: 10px 0 10px 40px;
+}
+
+#content li{
+	list-style-type: none;
+	background-image: url("/images/puce.png");
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+	padding-left: 22px;
+	display : list-item;
+	list-style-position:inside;
+	padding-bottom: 2px;
+}
+
+.label {
+    width: 100px;
+    text-align: right;
+    padding: 6px 10px 20px 0;
+    vertical-align: top;
+}
+
+input[type=text] {
+    width: 200px;
+}
+
+textarea {
+    width: 400px;
+    height: 100px;
+}
+
+table {
+    margin-top: 15px;
+}
+
+.ok {
+    text-align: center;
+    color: #618C04;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.picture {
+    text-align: center;
+    margin: 10px 0;
+}
+
+form th {
+    width: 100px;
+    text-align: right;
+    vertical-align: top;
+    padding: 8px 15px 20px 0;
+}
+
+form .submit {
+    text-align: right;
+    padding-top: 7px;
+}
+
+input[type=submit], input[type=reset] {
+	background: #EEE url(/images/button.png) repeat-x 0px 0px;
+	border-color: #999 #999 #888;
+	border-style: solid;
+	border-width: 1px;
+	color: #444 !important;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+	height: 25px;
+	padding: 3px 10px;
+	text-shadow: white 1px 1px 0px;
+}
+
+input[type=text], input[type=password] {
+	padding: 2px 7px;
+	width: 214px;
+}
+
+.notice-box {
+    background-color: #e4ffe0;
+    border-top: 1px solid #5bba4c;
+    border-bottom: 1px solid #5bba4c;
+    padding: 3px 0;
+    margin-bottom: 5px;
+    color: #2f8022;
+    text-align: center;
+    font-weight: bold;
+}
+
+form .error_list {
+    margin: 0px !important;
+    color: #CC0000;
+}
+
+textarea {
+	width:450px;
+	height: 100px;
+	display: block;
+	font-family: Arial, Verdana, serif;
+	padding: 7px;
+}

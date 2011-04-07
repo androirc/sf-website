@@ -1,0 +1,27 @@
+Article:
+    actAs: 
+        Timestampable:
+        Sluggable:
+            fileds: [title]
+            canUpdate: true
+    columns:
+        id:
+            type: integer
+            primary: true
+            autoincrement: true
+        sf_guard_user_id:
+            type: integer
+        title:
+            type: string(255)
+            notnull: true
+        content:
+            type: clob
+            notnull: true
+        is_visible:
+            type: boolean
+            default: 1
+    relations:
+        sfGuardUser:
+            onDelete: SET NULL
+            onUpdate: CASCADE
+            foreignAlias: Articles
