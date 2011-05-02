@@ -5,32 +5,39 @@
         <?php include_http_metas() ?>
         <?php include_metas() ?>
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css">
         <?php include_stylesheets() ?>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
         <?php include_javascripts() ?>
     </head>
     <body>
         <div id="up">
-                <div id="header">
-                    <div id="twitter">
-                        <a href="http://twitter.com/androirc"><img src="/images/twitter.png" alt="Follow me on Twitter!" /></a>
+            <div id="header">
+                <div id="twitter">
+                    <a href="http://twitter.com/androirc">
+                        <img src="/images/twitter.png" alt="Follow me on Twitter!" />
+                    </a>
                 </div>
                 <div id="informations">
-                    <div id="last_tweet"><div style="text-align: center; margin-top: 20px;"><img src="/images/ajax-loader.gif"></div></div></p>
+                    <div id="last_tweet">
+                        <!--<div style="text-align: center; margin-top: 20px;">-->
+                        <?php echo image_tag('ajax-loader.gif') ?>
+                    </div>
                 </div>
                 <div id="logo">
-                    <img src="/images/logo.png" alt="AndroIRC" />
+                    <?php echo image_tag('logo.png') ?>
                     <span><em>Android IRC Client</em></span>
                 </div>
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href="<?php echo url_for('@homepage') ?>">News</a></li>
+                    <li><?php echo link_to('News', '@homepage') ?></li>
                     <li><a href="http://wiki.androirc.com/">Wiki</a></li>
-                    <li><a href="<?php echo url_for('@screenshots') ?>">Screenshots</a></li>
-                    <li><a href="<?php echo url_for('@contact') ?>">Contact</a></li>
+                    <li><?php echo link_to('Screenshots', '@screenshots') ?></li>
+                    <li><?php echo link_to('Contact', '@contact') ?></li>
                     <li><a href="http://market.android.com/details?id=com.androirc">Download AndroIRC</a></li>
-                    <li><a href="<?php echo url_for('@eula') ?>">EULA</a></li>
-                    <li class="last"><a href="<?php echo url_for('@donate') ?>">Donate</a></li>
+                    <li><?php echo link_to('EULA', '@eula') ?></li>
+                    <li class="last"><?php echo link_to('Donate','@donate') ?></li>
                 </ul>
             </div>
         </div>

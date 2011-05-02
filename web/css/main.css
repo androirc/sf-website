@@ -1,69 +1,10 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
 
-/* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
-
-/* remember to highlight inserts somehow! */
-ins {
-	text-decoration: none;
-}
-del {
-	text-decoration: line-through;
-}
-
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+/* General configuration */
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #8A8A8A;
-}
-
-#donatebox {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 0 20px;
-    line-height: 200%;
-}
-
-#donatebox img {
-    margin-bottom: 10px;
 }
 
 h1, h2, h3 {
@@ -72,33 +13,37 @@ h1, h2, h3 {
 	color: #026995;
 }
 
-h1 { font-size: 44px; }
-
-h2 { font-size: 18px;}
-
-.eula {
-    margin: 15px 0;
+h1 { 
+    font-size: 44px; 
 }
 
-#donate {
-    position: relative;
-    top: 10px;
-    left: 25px;
+h2 { 
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-h3 { }
+h3 { 
+}
 
 p, ul, ol {
 	margin-top: 0;
-	line-height: 240%;
+	line-height: 1.9;
 	text-align: justify;
 }
 
-a { color: #026995; }
+p {
+    margin-bottom: 10px;
+}
 
-a:hover { text-decoration: none; }
+a { 
+    color: #026995; 
+}
 
+a:hover { 
+    text-decoration: none; 
+}
 
+/* Global design */
 
 #up {
 	background-image: url("/images/up.png");
@@ -111,12 +56,18 @@ a:hover { text-decoration: none; }
 	height: 115px;
 }
 
+/* Twitter */
+
 #twitter{
 	margin-top: 20px;
+    float: left;
 }
 
-#twitter {
+#informations {
 	float: left;
+	margin: 35px 0 0 10px;
+    width: 400px;
+    text-align: center;
 }
 
 #last_tweet ul {
@@ -127,11 +78,7 @@ a:hover { text-decoration: none; }
     font-style:italic;
 }
 
-#informations {
-	float: left;
-	margin: 35px 0 0 10px;
-    width: 400px;
-}
+/* Menu */
 
 #logo {
 	width: 284px;
@@ -185,149 +132,8 @@ a:hover { text-decoration: none; }
     background: url("/images/border.png") no-repeat right top;
 }
 
-#middle {
-	width:800px;
-	margin: auto;
-	margin-top: 10px;
-}
 
-#ads {
-	text-align: center;
-	margin-bottom: 25px;
-}
-
-#sidebar {
-	float: left;
-	width: 240px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-}
-
-#sidebar ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	line-height: normal;
-}
-
-#sidebar li {
-	margin-bottom: 30px;
-	padding: 0 0 10px 0px;
-}
-
-#sidebar li ul {
-	margin: 0px 14px;
-}
-
-#sidebar li li {
-	margin: 0;
-	padding: 12px 0px;
-	border-bottom: 1px solid #E9E8DD;
-}
-
-#sidebar li li a {
-	padding: 0px 0px 0px 20px;
-	font-weight: normal;
-	color: #026995;
-}
-
-#sidebar li li a:hover {
-	color: #026995;
-}
-
-#sidebar p {
-	margin: 0;
-	padding: 0px 14px;
-}
-
-#sidebar h2 {
-	height: 30px;
-	margin: 0 0 10px 0px;
-	padding: 6px 0 2px 14px;
-	text-transform: capitalize;
-	font-size: 18px;
-	font-weight: normal;
-	color: #026995;
-}
-
-.bigtitle {
-    color: #026995;
-    font-size: 22px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.reponse {
-    margin-top: 20px;
-    text-align: justify;
-    line-height: 200%;
-}
-
-#sidebar p {
-	line-height: 200%;
-}
-
-#sidebar a {
-	text-align: left;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.post {
-    margin-bottom: 5px;
-}
-
-.comments {
-    float: right;
-}
-
-.comments img {
-    position: relative;
-    top: 4px;
-}
-
-.post .title {
-	height: 44px;
-	padding-left: 15px;
-}
-
-.post .title a {
-	text-decoration: none;
-	font-size: 30px;
-	color: #026995;
-}
-
-.post .date {
-}
-
-.post .meta {
-	margin-top: -8px;
-	margin-left: 2px;
-	padding: 0px 30px 2px 15px;
-	border-bottom: 1px solid #D4D8CB;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: normal;
-	font-size: 10px;
-	color: #66665E;
-}
-
-.post .meta span {
-	display: block;
-	margin-top: -10px;
-}
-
-.post .meta a { }
-
-.post .entry {
-	margin-bottom: 10px;
-	padding: 10px 15px 10px 15px;
-}
-
-#page {
-	width: 800px;
-	margin: 0 auto;
-	padding: 30px 0px 0px 0px;
-}
+/* Footer */
 
 #footer {
 	width: 100%;
@@ -349,17 +155,11 @@ a:hover { text-decoration: none; }
 	font-size: 10px;
 }
 
-#footer a {
-}
+/* Content */
 
 #content {
 	float: right;
 	width: 550px;
-}
-
-.tweet {
-    float: right;
-    margin: 10px 5px 0 0;
 }
 
 #content ul {
@@ -376,6 +176,110 @@ a:hover { text-decoration: none; }
 	list-style-position:inside;
 	padding-bottom: 2px;
 }
+
+/* Side bar */
+
+#sidebar {
+	float: left;
+	width: 230px;
+}
+
+#sidebar ul {
+	list-style: none;
+	line-height: normal;
+}
+
+#sidebar li {
+	margin-bottom: 30px;
+	padding: 0 0 10px 0px;
+}
+
+#sidebar li ul {
+	margin: 0px 14px;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding: 12px 0px;
+	border-bottom: 1px solid #E9E8DD;
+}
+
+#sidebar li li a {
+	padding-left: 20px;
+}
+
+/* Others */
+
+#page {
+	width: 800px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+#ads {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.ok {
+    text-align: center;
+    color: #618C04;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Posts */
+
+.post h1 {
+	padding-left: 15px;
+}
+
+.post h1 a {
+	text-decoration: none;
+	font-size: 30px;
+	color: #026995;
+}
+
+.post .date {
+}
+
+.post .meta {
+	padding: 0px 30px 2px 15px;
+	border-bottom: 1px solid #D4D8CB;
+	font-size: 10px;
+	color: #66665E;
+}
+
+.post .comments {
+    float: right;
+}
+
+.post .share {
+    float: left;
+}
+
+.post .meta span {
+	display: block;
+}
+
+.post .entry {
+	margin-bottom: 10px;
+	padding: 10px 15px;
+}
+
+.post {
+    margin-bottom: 10px;
+}
+
+/* Forms */
 
 .label {
     width: 100px;
@@ -395,18 +299,6 @@ textarea {
 
 table {
     margin-top: 15px;
-}
-
-.ok {
-    text-align: center;
-    color: #618C04;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.picture {
-    text-align: center;
-    margin: 10px 0;
 }
 
 form th {
@@ -464,6 +356,8 @@ textarea {
 	padding: 7px;
 }
 
+/* Beta page */
+
 .button {
 	display: inline-block;
 	outline: none;
@@ -480,9 +374,11 @@ textarea {
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
+
 .button:hover {
 	text-decoration: none;
 }
+
 .button:active {
 	position: relative;
 	top: 1px;
@@ -496,15 +392,26 @@ textarea {
 	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
 }
+
 .blue:hover {
 	background: #007ead;
 	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
 	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
 }
+
 .blue:active {
 	color: #80bed6;
 	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
 	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+#beta {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#beta .button {
+    margin-bottom: 10px;
 }
