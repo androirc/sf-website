@@ -1,16 +1,18 @@
 <?php
 
-/**
- * Project filter form base class.
+/*
+ * This file is part of the AndroIRC website.
  *
- * @package    androirc
- * @subpackage filter
- * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormFilterBaseTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * (c) 2010-2011 Julien Brochet <mewt@androirc.com>
+ * (c) 2010-2011 Sébastien Brochet <blinkseb@androirc.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 abstract class BaseFormFilterDoctrine extends sfFormFilterDoctrine
 {
-  public function setup()
-  {
-  }
+    public function setup()
+    {       
+    }
 }

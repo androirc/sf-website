@@ -1,13 +1,15 @@
 <?php
 
-/**
- * article actions.
+/*
+ * This file is part of the AndroIRC website.
  *
- * @package    androirc
- * @subpackage article
- * @author     Your name here
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * (c) 2010-2011 Julien Brochet <mewt@androirc.com>
+ * (c) 2010-2011 Sébastien Brochet <blinkseb@androirc.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 class articleActions extends sfActions
 {
     public function executeIndex(sfWebRequest $request)
@@ -15,20 +17,22 @@ class articleActions extends sfActions
         $this->articles = Doctrine::getTable('Article')->getLastArticles();
     }
 
-  public function executeShow(sfWebRequest $request)
-  {
-    $this->a = Doctrine_Core::getTable('Article')->find(array($request->getParameter('id')));
-    $this->forward404Unless($this->a);
-    
-    sfProjectConfiguration::getActive()->loadHelpers(array('Text'));
-    
-    $content = strip_tags($this->a->getContent());
-    
-    $content = str_replace("\n", " ", $content);
-    $content = str_replace("\r", " ", $content);
-    
-    $this->getResponse()->addMeta('description', truncate_text($content, 200));
-    
-    $this->getResponse()->addMeta('title', $this->a->getTitle() . " - AndroIRC (Android IRC Client)");
-  }
+    public function executeShow(sfWebRequest $request)
+    {
+        $this->a = Doctrine_Core::getTable('Article')->find(array($request->getParameter('id')));
+        
+        $this->forward404Unless($this->a);
+
+        sfProjectConfiguration::getActive()->loadHelpers(array('Text'));
+
+        $content = strip_tags($this->a->getContent());
+
+        $content = str_replace("\n", " ", $content);
+        $content = str_replace("\r", " ", $content);
+
+        $this->getResponse()->addMeta('description', truncate_text($content, 200));
+
+        $this->getResponse()->addMeta('title', $this->a->getTitle() . " - AndroIRC (Android IRC Client)");
+    }
+
 }
