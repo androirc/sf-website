@@ -8,14 +8,16 @@
  * @property integer $id
  * @property integer $beta_release_id
  * @property string $ip
+ * @property BetaRelease $BetaRelease
  * 
  * @method integer      getId()              Returns the current record's "id" value
  * @method integer      getBetaReleaseId()   Returns the current record's "beta_release_id" value
  * @method string       getIp()              Returns the current record's "ip" value
+ * @method BetaRelease  getBetaRelease()     Returns the current record's "BetaRelease" value
  * @method BetaDownload setId()              Sets the current record's "id" value
  * @method BetaDownload setBetaReleaseId()   Sets the current record's "beta_release_id" value
  * @method BetaDownload setIp()              Sets the current record's "ip" value
- * @property  $
+ * @method BetaDownload setBetaRelease()     Sets the current record's "BetaRelease" value
  * 
  * @package    androirc
  * @subpackage model
@@ -44,8 +46,10 @@ abstract class BaseBetaDownload extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('BetRelease', array(
-             'onDelete' => 'DELETE',
+        $this->hasOne('BetaRelease', array(
+             'local' => 'beta_release_id',
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE',
              'onUpdate' => 'CASCADE'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();

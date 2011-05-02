@@ -13,14 +13,14 @@ abstract class BaseBetaDownloadFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'beta_release_id' => new sfWidgetFormFilterInput(),
+      'beta_release_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('BetaRelease'), 'add_empty' => true)),
       'ip'              => new sfWidgetFormFilterInput(),
       'created_at'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'beta_release_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'beta_release_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('BetaRelease'), 'column' => 'id')),
       'ip'              => new sfValidatorPass(array('required' => false)),
       'created_at'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
@@ -44,7 +44,7 @@ abstract class BaseBetaDownloadFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'              => 'Number',
-      'beta_release_id' => 'Number',
+      'beta_release_id' => 'ForeignKey',
       'ip'              => 'Text',
       'created_at'      => 'Date',
       'updated_at'      => 'Date',

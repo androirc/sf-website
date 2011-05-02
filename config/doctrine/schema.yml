@@ -36,8 +36,8 @@ BetaDownload:
     beta_release_id:          { type: integer }
     ip:                       { type: string(50) }
   relations:
-    BetRelease:
-      onDelete: DELETE
+    BetaRelease:
+      onDelete: CASCADE
       onUpdate: CASCADE
       foreignAlias: Downloads
     

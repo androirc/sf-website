@@ -9,15 +9,18 @@
  * @property string $version
  * @property boolean $is_downloadable
  * @property string $path
+ * @property Doctrine_Collection $Downloads
  * 
- * @method integer     getId()              Returns the current record's "id" value
- * @method string      getVersion()         Returns the current record's "version" value
- * @method boolean     getIsDownloadable()  Returns the current record's "is_downloadable" value
- * @method string      getPath()            Returns the current record's "path" value
- * @method BetaRelease setId()              Sets the current record's "id" value
- * @method BetaRelease setVersion()         Sets the current record's "version" value
- * @method BetaRelease setIsDownloadable()  Sets the current record's "is_downloadable" value
- * @method BetaRelease setPath()            Sets the current record's "path" value
+ * @method integer             getId()              Returns the current record's "id" value
+ * @method string              getVersion()         Returns the current record's "version" value
+ * @method boolean             getIsDownloadable()  Returns the current record's "is_downloadable" value
+ * @method string              getPath()            Returns the current record's "path" value
+ * @method Doctrine_Collection getDownloads()       Returns the current record's "Downloads" collection
+ * @method BetaRelease         setId()              Sets the current record's "id" value
+ * @method BetaRelease         setVersion()         Sets the current record's "version" value
+ * @method BetaRelease         setIsDownloadable()  Sets the current record's "is_downloadable" value
+ * @method BetaRelease         setPath()            Sets the current record's "path" value
+ * @method BetaRelease         setDownloads()       Sets the current record's "Downloads" collection
  * 
  * @package    androirc
  * @subpackage model
@@ -51,6 +54,10 @@ abstract class BaseBetaRelease extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasMany('BetaDownload as Downloads', array(
+             'local' => 'id',
+             'foreign' => 'beta_release_id'));
+
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);
     }
