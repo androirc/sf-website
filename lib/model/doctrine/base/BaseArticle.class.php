@@ -27,7 +27,7 @@
  * 
  * @package    androirc
  * @subpackage model
- * @author     Your name here
+ * @author     MewT
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseArticle extends sfDoctrineRecord
@@ -54,7 +54,7 @@ abstract class BaseArticle extends sfDoctrineRecord
              ));
         $this->hasColumn('is_visible', 'boolean', null, array(
              'type' => 'boolean',
-             'default' => 1,
+             'default' => true,
              ));
     }
 
