@@ -10,9 +10,9 @@
  * file that was distributed with this source code.
  */
 
-abstract class BaseFormDoctrine extends sfFormDoctrine
+class QuickStartFormFilter extends BaseQuickStartFormFilter
 {
-    public function setup()
+    public function configure()
     {
     }
 }

@@ -10,10 +10,9 @@
  * file that was distributed with this source code.
  */
 
-class BetaTable extends Doctrine_Table
+class BetaDownloadForm extends BaseBetaDownloadForm
 {
-    public static function getInstance()
+    public function configure()
     {
-        return Doctrine_Core::getTable('Beta');
-    }
+    } 
 }

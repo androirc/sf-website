@@ -1,4 +1,5 @@
 Article:
+  tableName: androirc_article
   actAs: 
     Timestampable: ~
     Sluggable:
@@ -16,7 +17,8 @@ Article:
       onUpdate: CASCADE
       foreignAlias: Articles
             
-Beta:
+BetaRelease:
+  tableName: androirc_beta_release
   actAs:
     Timestampable: ~
   columns:
@@ -24,3 +26,47 @@ Beta:
     version:                  { type: string(100) }
     is_downloadable:          { type: boolean, default: true }
     path:                     { type: string(255) }
+    
+BetaDownload:
+  tableName: androirc_beta_download
+  actAs:
+    Timestampable: ~
+  columns:
+    id:                       { type: integer, primary: true, autoincrement: true}
+    beta_release_id:          { type: integer }
+    ip:                       { type: string(50) }
+  relations:
+    BetRelease:
+      onDelete: DELETE
+      onUpdate: CASCADE
+      foreignAlias: Downloads
+    
+Tip:
+  tableName: androirc_tip
+  columns:
+    id:                       { type: integer, primary: true, autoincrement: true }
+    language:                 { type: string(2), notnull: true }
+    content:                  { type: clob, notnull: true }
+    
+QuickStart:
+  tableName: androirc_quick_start
+  columns:
+    id:                       { type: integer, primary: true, autoincrement: true }
+    language:                 { type: string(2), notnull: true }
+    verion_min:               { type: string(20), notnull: true }
+    verion_max:               { type: string(20), notnull: true }
+    content:                  { type: clob, notnull: true }
+    
+CrashReport:
+  tableName: androirc_crash_report
+  actAs:
+    Timestampable: ~
+  columns:
+    id:                       { type: integer, primary: true, autoincrement: true }
+    phone_model:              { type: string(200) }
+    android_version:          { type: string(200) }
+    thread_name:              { type: string(200) }
+    error_message:            { type: clob }
+    callstack:                { type: clob }
+    androirc_version:         { type: string(200) }
+  

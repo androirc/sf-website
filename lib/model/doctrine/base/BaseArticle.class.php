@@ -34,7 +34,7 @@ abstract class BaseArticle extends sfDoctrineRecord
 {
     public function setTableDefinition()
     {
-        $this->setTableName('article');
+        $this->setTableName('androirc_article');
         $this->hasColumn('id', 'integer', null, array(
              'type' => 'integer',
              'primary' => true,

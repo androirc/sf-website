@@ -10,9 +10,9 @@
  * file that was distributed with this source code.
  */
 
-abstract class BaseFormDoctrine extends sfFormDoctrine
+class TipForm extends BaseTipForm
 {
-    public function setup()
+    public function configure()
     {
     }
 }

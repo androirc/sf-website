@@ -10,9 +10,10 @@
  * file that was distributed with this source code.
  */
 
-class UserFormFilter extends BaseUserFormFilter
+class BetaReleaseTable extends Doctrine_Table
 {
-  public function configure()
-  {
-  }
+    public static function getInstance()
+    {
+        return Doctrine_Core::getTable('BetaRelease');
+    }
 }
