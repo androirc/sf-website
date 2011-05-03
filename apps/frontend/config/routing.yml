@@ -1,9 +1,7 @@
-# default rules
 homepage:
   url:   /
   param: { module: article, action: index }
 
-#articles
 article_show:
   url: /article/:id/:slug
   class: sfDoctrineRoute
@@ -13,51 +11,26 @@ article_show:
     id: \d+
     sf_method: [get]
   
-#donate
 donate:
   url: /donate
   param: { module: donate, action: index }
-  
-#donate ancien site
-donate_html:
-  url: /donate.html
-  param: { module: donate, action: index }
 
-#eula
 eula:
   url: /eula
   param: { module: eula, action: index }
-  
-#eula ancien site
-eula_html:
-  url: /eula.html
-  param: { module: eula, action: index }
 
-#screenshots
 screenshots:
-    url: /screenshots
-    param: { module: screenshots, action: index }
+  url: /screenshots
+  param: { module: screenshots, action: index }
     
-#screenshots ancien site
-screenshots_html:
-    url: /screenshots.html
-    param: { module: screenshots, action: index }
-    
-#contact
 contact:
-    url: /contact
-    param: { module: contact, action: index }
-    
-#contact ancien site
-contact_html:
-    url: /contact.html
-    param: { modume: contact, action: index }
+  url: /contact
+  param: { module: contact, action: index }
 
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
+beta:
+  url: /beta
+  param: { module: beta, action: index }
+  
+beta_download:
+  url: /beta/download
+  param: { module: beta, action: download }
