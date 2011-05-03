@@ -1,0 +1,38 @@
+input[type=submit], input[type=reset] {
+	background: #EEE url(/images/button.png) repeat-x 0px 0px;
+	border-color: #999 #999 #888;
+	border-style: solid;
+	border-width: 1px;
+	color: #444 !important;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+	height: 23px;
+	padding: 0px 10px;
+	text-shadow: white 1px 1px 0px;
+}
+
+textarea {
+	width:600px;
+	height: 200px;
+	display: block;
+	font-family: Arial, Verdana, serif;
+	padding: 7px;
+}
+
+input[type=text], input[type=password] {
+	padding: 2px;
+	width: 214px;
+}
+
+select {
+	padding: 2px;
+}
+
+th {
+    padding: 10px;
+}
+
+tfoot {
+    text-align: right;
+}

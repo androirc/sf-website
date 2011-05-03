@@ -1,0 +1,257 @@
+
+/* General configuration */
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #8A8A8A;
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	font-weight: normal;
+	color: #026995;
+}
+
+h1 { 
+    font-size: 25px; 
+    padding: 0px 30px 2px 15px;
+	border-bottom: 1px solid #D4D8CB;
+    margin-bottom: 10px;
+}
+
+h2 { 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h3 { 
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 1.9;
+	text-align: justify;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a { 
+    color: #026995; 
+    text-decoration: none; 
+    
+}
+
+a:hover { 
+    text-decoration: underline; 
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Global design */
+
+#up {
+	background-image: url("/images/up.png");
+	height: 202px;
+}
+
+#header {
+	width: 800px;
+	margin: auto;
+	height: 115px;
+}
+
+/* Twitter */
+
+#twitter{
+	margin-top: 20px;
+    float: left;
+}
+
+#informations {
+	float: left;
+	margin: 35px 0 0 10px;
+    width: 400px;
+    text-align: center;
+}
+
+#last_tweet ul {
+    line-height: 1.8;
+}
+
+#last_tweet .twitter_time {
+    font-style:italic;
+}
+
+/* Menu */
+
+#logo {
+	width: 284px;
+	height: 75px;
+	float: right;
+    margin: 20px 10px 0 0;
+    position: relative;
+}
+
+#logo span {
+    position: absolute;
+    top: 62px;
+    right:10px;
+}
+
+#menu {
+	width: 800px;
+	height: 43px;
+	margin: auto;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0;
+	padding: 13px 30px 0px 30px;
+	background: url("/images/border.png") no-repeat left top;
+	text-decoration: none;
+	text-align: center;
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#menu .last {
+    background: url("/images/border.png") no-repeat right top;
+}
+
+/* Footer */
+
+#footer {
+    margin-top: 15px;
+    background: none repeat scroll 0 0 #EEEEEE;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#footer > div {
+    color: #777777;
+    display: table;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
+
+}
+
+#footer .cell {
+    display: table-cell;
+    width: 200px;
+    padding: 0 20px;
+}
+
+.famfamfam {
+    position: relative;
+    top: 3px;
+    margin-right: 7px;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 550px;
+}
+
+#content ul {
+	margin: 10px 0 10px 40px;
+}
+
+#content li{
+	list-style-type: none;
+	background-image: url("/images/puce.png");
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+	padding-left: 22px;
+	display : list-item;
+	list-style-position:inside;
+	padding-bottom: 2px;
+}
+
+/* Side bar */
+
+#sidebar {
+	float: left;
+	width: 230px;
+}
+
+#sidebar ul {
+	list-style: none;
+	line-height: normal;
+}
+
+#sidebar li {
+	margin-bottom: 30px;
+	padding: 0 0 10px 0px;
+}
+
+#sidebar li ul {
+	margin: 0px 14px;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding: 12px 0px;
+	border-bottom: 1px solid #E9E8DD;
+}
+
+#sidebar li li a {
+	padding-left: 20px;
+}
+
+.author {
+    margin-top: 5px;
+}
+
+#facebook {
+    text-align: center;
+}
+
+/* Others */
+
+#page {
+	width: 800px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.ok {
+    text-align: center;
+    color: #618C04;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
