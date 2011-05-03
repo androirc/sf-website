@@ -34,3 +34,9 @@ beta:
 beta_download:
   url: /beta/download
   param: { module: beta, action: download }
+  
+quickstart:
+  url: /quickstart/:version/:lang
+  param: { module: quickstart, action: index }
+  options:
+    segment_separators: [/]
