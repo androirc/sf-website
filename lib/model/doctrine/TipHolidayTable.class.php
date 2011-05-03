@@ -16,4 +16,24 @@ class TipHolidayTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('TipHoliday');
     }
+    
+    public function retrieveMessageByDate($date, $lang = 'en')
+    {
+        if (null === $date) {
+            return null;
+        }
+        
+        $q = $this->createQuery('t')
+                  ->where('t.lang = ?', $lang)
+                  ->andWhere('t.date_start <= ?', $date)
+                  ->andWhere('t.date_end >= ?', $date);
+        
+        $message = $q->execute();
+        
+        if (null === $message) {
+            return null;
+        }
+        
+        return $message->getContent();
+    }
 }

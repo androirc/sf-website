@@ -54,7 +54,7 @@ TipHoliday:
     id:                       { type: integer, primary: true, autoincrement: true }
     language:                 { type: string(2), notnull: true }
     date_start:               { type: date, notnull: true }
-    date_end:                 { type: date }
+    date_end:                 { type: date, notnull: true }
     content:                  { type: clob }
     
 QuickStart:

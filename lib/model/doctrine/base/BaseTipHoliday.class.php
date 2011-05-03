@@ -48,6 +48,7 @@ abstract class BaseTipHoliday extends sfDoctrineRecord
              ));
         $this->hasColumn('date_end', 'date', null, array(
              'type' => 'date',
+             'notnull' => true,
              ));
         $this->hasColumn('content', 'clob', null, array(
              'type' => 'clob',
