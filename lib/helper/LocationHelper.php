@@ -14,5 +14,3 @@ function getLocationFromIP($ip)
 {
     return file_get_contents('http://geoip.wtanaka.com/cc/' . $ip); 
 }
-
-?>
