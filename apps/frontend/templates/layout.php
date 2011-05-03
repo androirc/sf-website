@@ -67,19 +67,19 @@
                         <ul>
                             <li>
                                 MewT <em>(WebMaster)</em>
-                                <div>
+                                <div class="author">
                                     <a href="http://twitter.com/aerialls">@aerialls</a>
                                 </div>
                             </li>
                             <li>
-                                S&eacute;bastien <em>(Lead Developper)</em>
-                                <div>
+                                S&eacute;bastien <em>(Lead Programmer)</em>
+                                <div class="author">
                                     <a href="http://twitter.com/blinkseb">@blinkseb</a>
                                 </div>
                             </li>
                             <li>
                                 Maxx <em>(Graphic Designer)</em>
-                                <div>
+                                <div class="author">
                                     <a href="http://twitter.com/maxxmx">@MaxxMx</a>
                                 </div>
                             </li>
@@ -109,11 +109,11 @@
                 <div class="cell">
                     <h2>Other pages</h2>
                     <ul>
-                        <li><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> <a href="">Participate to the last beta</a></li>
-                        <li><?php echo image_tag('bug.png', array('class' => 'famfamfam')) ?> <a href="">Bug tracker website</a></li>
+                        <li><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@beta') ?>">Participate to the last beta</a></li>
+                        <li><?php echo image_tag('bug.png', array('class' => 'famfamfam')) ?> <a href="http://bugs.androirc.com/">Bug tracker website</a></li>
                         <li><?php echo image_tag('feed.png', array('class' => 'famfamfam')) ?> <a href="">RSS Feed</a></li>
-                        <li><?php echo image_tag('coins.png', array('class' => 'famfamfam')) ?> <a href="">Make a donation</a></li>
-                        <li><?php echo image_tag('mail-open.png', array('class' => 'famfamfam')) ?> <a href="">Contact us</a></li>
+                        <li><?php echo image_tag('coins.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@donate') ?>">Make a donation</a></li>
+                        <li><?php echo image_tag('mail-open.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@contact') ?>">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="cell">

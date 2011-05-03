@@ -16,4 +16,13 @@ class BetaReleaseTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('BetaRelease');
     }
+    
+    public function getLastBeta()
+    {
+        return $this->createQuery('b')
+                    ->where('b.is_downloadable = ?', true)
+                    ->orderBy('b.created_at desc')
+                    ->execute()
+                    ->getFirst();
+    }
 }

@@ -221,6 +221,10 @@ strong {
 	padding-left: 20px;
 }
 
+.author {
+    margin-top: 5px;
+}
+
 #facebook {
     text-align: center;
 }
