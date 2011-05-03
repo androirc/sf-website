@@ -4,6 +4,27 @@ sfGuardUser:
     password: adm456A
     is_super_admin: true
     
+sfGuardPermission:
+  sgp_can_manage_articles:
+    name: can_manage_articles
+    description: Articles management
+  sgp_can_manage_tips:
+    name: can_manage_tips
+    description: Tips management
+  sgp_can_manage_quickstarts:
+    name: can_manage_quickstarts
+    description: QuickStarts management
+    
+sfGuardGroup:
+  sgg_reviewer:
+    name: Reviewer
+    description: Reviewers of the website
+
+sfGuardGroupPermission:
+  sggp_redacteurs:
+    Group: sgg_reviewer
+    Permission: sgp_can_manage_articles
+    
 TipHoliday:
   bonnee_annee_en:
     language:       en
