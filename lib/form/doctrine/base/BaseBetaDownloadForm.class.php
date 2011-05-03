@@ -17,7 +17,7 @@ abstract class BaseBetaDownloadForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'              => new sfWidgetFormInputHidden(),
       'beta_release_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('BetaRelease'), 'add_empty' => true)),
-      'ip'              => new sfWidgetFormInputText(),
+      'location'        => new sfWidgetFormInputText(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
     ));
@@ -25,7 +25,7 @@ abstract class BaseBetaDownloadForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'beta_release_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('BetaRelease'), 'required' => false)),
-      'ip'              => new sfValidatorString(array('max_length' => 50, 'required' => false)),
+      'location'        => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
     ));

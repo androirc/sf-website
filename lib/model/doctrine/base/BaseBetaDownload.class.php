@@ -7,16 +7,16 @@
  * 
  * @property integer $id
  * @property integer $beta_release_id
- * @property string $ip
+ * @property string $location
  * @property BetaRelease $BetaRelease
  * 
  * @method integer      getId()              Returns the current record's "id" value
  * @method integer      getBetaReleaseId()   Returns the current record's "beta_release_id" value
- * @method string       getIp()              Returns the current record's "ip" value
+ * @method string       getLocation()        Returns the current record's "location" value
  * @method BetaRelease  getBetaRelease()     Returns the current record's "BetaRelease" value
  * @method BetaDownload setId()              Sets the current record's "id" value
  * @method BetaDownload setBetaReleaseId()   Sets the current record's "beta_release_id" value
- * @method BetaDownload setIp()              Sets the current record's "ip" value
+ * @method BetaDownload setLocation()        Sets the current record's "location" value
  * @method BetaDownload setBetaRelease()     Sets the current record's "BetaRelease" value
  * 
  * @package    androirc
@@ -37,7 +37,7 @@ abstract class BaseBetaDownload extends sfDoctrineRecord
         $this->hasColumn('beta_release_id', 'integer', null, array(
              'type' => 'integer',
              ));
-        $this->hasColumn('ip', 'string', 50, array(
+        $this->hasColumn('location', 'string', 50, array(
              'type' => 'string',
              'length' => 50,
              ));

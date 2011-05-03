@@ -34,7 +34,7 @@ BetaDownload:
   columns:
     id:                       { type: integer, primary: true, autoincrement: true}
     beta_release_id:          { type: integer }
-    ip:                       { type: string(50) }
+    location:                 { type: string(50) }
   relations:
     BetaRelease:
       onDelete: CASCADE
