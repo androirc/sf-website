@@ -1,61 +1,40 @@
-<?php slot('title','End User License Agreemen') ?>
+<?php slot('title', 'End User License Agreement') ?>
 
-<p>By downloading, installing or using this application or any portion thereof ("Application"), you agree to the following terms and conditions (the "Terms and Conditions").</p>
+<p>END-USER LICENSE AGREEMENT FOR ANDROIRC. <strong>IMPORTANT: PLEASE READ THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT CAREFULLY BEFORE CONTINUING WITH THIS PROGRAM INSTALL</strong>: AndroIRC Team's End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and AndroIRC Team. For the AndroIRC Team software product(s) identified above which may include associated software components, media, printed materials, and "online" or electronic documentation ("SOFTWARE PRODUCT"). By installing, copying, or otherwise using the SOFTWARE PRODUCT, you agree to be bound by the terms of this EULA. This license agreement represents the entire agreement concerning the program between you and AndroIRC Team, (referred to as "licenser"), and it supersedes any prior proposal, representation, or understanding between the parties. If you do not agree to the terms of this EULA, do not install or use the SOFTWARE PRODUCT.</p>
 
-    <h2 class="eula">Use of application</h2>
+<p>The SOFTWARE PRODUCT is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE PRODUCT is licensed, not sold.</p>
 
-    <ul>
-        <li>Google grants you the non-exclusive, non-transferable, limited right and license to install and use this Application solely and exclusively for your personal use. </li>
-        <li>You may not use the Application in any manner that could damage, disable, overburden, or impair the Application (or servers or networks connected to the Application), nor may you use the Application in any manner that could interfere with any other party's use and enjoyment of the Application (or servers or networks connected to the Application).</li>
-        <li>You agree that you are solely responsible for (and that Google has no responsibility to you or to any third party for) your use of the Application, any breach of your obligations under the Terms and Conditions, and for the consequences (including any loss or damage which Google may suffer) of any such breach.</li>
-    </ul>
+<h2 class="eula">Grant of License</h2>
 
-    <h2 class="eula">Proprietary rights</h2>
+<p>The SOFTWARE PRODUCT is licensed as follows:</p>
 
-    <p>You acknowledge that (a) the Application contains proprietary and confidential information that is protected by applicable intellectual property and other laws, and (b) Google and/or third parties own all right, title and interest in and to the Application and content, excluding content provided by you,  that may be presented or accessed through the Application, including without limitation all Intellectual Property Rights therein and thereto. "Intellectual Property Rights" means any and all rights existing from time to time under patent law, copyright law, trade secret law, trademark law, unfair competition law, and any and all other proprietary rights, and any and all applications, renewals, extensions and restorations thereof, now or hereafter in force and effect worldwide.  You agree that you will not, and will not allow any third party to, (i) copy, sell, license, distribute, transfer, modify, adapt, translate, prepare derivative works from, decompile, reverse engineer, disassemble or otherwise attempt to derive source code from the Application or content that may be presented or accessed through the Application for any purpose, unless otherwise permitted, (ii) take any action to circumvent or defeat the security or content usage rules provided, deployed or enforced by any functionality (including without limitation digital rights management functionality) contained in the Application, (iii) use the Application to access, copy, transfer, transcode or retransmit content in violation of any law or third party rights, or (iv) remove, obscure, or alter Google's or any third party?s copyright notices, trademarks, or other proprietary rights notices affixed to or contained within or accessed in conjunction with or through the Application.</p>
+<ul>
+    <li><strong>Installation and Use</strong> AndroIRC Team grants you the right to install and use copies of the SOFTWARE PRODUCT on your computer running a validly licensed copy of the operating system for which the SOFTWARE PRODUCT was designed [Android].</li>
+    <li><strong>Backup Copies</strong> You may also make copies of the SOFTWARE PRODUCT as may be necessary for backup and archival purposes.</li>
+</ul>
 
-    <h2 class="eula">Google terms of service and privacy policy</h2>
+<h2 class="eula">Description of other rights and limitations</h2>
 
-                <ul>
-                    <li>Google's Privacy Policy explains how Google treats your information and protects your privacy when you use the Application.  You agree to the use of your data in accordance with Google?s privacy policies.</li>
-                    <li>The Application may contain features that are used in conjunction with Google?s search and other services.  Accordingly, your use of such features of the Application is also governed by Google?s Terms of Service, Google?s Privacy Policy located at http://www.google.com/privacypolicy.html, as well as any applicable Google Service-specific Terms of Service and Privacy Policy, which may be updated from time to time and without notice.</li>
-                </ul>
+<ul>
+    <li><strong>Maintenance of Copyright Notices</strong> You must not remove or alter any copyright notices on any and all copies of the SOFTWARE PRODUCT.</li>
+    <li><strong>Distribution</strong> You may not distribute registered copies of the SOFTWARE PRODUCT to third parties. Evaluation versions available for download from AndroIRC Team's websites may be freely distributed.</li>
+    <li><strong>Prohibition on Reverse Engineering, Decompilation, and Disassembly</strong> You may not reverse engineer, decompile, or disassemble the SOFTWARE PRODUCT, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation. </li>
+    <li><strong>Rental</strong> You may not rent, lease, or lend the SOFTWARE PRODUCT.
+    <li><strong>Support Services</strong> AndroIRC Team may provide you with support services related to the SOFTWARE PRODUCT ("Support Services"). Any supplemental software code provided to you as part of the Support Services shall be considered part of the SOFTWARE PRODUCT and subject to the terms and conditions of this EULA. </li>
+    <li><strong>Compliance with Applicable Laws</strong> You must comply with all applicable laws regarding use of the SOFTWARE PRODUCT.</li>
+</ul>
 
-                <h2 class="eula">U.S. Government restricted rights</h2>
+<h2 class="eula">Protection of personal information</h2>
+<p>AndroIRC Team may monitor and collect information on your use of the application and error reporting. we will not collect any personal data, i.e. data that can identify you. This collection of data will be anonymous. However, if you want to object to such anonymous collection of data, please disable the option in the application.</p>
 
-                <p>This Application, related materials and documentation have been developed entirely with private funds.  If the user of the Application is an agency, department, employee, or other entity of the United States Government, the use, duplication, reproduction, release, modification, disclosure, or transfer of the Application, including technical data or manuals, is restricted by the terms, conditions and covenants contained in these Terms and Conditions.  In accordance with Federal Acquisition Regulation 12.212 for civilian agencies and Defense Federal Acquisition Regulation Supplement 227.7202 for military agencies, use of the Application is further restricted by these Terms and Conditions.</p>
+<h2 class="eula">Termination</h2>
+<p>Without prejudice to any other rights, AndroIRC Team may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the SOFTWARE PRODUCT in your possession.</p>
 
-                <h2 class="eula">Export Restrictions</h2>
+<h2 class="eula">Copyright</h2>
+<p>All title, including but not limited to copyrights, in and to the SOFTWARE PRODUCT and any copies thereof are owned by AndroIRC Team or its suppliers. All title and intellectual property rights in and to the content which may be accessed through use of the SOFTWARE PRODUCT is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This EULA grants you no rights to use such content. All rights not expressly granted are reserved by AndroIRC Team.</p>
 
-                <p>The Application may be subject to export controls or restrictions by the United States or other countries or territories.  You agree to comply with all applicable U.S. and international export laws and regulations.  These laws include restrictions on destinations, end users, and end use.</p>
+<h2 class="eula">No warranties</h2>
+<p>AndroIRC Team expressly disclaims any warranty for the SOFTWARE PRODUCT. The SOFTWARE PRODUCT is provided 'As Is' without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, noninfringement, or fitness of a particular purpose. AndroIRC Team does not warrant or assume responsibility for the accuracy or completeness of any information, text, graphics, links or other items contained within the SOFTWARE PRODUCT. AndroIRC Team makes no warranties respecting any harm that may be caused by the transmission of a computer virus, worm, time bomb, logic bomb, or other such computer program. AndroIRC Team further expressly disclaims any warranty or representation to Authorized Users or to any third party.</p>
 
-                <h2 class="eula">Termination</h2>
-
-                <p>These Terms and Conditions will continue to apply until terminated by either you or Google as set forth below.  You may terminate these Terms and Conditions at any time by permanently deleting the Application from your mobile device in its entirety.  Your rights automatically and immediately terminate without notice from Google or any Third Party if you fail to comply with any provision of these Terms and Conditions.  In such event, you must immediately delete the Application. </p>
-
-                <h2 class="eula">Indemnity</h2>
-
-                <p>To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from your use of the Application, including your downloading, installation, or use of the Application, or your violation of these Terms and Conditions.</p>
-
-                <h2 class="eula">Disclaimer of warranties</h2>
-
-                <ul>
-                    <li>YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE APPLICATION IS AT YOUR SOLE DISCRETION AND RISK AND THAT THE APPLICATION IS PROVIDED ?AS IS? AND ?AS AVAILABLE? WITHOUT WARRANTY OF ANY KIND.</li>
-                    <li>YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR MOBILE DEVICE, OR OTHER DEVICE, OR LOSS OF DATA THAT RESULTS FROM SUCH USE.</li>
-                    <li>GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT, WITH RESPECT TO THE APPLICATION.</li>
-                    <li>THE APPLICATION IS NOT INTENDED FOR USE IN THE OPERATION OF NUCLEAR FACILITIES, LIFE SUPPORT SYSTEMS, EMERGENCY COMMUNICATIONS, AIRCRAFT NAVIGATION OR COMMUNICATION SYSTEMS, AIR TRAFFIC CONTROL SYSTEMS, OR ANY OTHER ACTIVITIES IN WHICH THE FAILURE OF THE APPLICATION COULD LEAD TO DEATH, PERSONAL INJURY, OR SEVERE PHYSICAL OR ENVIRONMENTAL DAMAGE.</li>
-                </ul>
-
-                <h2 class="eula">Limitation of liability</h2>
-
-                <p>YOU EXPRESSLY UNDERSTAND AND AGREE THAT GOOGLE, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS ARE NOT LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU THROUGH YOUR USE OF THE APPLICATION, INCLUDING ANY LOSS OF DATA OR DAMAGE TO YOUR MOBILE DEVICE, WHETHER OR NOT GOOGLE OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.</p>
-
-                <h2 class="eula">Miscellaneous</h2>
-
-                <ul>
-                    <li>These Terms and Conditions constitute the entire Agreement between you and Google relating to the Application and govern your use of the Application, and completely replace any prior or contemporaneous agreements between you and Google regarding the Application.</li>
-                    <li>The failure of Google to exercise or enforce any right or provision of these Terms and Conditions does not constitute a waiver of such right or provision, which will still be available to Google.</li>
-                    <li>If any court of law, having the jurisdiction to decide on this matter, rules that any provision of these Terms and Conditions is invalid, then that provision will be removed from the Terms and Conditions without affecting the rest of the Terms and Conditions.  The remaining provisions of these Terms and Conditions will continue to be valid and enforceable.</li>
-                    <li>The rights granted in these Terms and Conditions may not be assigned or transferred by either you or Google without the prior written approval of the other party. Neither you nor Google are permitted to delegate their responsibilities or obligations under these Terms and Conditions without the prior written approval of the other party.</li>
-                    <li>These Terms and Conditions and your relationship with Google under these Terms and Conditions will be governed by the laws of the State of California without regard to its conflict of laws provisions.  You and Google agree to submit to the exclusive jurisdiction of the courts located within the county of Santa Clara, California to resolve any legal matter arising from these Terms and Conditions.  Notwithstanding this, you agree that Google will still be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.</li>
-                </ul>
+<h2 class="eula">Limitation of liability</h2>
+<p>In no event shall AndroIRC Team be liable for any damages (including, without limitation, lost profits, business interruption, or lost information) rising out of 'Authorized Users' use of or inability to use the SOFTWARE PRODUCT, even if AndroIRC Team has been advised of the possibility of such damages. In no event will AndroIRC Team be liable for loss of data or for indirect, special, incidental, consequential (including lost profit), or other damages based in contract, tort or otherwise. AndroIRC Team shall have no liability with respect to the content of the SOFTWARE PRODUCT or any part thereof, including but not limited to errors or omissions contained therein, libel, infringements of rights of publicity, privacy, trademark rights, business interruption, personal injury, loss of privacy, moral rights or the disclosure of confidential information.</p>

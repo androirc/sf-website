@@ -109,11 +109,11 @@
                 <div class="cell">
                     <h2>Other pages</h2>
                     <ul>
-                        <li><a href=""><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> Participate to the last beta</a></li>
-                        <li><a href=""><?php echo image_tag('bug.png', array('class' => 'famfamfam')) ?> Bug tracker website</a></li>
-                        <li><a href=""><?php echo image_tag('feed.png', array('class' => 'famfamfam')) ?> RSS Feed</a></li>
-                        <li><a href=""><?php echo image_tag('coins.png', array('class' => 'famfamfam')) ?> Make a donation</a></li>
-                        <li><a href=""><?php echo image_tag('mail-open.png', array('class' => 'famfamfam')) ?> Contact us</a></li>
+                        <li><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> <a href="">Participate to the last beta</a></li>
+                        <li><?php echo image_tag('bug.png', array('class' => 'famfamfam')) ?> <a href="">Bug tracker website</a></li>
+                        <li><?php echo image_tag('feed.png', array('class' => 'famfamfam')) ?> <a href="">RSS Feed</a></li>
+                        <li><?php echo image_tag('coins.png', array('class' => 'famfamfam')) ?> <a href="">Make a donation</a></li>
+                        <li><?php echo image_tag('mail-open.png', array('class' => 'famfamfam')) ?> <a href="">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="cell">

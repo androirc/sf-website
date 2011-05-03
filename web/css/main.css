@@ -45,6 +45,10 @@ a:hover {
     text-decoration: underline; 
 }
 
+strong {
+    font-weight: bold;
+}
+
 /* Global design */
 
 #up {
@@ -137,6 +141,7 @@ a:hover {
 /* Footer */
 
 #footer {
+    margin-top: 15px;
     background: none repeat scroll 0 0 #EEEEEE;
     left: 0;
     position: absolute;
@@ -147,7 +152,7 @@ a:hover {
     color: #777777;
     display: table;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
 
 }
 
