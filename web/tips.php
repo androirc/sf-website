@@ -1,69 +1,14 @@
 ﻿<?php
 
-require_once 'includes/sqlmanager.class.php';
-$db = new SQLManager();
+$lang = $_GET['lang'];
+$date = $_GET['date'];
 
-$messages = array(
-                '01/01' => array(
-                                'fr' => 'Bonne année :o) !',
-                                'en' => 'Happy new year to you !'
-                 ),
-                '14/02' => array(
-                                'fr' => 'Bonne Saint-Valentin !',
-                                'en' => 'Want to be my valentine? <3'
-                 ),
-                '27/02' => array(
-                                'fr' => 'C\'est l\'anniversaire de AndroIRC aujourd\'hui ! Ca se fête non ? <:o) <b>BON ANNIVERAIRE !</b>',
-                                'en' => 'It\'s AndroIRC\'s birthday today! <b>HAPPY BIRTHDAY!</b>'
-                 ),
-                '17/03' => array(
-                                'fr' => 'C\'est le moment de porter du vert ! Et oui, c\'est la fête de la Saint Patrick !',
-                                'en' => 'It\'s St. Patrick\'s day, time to get some booze!'
-                 ),
-                '17/03' => array(
-                                'fr' => 'Farce ou friandise ?',
-                                'en' => 'Trick or treat?'
-                 ),
-                 '24/12' => array(
-                                'fr' => 'Nous vous souhaitons un joyeux Noël !',
-                                'en' => 'We wish you a merry christmas... *sings*'
-                 ),
-                 '25/12' => array(
-                                'fr' => 'Nous vous souhaitons un joyeux Noël !',
-                                'en' => 'We wish you a merry christmas... *sings*'
-                 ),
-                 '26/12' => array(
-                                'fr' => 'Nous vous souhaitons un joyeux Noël !',
-                                'en' => 'We wish you a merry christmas... *sings*'
-                 )
-);
-       
+$url = '/tip/' . $lang;
 
-if (isset($_GET['lang']))
-{
-    $lang = 'en';
-
-    if ($_GET['lang'] == 'fr')
-        $lang = 'fr';
-        
-    if (isset($_GET['date']))
-    {
-        list($years, $months, $days) = explode('-', $_GET['date']);
-        
-        $key =  $days . '/' . $months;
-        
-        if (array_key_exists($key, $messages))
-        {    
-            echo $messages[$key][$lang];
-            return;
-        }
-    }
-    
-    $sql = "SELECT tipsText FROM andro_tips WHERE tipsLang='$lang' ORDER BY RAND() LIMIT 0,1";
-    $query = $db->query($sql);
-    $data = mysql_fetch_object($query);
-
-    echo $data->tipsText;
+if ($date) {
+    $url .= '/' . $date;
 }
 
-?>
+header('Status: 301 Moved Permanently', false, 301);   
+header('Location: ' . $url);   
+

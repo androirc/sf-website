@@ -1,0 +1,1 @@
+<?php echo $tip->getContent() ?>

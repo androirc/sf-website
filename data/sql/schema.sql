@@ -4,7 +4,7 @@ CREATE TABLE androirc_beta_release (id BIGINT AUTO_INCREMENT, version VARCHAR(10
 CREATE TABLE androirc_crash_report (id BIGINT AUTO_INCREMENT, phone_model VARCHAR(200), android_version VARCHAR(200), thread_name VARCHAR(200), error_message LONGTEXT, callstack LONGTEXT, androirc_version VARCHAR(200), created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE androirc_quick_start (id BIGINT AUTO_INCREMENT, language VARCHAR(2) NOT NULL, version_min VARCHAR(20) NOT NULL, version_max VARCHAR(20) NOT NULL, content LONGTEXT NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE androirc_tip (id BIGINT AUTO_INCREMENT, language VARCHAR(2) NOT NULL, content LONGTEXT NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE androirc_tip_holiday (id BIGINT AUTO_INCREMENT, language VARCHAR(2) NOT NULL, date_start DATE NOT NULL, date_end DATE NOT NULL, content LONGTEXT, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE androirc_tip_holiday (id BIGINT AUTO_INCREMENT, language VARCHAR(2) NOT NULL, date DATE NOT NULL, content LONGTEXT, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_forgot_password (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, unique_key VARCHAR(255), expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group (id BIGINT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group_permission (group_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(group_id, permission_id)) ENGINE = INNODB;

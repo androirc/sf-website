@@ -10,23 +10,26 @@
  * file that was distributed with this source code.
  */
 
-class quickstartActions extends sfActions
+class tipActions extends sfActions
 {
     public function executeIndex(sfWebRequest $request)
     {
         $this->setLayout(false);
         sfConfig::set('sf_web_debug', false);
         
-        $this->content = null;
+        $lang = $request->getParameter('lang');
+        $date = $request->getParameter('date');
         
-        $lang = $request->getParameter('lang', 'en');
-        $version = $request->getParameter('version');
+        $this->tip = null;
         
-        if ($version)
-        {
-            $qst = QuickStartTable::getInstance();
-            
-            $this->content = $qst->getQuickStart($version, $lang);
+        if ($date) {
+            $tht = TipHolidayTable::getInstance();
+            $this->tip = $tht->getTip($date, $lang);
+        }
+        
+        if (!$this->tip) {
+            $tt = TipTable::getInstance();
+            $this->tip = $tt->getTip($lang);
         }
     }
 }

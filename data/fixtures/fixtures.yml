@@ -1,18 +1,56 @@
-# # Populate this file with data to be loaded by your ORM's *:data-load task.
-# # You can create multiple files in this directory (i.e. 010_users.yml,
-# # 020_articles.yml, etc) which will be loaded in alphabetical order.
-# # 
-# # See documentation for your ORM's *:data-load task for more information.
-# 
-# User:
-#   fabien:
-#     username: fabien
-#     password: changeme
-#     name:     Fabien Potencier
-#     email:    fabien.potencier@symfony-project.com
-#   kris:
-#     username: Kris.Wallsmith
-#     password: changeme
-#     name:     Kris Wallsmith
-#     email:    kris.wallsmith@symfony-project.com
-        
+sfGuardUser:
+  sgu_admin:
+    username: admin
+    password: adm456A
+    is_super_admin: true
+    
+TipHoliday:
+  bonnee_annee_en:
+    language:       en
+    date:           2011-01-01T
+    content:        Happy new year to you !
+  bonne_annee_fr:
+    language:       fr
+    date:           2011-01-01T
+    content:        Bonne année :o) !
+  st_valentin_en:
+    language:       en
+    date:           2011-02-14T
+    content:        Want to be my valentine? <3
+  st_valentin_fr:
+    language:       fr
+    date:           2011-02-14T
+    content:        Bonne Saint-Valentin !
+  anniversaire_en:
+    language:       en
+    date:           2011-02-27T
+    content:        It's AndroIRC's birthday today! <b>HAPPY BIRTHDAY!</b>
+  anniversaire_fr:
+    language:       fr
+    date:           2011-02-27T
+    content:        C'est l'anniversaire de AndroIRC aujourd'hui ! Ca se fête non ? <:o) <b>BON ANNIVERAIRE !</b>
+  st_patrick_en:
+    language:       en
+    date:           2011-03-17T
+    content:        It's St. Patrick's day, time to get some booze!
+  st_patrick_fr:
+    language:       fr
+    date:           2011-03-17T
+    content:        C'est le moment de porter du vert ! Et oui, c'est la fête de la Saint Patrick !
+  halloween_en:
+    language:       en
+    date:           2011-10-31T
+    content:        Trick or treat?
+  halloween_fr:
+    language:       fr
+    date:           2011-10-31T
+    content:        Farce ou friandise ?
+  noel_en:
+    language:       en
+    date:           2011-12-25T
+    content:        We wish you a merry christmas... *sings*
+  noel_fr:
+    language:       fr
+    date:           2011-12-25T
+    content:        Nous vous souhaitons un joyeux Noël !
+  

@@ -40,3 +40,11 @@ quickstart:
   param: { module: quickstart, action: index }
   options:
     segment_separators: [/]
+    
+tip:
+  url: /tip/:lang/:date
+  param: { module: tip, action: index }
+  
+tip_without_date:
+  url: /tip/:lang
+  param: { module: tip, action: index }

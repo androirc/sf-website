@@ -7,20 +7,17 @@
  * 
  * @property integer $id
  * @property string $language
- * @property date $date_start
- * @property date $date_end
+ * @property date $date
  * @property clob $content
  * 
- * @method integer    getId()         Returns the current record's "id" value
- * @method string     getLanguage()   Returns the current record's "language" value
- * @method date       getDateStart()  Returns the current record's "date_start" value
- * @method date       getDateEnd()    Returns the current record's "date_end" value
- * @method clob       getContent()    Returns the current record's "content" value
- * @method TipHoliday setId()         Sets the current record's "id" value
- * @method TipHoliday setLanguage()   Sets the current record's "language" value
- * @method TipHoliday setDateStart()  Sets the current record's "date_start" value
- * @method TipHoliday setDateEnd()    Sets the current record's "date_end" value
- * @method TipHoliday setContent()    Sets the current record's "content" value
+ * @method integer    getId()       Returns the current record's "id" value
+ * @method string     getLanguage() Returns the current record's "language" value
+ * @method date       getDate()     Returns the current record's "date" value
+ * @method clob       getContent()  Returns the current record's "content" value
+ * @method TipHoliday setId()       Sets the current record's "id" value
+ * @method TipHoliday setLanguage() Sets the current record's "language" value
+ * @method TipHoliday setDate()     Sets the current record's "date" value
+ * @method TipHoliday setContent()  Sets the current record's "content" value
  * 
  * @package    androirc
  * @subpackage model
@@ -42,11 +39,7 @@ abstract class BaseTipHoliday extends sfDoctrineRecord
              'notnull' => true,
              'length' => 2,
              ));
-        $this->hasColumn('date_start', 'date', null, array(
-             'type' => 'date',
-             'notnull' => true,
-             ));
-        $this->hasColumn('date_end', 'date', null, array(
+        $this->hasColumn('date', 'date', null, array(
              'type' => 'date',
              'notnull' => true,
              ));
