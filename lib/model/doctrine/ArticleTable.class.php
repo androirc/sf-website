@@ -20,9 +20,9 @@ class ArticleTable extends Doctrine_Table
     public function getLastArticles($limit = 10)
     {
         return $this->createQuery('a')
-                     ->where('a.is_visible=1')
-                     ->orderBy('id DESC')
-                     ->limit($limit)
-                     ->execute();
+                    ->where('a.is_visible = ?', true)
+                    ->orderBy('id desc')
+                    ->limit($limit)
+                    ->execute();
     }
 }

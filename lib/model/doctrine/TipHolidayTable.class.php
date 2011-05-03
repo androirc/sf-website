@@ -24,7 +24,7 @@ class TipHolidayTable extends Doctrine_Table
         }
         
         $q = $this->createQuery('t')
-                  ->where('t.lang = ?', $lang)
+                  ->where('t.language = ?', $lang)
                   ->andWhere('t.date_start <= ?', $date)
                   ->andWhere('t.date_end >= ?', $date);
         
