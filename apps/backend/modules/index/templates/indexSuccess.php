@@ -1,0 +1,1 @@
+Welcome <?php echo $sf_user->getUsername() ?> !

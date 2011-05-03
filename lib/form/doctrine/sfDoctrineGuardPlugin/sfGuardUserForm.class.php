@@ -14,5 +14,6 @@ class sfGuardUserForm extends PluginsfGuardUserForm
 {
     public function configure()
     {
+        unset($this['firstname'], $this['lastname']);
     }
 }

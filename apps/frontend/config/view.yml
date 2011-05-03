@@ -13,7 +13,7 @@ default:
     language:     en
     robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [design.css, front.css, form.css]
 
   javascripts:    [twitter.js, simpleviewer.js]
 
