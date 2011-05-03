@@ -48,6 +48,15 @@ Tip:
     language:                 { type: string(2), notnull: true }
     content:                  { type: clob, notnull: true }
     
+TipHoliday:
+  tableName: androirc_tip_holiday
+  columns:
+    id:                       { type: integer, primary: true, autoincrement: true }
+    language:                 { type: string(2), notnull: true }
+    date_start:               { type: date, notnull: true }
+    date_end:                 { type: date }
+    content:                  { type: clob }
+    
 QuickStart:
   tableName: androirc_quick_start
   columns:
