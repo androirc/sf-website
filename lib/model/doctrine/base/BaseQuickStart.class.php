@@ -7,20 +7,20 @@
  * 
  * @property integer $id
  * @property string $language
- * @property string $verion_min
- * @property string $verion_max
+ * @property string $version_min
+ * @property string $version_max
  * @property clob $content
  * 
- * @method integer    getId()         Returns the current record's "id" value
- * @method string     getLanguage()   Returns the current record's "language" value
- * @method string     getVerionMin()  Returns the current record's "verion_min" value
- * @method string     getVerionMax()  Returns the current record's "verion_max" value
- * @method clob       getContent()    Returns the current record's "content" value
- * @method QuickStart setId()         Sets the current record's "id" value
- * @method QuickStart setLanguage()   Sets the current record's "language" value
- * @method QuickStart setVerionMin()  Sets the current record's "verion_min" value
- * @method QuickStart setVerionMax()  Sets the current record's "verion_max" value
- * @method QuickStart setContent()    Sets the current record's "content" value
+ * @method integer    getId()          Returns the current record's "id" value
+ * @method string     getLanguage()    Returns the current record's "language" value
+ * @method string     getVersionMin()  Returns the current record's "version_min" value
+ * @method string     getVersionMax()  Returns the current record's "version_max" value
+ * @method clob       getContent()     Returns the current record's "content" value
+ * @method QuickStart setId()          Sets the current record's "id" value
+ * @method QuickStart setLanguage()    Sets the current record's "language" value
+ * @method QuickStart setVersionMin()  Sets the current record's "version_min" value
+ * @method QuickStart setVersionMax()  Sets the current record's "version_max" value
+ * @method QuickStart setContent()     Sets the current record's "content" value
  * 
  * @package    androirc
  * @subpackage model
@@ -42,12 +42,12 @@ abstract class BaseQuickStart extends sfDoctrineRecord
              'notnull' => true,
              'length' => 2,
              ));
-        $this->hasColumn('verion_min', 'string', 20, array(
+        $this->hasColumn('version_min', 'string', 20, array(
              'type' => 'string',
              'notnull' => true,
              'length' => 20,
              ));
-        $this->hasColumn('verion_max', 'string', 20, array(
+        $this->hasColumn('version_max', 'string', 20, array(
              'type' => 'string',
              'notnull' => true,
              'length' => 20,

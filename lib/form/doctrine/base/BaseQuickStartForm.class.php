@@ -15,19 +15,19 @@ abstract class BaseQuickStartForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'language'   => new sfWidgetFormInputText(),
-      'verion_min' => new sfWidgetFormInputText(),
-      'verion_max' => new sfWidgetFormInputText(),
-      'content'    => new sfWidgetFormTextarea(),
+      'id'          => new sfWidgetFormInputHidden(),
+      'language'    => new sfWidgetFormInputText(),
+      'version_min' => new sfWidgetFormInputText(),
+      'version_max' => new sfWidgetFormInputText(),
+      'content'     => new sfWidgetFormTextarea(),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'language'   => new sfValidatorString(array('max_length' => 2)),
-      'verion_min' => new sfValidatorString(array('max_length' => 20)),
-      'verion_max' => new sfValidatorString(array('max_length' => 20)),
-      'content'    => new sfValidatorString(),
+      'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'language'    => new sfValidatorString(array('max_length' => 2)),
+      'version_min' => new sfValidatorString(array('max_length' => 20)),
+      'version_max' => new sfValidatorString(array('max_length' => 20)),
+      'content'     => new sfValidatorString(),
     ));
 
     $this->widgetSchema->setNameFormat('quick_start[%s]');

@@ -13,17 +13,17 @@ abstract class BaseQuickStartFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'language'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'verion_min' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'verion_max' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'content'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'language'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'version_min' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'version_max' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'content'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'language'   => new sfValidatorPass(array('required' => false)),
-      'verion_min' => new sfValidatorPass(array('required' => false)),
-      'verion_max' => new sfValidatorPass(array('required' => false)),
-      'content'    => new sfValidatorPass(array('required' => false)),
+      'language'    => new sfValidatorPass(array('required' => false)),
+      'version_min' => new sfValidatorPass(array('required' => false)),
+      'version_max' => new sfValidatorPass(array('required' => false)),
+      'content'     => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('quick_start_filters[%s]');
@@ -43,11 +43,11 @@ abstract class BaseQuickStartFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'         => 'Number',
-      'language'   => 'Text',
-      'verion_min' => 'Text',
-      'verion_max' => 'Text',
-      'content'    => 'Text',
+      'id'          => 'Number',
+      'language'    => 'Text',
+      'version_min' => 'Text',
+      'version_max' => 'Text',
+      'content'     => 'Text',
     );
   }
 }

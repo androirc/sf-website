@@ -62,8 +62,8 @@ QuickStart:
   columns:
     id:                       { type: integer, primary: true, autoincrement: true }
     language:                 { type: string(2), notnull: true }
-    verion_min:               { type: string(20), notnull: true }
-    verion_max:               { type: string(20), notnull: true }
+    version_min:              { type: string(20), notnull: true }
+    version_max:              { type: string(20), notnull: true }
     content:                  { type: clob, notnull: true }
     
 CrashReport:
