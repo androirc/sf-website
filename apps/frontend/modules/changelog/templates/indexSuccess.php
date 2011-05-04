@@ -21,7 +21,17 @@
     </head>
     <body>
         <?php if ($changelog): ?>
-            <?php var_dump($changelog->getChanges()) ?>
+            <h1>Changelog v<?php echo $changelog->getVersion() ?></h1>
+            <ul>
+                <?php foreach ($changelog->getChanges() as $change): ?>
+                    <li>
+                        <?php if ($change['key'] != ''): ?>
+                            <strong><?php echo $change['key'] ?></strong>: 
+                        <?php endif ?>
+                        <?php echo $change['content'] ?>
+                    </li>
+                <?php endforeach ?>
+            </ul>
         <?php else: ?>
             No change log for this version
         <?php endif ?>
