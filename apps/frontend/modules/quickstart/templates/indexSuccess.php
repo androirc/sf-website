@@ -22,10 +22,10 @@
         </style>
     </head>
     <body>
-        <?php if (!$content): ?>
+        <?php if (!$quickstart): ?>
             No help...yet!
         <?php else: ?>
-            <?php echo $content ?>
+            <?php echo $quickstart->getContent() ?>
         <?php endif ?>
     </body>
 </html>

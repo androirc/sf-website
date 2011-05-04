@@ -13,7 +13,9 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields:
+        version_min:      { help: The minimum version (e.g. 2.3.1) }
+        version_max:      { help: The maximum version (e.g. 2.3.1) }
       list:
         title: Quickstarts
         display: [language, version_min, version_max]

@@ -17,7 +17,7 @@ class quickstartActions extends sfActions
         $this->setLayout(false);
         sfConfig::set('sf_web_debug', false);
         
-        $this->content = null;
+        $this->quickstart = null;
         
         $lang = $request->getParameter('lang', 'en');
         $version = $request->getParameter('version');
@@ -26,7 +26,7 @@ class quickstartActions extends sfActions
         {
             $qst = QuickStartTable::getInstance();
             
-            $this->content = $qst->getQuickStart($version, $lang);
+            $this->quickstart = $qst->getQuickStart($version, $lang);
         }
     }
 }

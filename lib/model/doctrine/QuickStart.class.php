@@ -16,6 +16,10 @@ class QuickStart extends BaseQuickStart
     {
         $version = str_replace('.', '', $version);
         
+        if (0 == $version) {
+            return 0;
+        }
+        
         while (strlen($version) != 3) {
             $version *= 10;
         }

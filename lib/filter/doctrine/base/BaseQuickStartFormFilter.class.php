@@ -13,14 +13,14 @@ abstract class BaseQuickStartFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'language'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'language'    => new sfWidgetFormChoice(array('choices' => array('' => '', 'fr' => 'fr', 'en' => 'en'))),
       'version_min' => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'version_max' => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'content'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'language'    => new sfValidatorPass(array('required' => false)),
+      'language'    => new sfValidatorChoice(array('required' => false, 'choices' => array('fr' => 'fr', 'en' => 'en'))),
       'version_min' => new sfValidatorPass(array('required' => false)),
       'version_max' => new sfValidatorPass(array('required' => false)),
       'content'     => new sfValidatorPass(array('required' => false)),
@@ -44,7 +44,7 @@ abstract class BaseQuickStartFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'          => 'Number',
-      'language'    => 'Text',
+      'language'    => 'Enum',
       'version_min' => 'Text',
       'version_max' => 'Text',
       'content'     => 'Text',

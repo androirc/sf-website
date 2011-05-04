@@ -18,9 +18,9 @@ class QuickStartTable extends Doctrine_Table
     }
     
     public function getQuickStart($version, $lang = 'en')
-    {
+    {   
         $version = QuickStart::versionToInteger($version);
-        
+ 
         $quickstarts = $this->createQuery('q')
                             ->where('q.language = ?', $lang)
                             ->execute();
@@ -35,7 +35,7 @@ class QuickStartTable extends Doctrine_Table
             $versionMax = QuickStart::versionToInteger($quickstart->getVersionMax());
             
             if ($versionMin <= $version && $version <= $versionMax) {
-                return $quickstart->getContent();
+                return $quickstart;
             }
         }
         
