@@ -48,3 +48,9 @@ tip:
 tip_without_date:
   url: /tip/:lang
   param: { module: tip, action: index }
+  
+changelog:
+  url: /changelog/:version
+  param: { module: changelog, action: index }
+  options:
+    segment_separators: [/]

@@ -84,5 +84,5 @@ ChangeLog:
     Timestampable: ~
   columns:
     id:                       { type: integer, primary: true, autoincrement: true }
-    version:                  { type: string(50), notnull: true }
+    version:                  { type: string(50), unique: true, notnull: true }
     file:                     { type: string(75), notnull: true }

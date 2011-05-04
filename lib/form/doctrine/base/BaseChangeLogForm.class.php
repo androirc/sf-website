@@ -30,6 +30,10 @@ abstract class BaseChangeLogForm extends BaseFormDoctrine
       'updated_at' => new sfValidatorDateTime(),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'ChangeLog', 'column' => array('version')))
+    );
+
     $this->widgetSchema->setNameFormat('change_log[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

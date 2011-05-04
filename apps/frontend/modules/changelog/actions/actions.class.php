@@ -1,22 +1,28 @@
 <?php
 
-/**
- * changelog actions.
+/*
+ * This file is part of the AndroIRC website.
  *
- * @package    androirc
- * @subpackage changelog
- * @author     MewT
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * (c) 2010-2011 Julien Brochet <mewt@androirc.com>
+ * (c) 2010-2011 Sébastien Brochet <blinkseb@androirc.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 class changelogActions extends sfActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->forward('default', 'module');
-  }
+    public function executeIndex(sfWebRequest $request)
+    {
+        $this->setLayout(false);
+        sfConfig::set('sf_web_debug', false);
+        
+        $version = $request->getParameter('version');
+        
+        $this->forward404Unless($version);
+        
+        $clt = ChangeLogTable::getInstance();
+        
+        $this->changelog = $clt->findOneBy('version', $version);
+    }
 }
