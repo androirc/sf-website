@@ -6,11 +6,15 @@
         <p><?php echo auto_link_text(esc_raw($a->getContent())) ?></p>
         <div>
             <div class="share">
-                <div class="addthis_toolbox addthis_default_style " addthis:url="<?php echo url_for('article_show', $a, true) ?>" addthis:title="<?php echo $a->getTitle() ?>">
-                    <a class="addthis_button_tweet"></a>
+                <div class="addthis_toolbox addthis_default_style" 
+                     addthis:url="<?php echo url_for('article_show', $a, true) ?>"
+                     addthis:title="<?php echo $a->getTitle() ?> - AndroIRC (Android IRC Client)">
+
                     <a class="addthis_counter addthis_pill_style"></a>
+                    <a class="addthis_button_tweet"></a>
+                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+
                 </div>
-                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
             </div>
             <?php if ($showComments) : ?>
                 <div class="comments">

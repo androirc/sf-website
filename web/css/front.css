@@ -95,12 +95,23 @@
 
 .post .entry {
 	margin-bottom: 10px;
-	padding: 10px 15px;
+	padding: 0 15px 10px 15px;
 }
 
 .post {
     margin-bottom: 10px;
 }
+
+.addthis_counter {
+    margin-right: 10px;
+}
+
+/* Donate page */
+
+#donate {
+    margin-top: 10px;
+}
+
 
 /* Others */
 

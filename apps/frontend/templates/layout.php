@@ -7,7 +7,8 @@
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
         <?php include_stylesheets() ?>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
         <?php include_javascripts() ?>
     </head>
     <body>
@@ -133,6 +134,21 @@
                 var pageTracker = _gat._getTracker("UA-133630-2");
                 pageTracker._trackPageview();
             } catch(err) {}
+        </script>
+        <script type="text/javascript">
+            var addthis_config = {
+                data_track_clickback : true,
+                data_ga_tracker: pageTracker,
+                ui_click: true,
+                ui_cobrand: 'AndroIRC'
+                
+            }
+            var addthis_share = {
+                templates: {
+                    twitter: '{{title}} - {{url}} (from @androirc)'
+                },
+                title: 'test'
+            }
         </script>
     </body>
 </html>

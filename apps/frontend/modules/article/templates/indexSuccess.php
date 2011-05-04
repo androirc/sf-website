@@ -36,4 +36,3 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
