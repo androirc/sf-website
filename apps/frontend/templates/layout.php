@@ -7,6 +7,7 @@
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
         <?php include_stylesheets() ?>
+        <link href="<?php echo url_for('@article_atom', true) ?>" type="application/atom+xml" rel="alternate" title="Last articles" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
         <?php include_javascripts() ?>
@@ -112,7 +113,7 @@
                     <ul>
                         <li><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@beta') ?>">Participate to the last beta</a></li>
                         <li><?php echo image_tag('bug.png', array('class' => 'famfamfam')) ?> <a href="http://bugs.androirc.com/">Bug tracker website</a></li>
-                        <li><?php echo image_tag('feed.png', array('class' => 'famfamfam')) ?> <a href="">RSS Feed</a></li>
+                        <li><?php echo image_tag('feed.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@article_atom', true) ?>">RSS Feed</a></li>
                         <li><?php echo image_tag('coins.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@donate') ?>">Make a donation</a></li>
                         <li><?php echo image_tag('mail-open.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@contact') ?>">Contact us</a></li>
                     </ul>
