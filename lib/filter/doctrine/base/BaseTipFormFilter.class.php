@@ -13,12 +13,12 @@ abstract class BaseTipFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'language' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'language' => new sfWidgetFormChoice(array('choices' => array('' => '', 'fr' => 'fr', 'en' => 'en'))),
       'content'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'language' => new sfValidatorPass(array('required' => false)),
+      'language' => new sfValidatorChoice(array('required' => false, 'choices' => array('fr' => 'fr', 'en' => 'en'))),
       'content'  => new sfValidatorPass(array('required' => false)),
     ));
 
@@ -40,7 +40,7 @@ abstract class BaseTipFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'       => 'Number',
-      'language' => 'Text',
+      'language' => 'Enum',
       'content'  => 'Text',
     );
   }

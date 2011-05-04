@@ -16,14 +16,14 @@ abstract class BaseTipHolidayForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'       => new sfWidgetFormInputHidden(),
-      'language' => new sfWidgetFormInputText(),
+      'language' => new sfWidgetFormChoice(array('choices' => array('fr' => 'fr', 'en' => 'en'))),
       'date'     => new sfWidgetFormDate(),
       'content'  => new sfWidgetFormTextarea(),
     ));
 
     $this->setValidators(array(
       'id'       => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'language' => new sfValidatorString(array('max_length' => 2)),
+      'language' => new sfValidatorChoice(array('choices' => array(0 => 'fr', 1 => 'en'), 'required' => false)),
       'date'     => new sfValidatorDate(),
       'content'  => new sfValidatorString(array('required' => false)),
     ));

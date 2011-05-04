@@ -13,13 +13,13 @@ abstract class BaseTipHolidayFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'language' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'language' => new sfWidgetFormChoice(array('choices' => array('' => '', 'fr' => 'fr', 'en' => 'en'))),
       'date'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'content'  => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'language' => new sfValidatorPass(array('required' => false)),
+      'language' => new sfValidatorChoice(array('required' => false, 'choices' => array('fr' => 'fr', 'en' => 'en'))),
       'date'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'content'  => new sfValidatorPass(array('required' => false)),
     ));
@@ -42,7 +42,7 @@ abstract class BaseTipHolidayFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'       => 'Number',
-      'language' => 'Text',
+      'language' => 'Enum',
       'date'     => 'Date',
       'content'  => 'Text',
     );

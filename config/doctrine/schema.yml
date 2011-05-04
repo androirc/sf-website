@@ -45,14 +45,14 @@ Tip:
   tableName: androirc_tip
   columns:
     id:                       { type: integer, primary: true, autoincrement: true }
-    language:                 { type: string(2), notnull: true }
+    language:                 { type: enum, values: [fr, en] }
     content:                  { type: clob, notnull: true }
     
 TipHoliday:
   tableName: androirc_tip_holiday
   columns:
     id:                       { type: integer, primary: true, autoincrement: true }
-    language:                 { type: string(2), notnull: true }
+    language:                 { type: enum, values: [fr, en] }
     date:                     { type: date, notnull: true }
     content:                  { type: clob }
     
@@ -60,7 +60,7 @@ QuickStart:
   tableName: androirc_quick_start
   columns:
     id:                       { type: integer, primary: true, autoincrement: true }
-    language:                 { type: string(2), notnull: true }
+    language:                 { type: enum, values: [fr, en] }
     version_min:              { type: string(20), notnull: true }
     version_max:              { type: string(20), notnull: true }
     content:                  { type: clob, notnull: true }
@@ -78,3 +78,11 @@ CrashReport:
     callstack:                { type: clob }
     androirc_version:         { type: string(200) }
   
+ChangeLog:
+  tableName: androirc_changelog
+  actAs:
+    Timestampable: ~
+  columns:
+    id:                       { type: integer, primary: true, autoincrement: true }
+    version:                  { type: string(50) }
+    file:                     { type: string(75) }
