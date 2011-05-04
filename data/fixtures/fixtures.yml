@@ -17,6 +17,9 @@ sfGuardPermission:
   sgp_can_manage_changelogs:
     name: can_manage_changelogs
     description: ChangeLogs management
+  sgp_can_manage_betas:
+    name: can_manage_betas
+    description: Betas management
     
 sfGuardGroup:
   sgg_reviewer:

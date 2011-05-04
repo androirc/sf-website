@@ -18,16 +18,16 @@ abstract class BaseBetaReleaseForm extends BaseFormDoctrine
       'id'              => new sfWidgetFormInputHidden(),
       'version'         => new sfWidgetFormInputText(),
       'is_downloadable' => new sfWidgetFormInputCheckbox(),
-      'path'            => new sfWidgetFormInputText(),
+      'file'            => new sfWidgetFormInputText(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'version'         => new sfValidatorString(array('max_length' => 100, 'required' => false)),
+      'version'         => new sfValidatorString(array('max_length' => 100)),
       'is_downloadable' => new sfValidatorBoolean(array('required' => false)),
-      'path'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'file'            => new sfValidatorString(array('max_length' => 255)),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
     ));

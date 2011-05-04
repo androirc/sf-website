@@ -8,18 +8,18 @@
  * @property integer $id
  * @property string $version
  * @property boolean $is_downloadable
- * @property string $path
+ * @property string $file
  * @property Doctrine_Collection $Downloads
  * 
  * @method integer             getId()              Returns the current record's "id" value
  * @method string              getVersion()         Returns the current record's "version" value
  * @method boolean             getIsDownloadable()  Returns the current record's "is_downloadable" value
- * @method string              getPath()            Returns the current record's "path" value
+ * @method string              getFile()            Returns the current record's "file" value
  * @method Doctrine_Collection getDownloads()       Returns the current record's "Downloads" collection
  * @method BetaRelease         setId()              Sets the current record's "id" value
  * @method BetaRelease         setVersion()         Sets the current record's "version" value
  * @method BetaRelease         setIsDownloadable()  Sets the current record's "is_downloadable" value
- * @method BetaRelease         setPath()            Sets the current record's "path" value
+ * @method BetaRelease         setFile()            Sets the current record's "file" value
  * @method BetaRelease         setDownloads()       Sets the current record's "Downloads" collection
  * 
  * @package    androirc
@@ -39,14 +39,16 @@ abstract class BaseBetaRelease extends sfDoctrineRecord
              ));
         $this->hasColumn('version', 'string', 100, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 100,
              ));
         $this->hasColumn('is_downloadable', 'boolean', null, array(
              'type' => 'boolean',
              'default' => true,
              ));
-        $this->hasColumn('path', 'string', 255, array(
+        $this->hasColumn('file', 'string', 255, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 255,
              ));
     }

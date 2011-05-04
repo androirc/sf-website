@@ -10,18 +10,10 @@
  * file that was distributed with this source code.
  */
 
-class BetaRelease extends BaseBetaRelease
+class myValidatedFile extends sfValidatedFile
 {
-    private $downloads;
-    
-    public function getDownloads()
+    public function generateFilename()
     {
-        if ($this->downloads) {
-            return $this->downloads;
-        }
-        
-        $bdt = BetaDownloadTable::getInstance();
-        
-        return $this->downloads = $bdt->getDownloadsFromBeta($this);
+        return $this->getOriginalName();
     }
 }

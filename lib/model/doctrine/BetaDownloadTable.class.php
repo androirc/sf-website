@@ -16,4 +16,12 @@ class BetaDownloadTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('BetaDownload');
     }
+    
+    public function getDownloadsFromBeta(BetaRelease $beta)
+    {
+        $downloads = $this->createQuery('b')
+                          ->where('b.beta_release_id = ?', $beta->getId());
+        
+        return count($downloads);
+    }
 }

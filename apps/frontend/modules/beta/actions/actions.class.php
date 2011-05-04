@@ -36,7 +36,6 @@ class betaActions extends sfActions
         
         $download->save();
         
-        //TODO Rediriger vers le fichier
-        die();
+        $this->redirect('/uploads/betas/' . $beta->getFile());
     }
 }

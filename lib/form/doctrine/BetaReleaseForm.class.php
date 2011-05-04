@@ -14,5 +14,16 @@ class BetaReleaseForm extends BaseBetaReleaseForm
 {
     public function configure()
     {
+        unset($this['created_at'], $this['updated_at']);
+        
+        $this->widgetSchema['file'] = new sfWidgetFormInputFile(array (
+            'label' => 'File'
+        ));
+                
+        $this->validatorSchema['file'] = new sfValidatorFile(array(
+            'required' => true,
+            'path' => sfConfig::get('sf_upload_dir') . '/betas',
+            'validated_file_class' => 'myValidatedFile',            
+        ));
     }
 }
