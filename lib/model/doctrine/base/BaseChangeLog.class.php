@@ -33,10 +33,12 @@ abstract class BaseChangeLog extends sfDoctrineRecord
              ));
         $this->hasColumn('version', 'string', 50, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 50,
              ));
         $this->hasColumn('file', 'string', 75, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 75,
              ));
     }

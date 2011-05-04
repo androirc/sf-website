@@ -13,8 +13,8 @@ abstract class BaseChangeLogFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'version'    => new sfWidgetFormFilterInput(),
-      'file'       => new sfWidgetFormFilterInput(),
+      'version'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'file'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));

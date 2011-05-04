@@ -1,3 +1,12 @@
+change_log:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ChangeLog
+    module:               changelog
+    prefix_path:          /changelog
+    column:               id
+    with_wildcard_routes: true
+
 quick_start:
   class: sfDoctrineRouteCollection
   options:

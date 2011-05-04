@@ -14,6 +14,9 @@ sfGuardPermission:
   sgp_can_manage_quickstarts:
     name: can_manage_quickstarts
     description: QuickStarts management
+  sgp_can_manage_changelogs:
+    name: can_manage_changelogs
+    description: ChangeLogs management
     
 sfGuardGroup:
   sgg_reviewer:

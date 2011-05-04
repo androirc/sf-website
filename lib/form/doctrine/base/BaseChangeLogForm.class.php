@@ -24,8 +24,8 @@ abstract class BaseChangeLogForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'version'    => new sfValidatorString(array('max_length' => 50, 'required' => false)),
-      'file'       => new sfValidatorString(array('max_length' => 75, 'required' => false)),
+      'version'    => new sfValidatorString(array('max_length' => 50)),
+      'file'       => new sfValidatorString(array('max_length' => 75)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));
