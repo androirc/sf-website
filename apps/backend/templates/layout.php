@@ -25,7 +25,7 @@
                     <li><?php echo link_to('Articles', 'article/index') ?></li>
                     <li><?php echo link_to('Users', 'sf_guard_user') ?></li>
                     <li><?php echo link_to('Tips', 'article/index') ?></li>
-                    <li><?php echo link_to('Quick Starts', 'article/index') ?></li>
+                    <li><?php echo link_to('Quick Starts', 'quickstart/index') ?></li>
                     <li class="last"><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
                 </ul>
                 <?php endif ?>

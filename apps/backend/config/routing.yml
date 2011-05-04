@@ -1,3 +1,12 @@
+quick_start:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                QuickStart
+    module:               quickstart
+    prefix_path:          /quickstart
+    column:               id
+    with_wildcard_routes: true
+
 article:
   class: sfDoctrineRouteCollection
   options:
