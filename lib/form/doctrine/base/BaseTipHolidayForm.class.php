@@ -25,7 +25,7 @@ abstract class BaseTipHolidayForm extends BaseFormDoctrine
       'id'       => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'language' => new sfValidatorChoice(array('choices' => array(0 => 'fr', 1 => 'en'), 'required' => false)),
       'date'     => new sfValidatorDate(),
-      'content'  => new sfValidatorString(array('required' => false)),
+      'content'  => new sfValidatorString(),
     ));
 
     $this->widgetSchema->setNameFormat('tip_holiday[%s]');

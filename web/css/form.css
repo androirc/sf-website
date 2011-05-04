@@ -13,8 +13,8 @@ input[type=submit], input[type=reset] {
 }
 
 textarea {
-	width:600px;
-	height: 200px;
+	width:400px;
+	height: 100px;
 	display: block;
 	font-family: Arial, Verdana, serif;
 	padding: 7px;

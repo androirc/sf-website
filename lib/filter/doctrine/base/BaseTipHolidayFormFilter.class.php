@@ -15,7 +15,7 @@ abstract class BaseTipHolidayFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'language' => new sfWidgetFormChoice(array('choices' => array('' => '', 'fr' => 'fr', 'en' => 'en'))),
       'date'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'content'  => new sfWidgetFormFilterInput(),
+      'content'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(

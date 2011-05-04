@@ -1,0 +1,1 @@
+<?php echo $tip_holiday->getDateTimeObject('date')->format('m/d')?>

@@ -21,12 +21,13 @@
             <div id="menu">
                 <?php if($sf_user->isAuthenticated()): ?>
                 <ul>
-                    <li><?php echo link_to('Articles', 'article/index') ?></li>
-                    <li><?php echo link_to('Users', 'sf_guard_user') ?></li>
-                    <li><?php echo link_to('Betas', 'beta/index') ?></li>
-                    <li><?php echo link_to('Tips', 'article/index') ?></li>
-                    <li><?php echo link_to('Quick Starts', 'quickstart/index') ?></li>
-                    <li><?php echo link_to('Change Logs', 'changelog/index') ?></li>
+                    <li><?php echo link_to('Article', 'article/index') ?></li>
+                    <li><?php echo link_to('User', 'sf_guard_user') ?></li>
+                    <li><?php echo link_to('Beta', 'beta/index') ?></li>
+                    <li><?php echo link_to('Tip', 'tip/index') ?></li>
+                    <li><?php echo link_to('Holiday', 'tip/index') ?></li>
+                    <li><?php echo link_to('Quick Start', 'quickstart/index') ?></li>
+                    <li><?php echo link_to('Change Log', 'changelog/index') ?></li>
                     <li class="last"><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
                 </ul>
                 <?php endif ?>

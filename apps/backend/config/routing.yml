@@ -1,3 +1,21 @@
+tip_holiday:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TipHoliday
+    module:               holiday
+    prefix_path:          /holiday
+    column:               id
+    with_wildcard_routes: true
+
+tip:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Tip
+    module:               tip
+    prefix_path:          /tip
+    column:               id
+    with_wildcard_routes: true
+
 beta_release:
   class: sfDoctrineRouteCollection
   options:

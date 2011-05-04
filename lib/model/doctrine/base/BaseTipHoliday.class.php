@@ -48,6 +48,7 @@ abstract class BaseTipHoliday extends sfDoctrineRecord
              ));
         $this->hasColumn('content', 'clob', null, array(
              'type' => 'clob',
+             'notnull' => true,
              ));
     }
 

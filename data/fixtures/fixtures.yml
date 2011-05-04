@@ -2,6 +2,7 @@ sfGuardUser:
   sgu_admin:
     username: admin
     password: adm456A
+    email_address: contact@androirc.com
     is_super_admin: true
     
 sfGuardPermission:
@@ -94,3 +95,101 @@ QuickStart:
       <h1>Rejoindre un salon</h1>
       <p>Une fois la connexion réussie, vous devez rejoindre un salon pour pouvoir commencer à discuter. Deux manières : soit dans le menu, <strong>Action</strong>, <strong>Rejoindre un salon</strong> et indiquez <strong>#Dialogues</strong> (pour EpiKnet) ou alors tapez directement dans la barre <strong>/join #dialogues</strong>. Il est bien sûr possible de rejoindre plusieurs salons sur plusieurs serveurs différents ! Vous pouvez à tout moment voir et naviguer entre vos salons via le menu, rubrique <strong>Fenêtres</strong>.</p>
       <strong>Pour plus d'informations</strong> : <a href="http://wiki.androirc.com">wiki</a> [en]
+      
+Tip:
+  tip_1:
+    language:     fr
+    content:      "Vous pouvez faire un don pour supporter AndroIRC via le lien suivant : www.androirc.com/donate"
+  tip_2:
+    language:     fr
+    content:      "Vous pouvez suivre rapidement AndroIRC grâce à son Twitter ! twitter.com/androirc"
+  tip_3:
+    language:     fr
+    content:      "Vous pouvez vous connecter automatiquement  à un serveur au lancement de AndroIRC"
+  tip_4:
+    language:     fr
+    content:      "Vous pouvez afficher l'heure devant chaque message. (Activable dans les préférences, rubrique 'Divers')"
+  tip_5:
+    language:     fr
+    content:      "Vous pouvez spécifier un pseudonyme différent pour chaque serveur"
+  tip_6:
+    language:     fr
+    content:      "Vous pouvez vous identifier automatiquement à la connexion d'un serveur. (Pour les serveurs utilisant NickServ)"
+  tip_7:
+    language:     fr
+    content:      "En laissant appuyé sur un message, celui-ci est directement copié dans le presse-papier"
+  tip_8:
+    language:     fr
+    content:      "Vous pouvez naviguer facilement entre vos salons en appuyant légèrement sur l'écran"
+  tip_9:
+    language:     fr
+    content:      "Une double pression sur l'écran affiche la liste des utilisateurs du salon en cours"
+  tip_10:
+    language:     fr
+    content:      "Vous pouvez vous tenir au courant de l'évolution de AndroIRC via le site officiel"
+  tip_11:
+    language:     fr
+    content:      "Vous pouvez colorer votre texte facilement en laissant appuyer sur le champ texte et en sélectionnant 'Décorer le texte' dans le menu"
+  tip_12:
+    language:     fr
+    content:      "Il est possible de vous identifier à la connexion grâce au protocole SASL (PLAIN ou BLOWFISH)"
+  tip_13:
+    language:     fr
+    content:      "Il est possible d'enregistrer l'ensemble des conversations automatiquement sur la carte SD ! Regardez dans la partie 'Logs' des préférences"
+  tip_14:
+    language:     fr
+    content:      "Vous pouvez augmenter la taille de la police facilement dans les préférences"
+  tip_15:
+    language:     fr
+    content:      "Il est possible d'ajouter un raccourci sur votre bureau pour vous connecter directement à un serveur en particulier"
+  tip_16:
+    language:     fr
+    content:      "Vous pouvez exécuter vos propres commandes à la connexion d'un serveur"
+  tip_17:
+    language:     fr
+    content:      "Vous pouvez changer de thème pour passer à un plus sombre"
+  tip_18:
+    language:     fr
+    content:      "Un soucis ? Une question ? Regardez le wiki officiel : wiki.androirc.com"
+  tip_19:
+    language:     fr
+    content:      "Devenez fan de la page Facebook ! facebook.com/androirc"
+  tip_20:
+    language:     fr
+    content:      "Vous aimez AndroIRC ? Alors ajoutez un commentaire sur l'Android Market, ça fait toujours plaisir ;)"
+  tip_21:
+    language:     en
+    content:      "AndroIRC is now on Twitter ! twitter.com/androirc"
+  tip_22:
+    language:     en
+    content:      "You can make a donation to support AndroIRC. See www.androirc.com/donate"
+  tip_23:
+    language:     en
+    content:      "You can auto-connect to your servers on startup!"
+  tip_24:
+    language:     en
+    content:      "You can show a timestamp before each message! (look in the options)"
+  tip_25:
+    language:     en
+    content:      "You can choose a different nickname per server"
+  tip_26:
+    language:     en
+    content:      "You can auto-ident on server using NickServ"
+  tip_27:
+    language:     en
+    content:      "When longpressing on a message, the text is automatically copied on the clipboard"
+  tip_28:
+    language:     en
+    content:      "You can easily navigate betwwen your channels by single tapping on your touch-screen"
+  tip_29:
+    language:     en
+    content:      "You can be kept updated by visiting our official website"
+  tip_30:
+    language:     en
+    content:      "You can choose a different theme for the app : <b>classic</b> or <b>black</b>"
+  tip_31:
+    language:     en
+    content:      "Become a fan of the Facebook page ! facebook.com/androirc"
+  tip_32:
+    language:     en
+    content:      "Verizon blocks IRC over 3G. You won\'t be able to use AndroIRC over 3G, you will need to use WiFi"

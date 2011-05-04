@@ -54,7 +54,7 @@ TipHoliday:
     id:                       { type: integer, primary: true, autoincrement: true }
     language:                 { type: enum, values: [fr, en] }
     date:                     { type: date, notnull: true }
-    content:                  { type: clob }
+    content:                  { type: clob, notnull: true }
     
 QuickStart:
   tableName: androirc_quick_start
