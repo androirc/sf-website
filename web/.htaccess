@@ -1,7 +1,6 @@
 Options +FollowSymLinks +ExecCGI
 
 RewriteRule    ^tips\.htm(l)? tips.php
-Redirect permanent /facebook http://www.facebook.com/pages/AndroIRC/120342511371853
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
