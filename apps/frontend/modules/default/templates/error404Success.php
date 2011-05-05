@@ -1,5 +1,5 @@
 <?php slot('title','Error 404') ?>
 
-<h2 style="text-align: center;">Error 404</h2>
+<h2>This page is not longer available</h2>
 
-<p style="margin-top: 25px; text-align: center; font-size: 1.5em;">The page cannot be found</p>
+<p>This page may have moved or is no longer available.</p>
