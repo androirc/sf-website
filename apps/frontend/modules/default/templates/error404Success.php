@@ -1,4 +1,4 @@
-<?php slot('title','Error 404') ?>
+<?php slot('title','This page is not longer available') ?>
 
 <h2>This page is not longer available</h2>
 
