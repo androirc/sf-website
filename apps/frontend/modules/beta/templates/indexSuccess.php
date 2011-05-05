@@ -1,4 +1,4 @@
-<?php slot('title','Beta') ?>
+<?php slot('title', 'Beta') ?>
 
 <h2>AnroIRC Beta version</h2>
 
@@ -6,11 +6,11 @@
 
 <div id="beta">
     <?php if (false === $beta): ?>
-    No beta right now... come back later!
+        No beta right now... come back later!
     <?php else: ?>
-   <a class="button blue" href="<?php echo url_for('beta_download')?>">Download the last beta of AndroIRC</a><br />
-   <span>(Version <?php echo $beta->getVersion() ?> - <?php echo $beta->getDateTimeObject('created_at')->format('m/d/Y') ?>)</span>
-   <?php endif ?>
+        <a class="button blue" href="<?php echo url_for('beta_download') ?>">Download the last beta of AndroIRC</a><br />
+        <span>(Version <?php echo $beta->getVersion() ?> - <?php echo $beta->getDateTimeObject('created_at')->format('m/d/Y') ?>)</span>
+    <?php endif ?>
 </div>
 
 
