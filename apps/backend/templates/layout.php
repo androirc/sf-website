@@ -26,8 +26,8 @@
                     <li><?php echo link_to('Beta', 'beta/index') ?></li>
                     <li><?php echo link_to('Tip', 'tip/index') ?></li>
                     <li><?php echo link_to('Holiday', 'tip/index') ?></li>
-                    <li><?php echo link_to('Quick Start', 'quickstart/index') ?></li>
-                    <li><?php echo link_to('Change Log', 'changelog/index') ?></li>
+                    <li><?php echo link_to('QuickStart', 'quickstart/index') ?></li>
+                    <li><?php echo link_to('ChangeLog', 'changelog/index') ?></li>
                     <li class="last"><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
                 </ul>
                 <?php endif ?>

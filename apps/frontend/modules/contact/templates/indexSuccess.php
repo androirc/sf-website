@@ -7,12 +7,5 @@
 <?php endif; ?>
 <p>You can use this form to contact the team either to submit a bug or jsut to ask something.</p>
 <form action="<?php echo url_for('@contact') ?>" method="POST">
-  <table>
-    <?php echo $form ?>
-    <tr>
-      <td colspan="2" class="submit">
-        <input type="submit" />
-      </td>
-    </tr>
-  </table>
+    <?php include_partial('form', array('form' => $form)) ?>
 </form>

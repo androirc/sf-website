@@ -33,6 +33,53 @@ th {
     padding: 10px;
 }
 
-tfoot {
+form .submit {
     text-align: right;
+    padding: 10px 0;
+}
+
+form .error {
+    display:inline-block;
+}
+
+form ul {
+    margin:0 !important;
+    padding: 0;
+    color:#B43F3F;
+    border:none;
+    font-weight:bold;
+}
+
+form ul li {
+    padding: 3px 15px !important;
+    list-style:none;
+    color:#B43F3F;
+    background-image: none !important;
+}
+
+form ul li:before {
+    content: '↑ ';
+}
+
+form ul li:after {
+    content: ' ↑';
+}
+
+form .datas {
+    margin-left: 60px;
+}
+
+form label {
+    display:block;
+    padding:6px 1em 3px 0;
+    text-align:right;
+    width:50px;
+    font-weight:bold;
+    cursor:pointer;
+    float: left;
+}
+
+.form_row {
+    clear:both;
+    margin-bottom:10px;
 }

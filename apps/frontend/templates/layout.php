@@ -101,7 +101,7 @@
             <div>
                 <div class="cell">
                     <h2>Community</h2>
-                    <p>You can join us on IRC. We're on <a href="irc://irc.epiknet.org">EpiKnet</a>, channel #AndroIRC of course ;)</p>
+                    <p>You can join us on IRC. We're on <a href="irc://irc.epiknet.org">EpiKnet</a>, channel #AndroIRC</p>
                     <ul>
                         <li><?php echo image_tag('facebook_small.png', array('class' => 'famfamfam')) ?> <a href="http://facebook.com/androirc">Facebook page</a></li>
                         <li><?php echo image_tag('twitter_small.png', array('class' => 'famfamfam')) ?> <a href="http://twitter.com/androirc">Follow us on twitter</a></li>
@@ -147,8 +147,7 @@
             var addthis_share = {
                 templates: {
                     twitter: '{{title}} - {{url}} (from @androirc)'
-                },
-                title: 'test'
+                }
             }
         </script>
     </body>
