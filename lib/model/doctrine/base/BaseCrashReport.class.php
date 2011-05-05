@@ -12,6 +12,7 @@
  * @property clob $error_message
  * @property clob $callstack
  * @property string $androirc_version
+ * @property integer $count
  * 
  * @method integer     getId()               Returns the current record's "id" value
  * @method string      getPhoneModel()       Returns the current record's "phone_model" value
@@ -20,6 +21,7 @@
  * @method clob        getErrorMessage()     Returns the current record's "error_message" value
  * @method clob        getCallstack()        Returns the current record's "callstack" value
  * @method string      getAndroircVersion()  Returns the current record's "androirc_version" value
+ * @method integer     getCount()            Returns the current record's "count" value
  * @method CrashReport setId()               Sets the current record's "id" value
  * @method CrashReport setPhoneModel()       Sets the current record's "phone_model" value
  * @method CrashReport setAndroidVersion()   Sets the current record's "android_version" value
@@ -27,6 +29,7 @@
  * @method CrashReport setErrorMessage()     Sets the current record's "error_message" value
  * @method CrashReport setCallstack()        Sets the current record's "callstack" value
  * @method CrashReport setAndroircVersion()  Sets the current record's "androirc_version" value
+ * @method CrashReport setCount()            Sets the current record's "count" value
  * 
  * @package    androirc
  * @subpackage model
@@ -64,6 +67,10 @@ abstract class BaseCrashReport extends sfDoctrineRecord
         $this->hasColumn('androirc_version', 'string', 200, array(
              'type' => 'string',
              'length' => 200,
+             ));
+        $this->hasColumn('count', 'integer', null, array(
+             'type' => 'integer',
+             'default' => 1,
              ));
     }
 

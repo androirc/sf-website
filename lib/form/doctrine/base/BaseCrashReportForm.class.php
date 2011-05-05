@@ -22,6 +22,7 @@ abstract class BaseCrashReportForm extends BaseFormDoctrine
       'error_message'    => new sfWidgetFormTextarea(),
       'callstack'        => new sfWidgetFormTextarea(),
       'androirc_version' => new sfWidgetFormInputText(),
+      'count'            => new sfWidgetFormInputText(),
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),
     ));
@@ -34,6 +35,7 @@ abstract class BaseCrashReportForm extends BaseFormDoctrine
       'error_message'    => new sfValidatorString(array('required' => false)),
       'callstack'        => new sfValidatorString(array('required' => false)),
       'androirc_version' => new sfValidatorString(array('max_length' => 200, 'required' => false)),
+      'count'            => new sfValidatorInteger(array('required' => false)),
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
     ));

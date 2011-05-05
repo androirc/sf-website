@@ -58,3 +58,7 @@ changelog:
   param: { module: changelog, action: index }
   options:
     segment_separators: [/]
+    
+crashreport:
+  url: /crashreport
+  params: { module: crashreport, action: index }

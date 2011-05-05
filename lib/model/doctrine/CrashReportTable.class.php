@@ -16,4 +16,20 @@ class CrashReportTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('CrashReport');
     }
+    
+    public function alreadyExist(CrashReport $cr)
+    {
+        $crashreports = $this->createQuery('c')
+                             ->orderBy('c.created_at desc')
+                             ->execute();
+        
+        foreach ($crashreports as $crashreport) {
+            if ($cr->getCrashMessage() == $crashreport->getCrashMessage()
+                    && $cr->getCrashLocation() == $crashreport->getCrashLocation()) {
+                return $crashreport;
+            }
+        }
+        
+        return false;
+    }
 }

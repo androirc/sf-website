@@ -77,6 +77,7 @@ CrashReport:
     error_message:            { type: clob }
     callstack:                { type: clob }
     androirc_version:         { type: string(200) }
+    count:                    { type: integer, default: 1 }
   
 ChangeLog:
   tableName: androirc_changelog
