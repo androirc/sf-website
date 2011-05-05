@@ -15,7 +15,7 @@ class crashreportActions extends sfActions
     public function executeIndex(sfWebRequest $request)
     {
         if (!$request->isMethod('post')) {
-            $this->redirect('@homepage');
+            $this->forward404();
         }
         
         $phoneModel = $request->getParameter('phone_model');
