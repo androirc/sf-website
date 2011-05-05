@@ -24,6 +24,13 @@ class crashreportActions extends sfActions
         $errorMessage = $request->getParameter('error_message');
         $callstack = $request->getParameter('callstack');
         $androircVersion = $request->getParameter('version', 'Unknown');
+        
+        if (!$callstack 
+                || !$androircVersion 
+                || !$phoneModel
+                || !$androidVersion) {
+            return sfView::NONE;
+        }
            
         if (preg_match('#sdk#', $phoneModel)) {
             return sfView::NONE;
