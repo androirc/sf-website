@@ -13,7 +13,11 @@
 class crashreportActions extends sfActions
 {
     public function executeIndex(sfWebRequest $request)
-    {        
+    {
+        if (!$request->isMethod('post')) {
+            $this->redirect('@homepage');
+        }
+        
         $phoneModel = $request->getParameter('phone_model');
         $androidVersion = $request->getParameter('android_version');
         $threadName = $request->getParameter('thread_name');
