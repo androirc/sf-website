@@ -21,6 +21,9 @@ sfGuardPermission:
   sgp_can_manage_betas:
     name: can_manage_betas
     description: Betas management
+  sgp_can_manage_crashs:
+    name: can_manage_crashs
+    description: Crashs management
     
 sfGuardGroup:
   sgg_reviewer:

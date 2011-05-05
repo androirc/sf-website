@@ -11,6 +11,7 @@
  * @property string $thread_name
  * @property clob $error_message
  * @property clob $callstack
+ * @property boolean $is_resolved
  * @property string $androirc_version
  * @property integer $count
  * 
@@ -20,6 +21,7 @@
  * @method string      getThreadName()       Returns the current record's "thread_name" value
  * @method clob        getErrorMessage()     Returns the current record's "error_message" value
  * @method clob        getCallstack()        Returns the current record's "callstack" value
+ * @method boolean     getIsResolved()       Returns the current record's "is_resolved" value
  * @method string      getAndroircVersion()  Returns the current record's "androirc_version" value
  * @method integer     getCount()            Returns the current record's "count" value
  * @method CrashReport setId()               Sets the current record's "id" value
@@ -28,6 +30,7 @@
  * @method CrashReport setThreadName()       Sets the current record's "thread_name" value
  * @method CrashReport setErrorMessage()     Sets the current record's "error_message" value
  * @method CrashReport setCallstack()        Sets the current record's "callstack" value
+ * @method CrashReport setIsResolved()       Sets the current record's "is_resolved" value
  * @method CrashReport setAndroircVersion()  Sets the current record's "androirc_version" value
  * @method CrashReport setCount()            Sets the current record's "count" value
  * 
@@ -63,6 +66,10 @@ abstract class BaseCrashReport extends sfDoctrineRecord
              ));
         $this->hasColumn('callstack', 'clob', null, array(
              'type' => 'clob',
+             ));
+        $this->hasColumn('is_resolved', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
              ));
         $this->hasColumn('androirc_version', 'string', 200, array(
              'type' => 'string',

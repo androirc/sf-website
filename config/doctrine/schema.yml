@@ -76,6 +76,7 @@ CrashReport:
     thread_name:              { type: string(200) }
     error_message:            { type: clob }
     callstack:                { type: clob }
+    is_resolved:              { type: boolean, default: false }
     androirc_version:         { type: string(200) }
     count:                    { type: integer, default: 1 }
   
