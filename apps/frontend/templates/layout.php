@@ -22,9 +22,12 @@
                 </div>
                 <div id="informations">
                     <div id="last_tweet">
-                        <?php echo image_tag('ajax-loader.gif') ?>
+                        <div id="loader">
+                            <?php echo image_tag('ajax-loader.gif') ?>
+                        </div>
                     </div>
                 </div>
+
                 <div id="logo">
                     <?php echo image_tag('logo.png') ?>
                     <span><em>Android IRC Client</em></span>
