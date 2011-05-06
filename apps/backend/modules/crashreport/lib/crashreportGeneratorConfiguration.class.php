@@ -1,13 +1,15 @@
 <?php
 
-/**
- * crashreport module configuration.
+/*
+ * This file is part of the AndroIRC website.
  *
- * @package    androirc
- * @subpackage crashreport
- * @author     MewT
- * @version    SVN: $Id: configuration.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * (c) 2010-2011 Julien Brochet <mewt@androirc.com>
+ * (c) 2010-2011 Sébastien Brochet <blinkseb@androirc.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 class crashreportGeneratorConfiguration extends BaseCrashreportGeneratorConfiguration
 {
 }

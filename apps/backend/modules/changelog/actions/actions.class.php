@@ -1,16 +1,18 @@
 <?php
 
+/*
+ * This file is part of the AndroIRC website.
+ *
+ * (c) 2010-2011 Julien Brochet <mewt@androirc.com>
+ * (c) 2010-2011 Sébastien Brochet <blinkseb@androirc.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 require_once dirname(__FILE__).'/../lib/changelogGeneratorConfiguration.class.php';
 require_once dirname(__FILE__).'/../lib/changelogGeneratorHelper.class.php';
 
-/**
- * changelog actions.
- *
- * @package    androirc
- * @subpackage changelog
- * @author     MewT
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
- */
 class changelogActions extends autoChangelogActions
 {
 }

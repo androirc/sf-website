@@ -1,8 +1,5 @@
 <?php
 
-require_once dirname(__FILE__).'/../lib/crashreportGeneratorConfiguration.class.php';
-require_once dirname(__FILE__).'/../lib/crashreportGeneratorHelper.class.php';
-
 /*
  * This file is part of the AndroIRC website.
  *
@@ -12,6 +9,9 @@ require_once dirname(__FILE__).'/../lib/crashreportGeneratorHelper.class.php';
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
+require_once dirname(__FILE__).'/../lib/crashreportGeneratorConfiguration.class.php';
+require_once dirname(__FILE__).'/../lib/crashreportGeneratorHelper.class.php';
 
 class crashreportActions extends autoCrashreportActions
 {
