@@ -14,8 +14,5 @@ class QuickStartForm extends BaseQuickStartForm
 {
     public function configure()
     {
-        $this->widgetSchema['language'] = new sfWidgetFormChoice(array('choices' => array('fr' => 'French', 'en' => 'English')));
-        
-        $this->validatorSchema['language'] = new sfValidatorChoice(array('choices' => array(0 => 'French', 1 => 'English'), 'required' => false));
     } 
 }
