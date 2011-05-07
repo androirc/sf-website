@@ -396,19 +396,6 @@ if (typeof renderTwitters != 'function') (function () {
     }
 })();
 
-(function ($) {
-    $.fn.vAlign = function() {
-        return this.each(function(i){
-        var h = $(this).height();
-        var oh = $(this).outerHeight();
-        var mt = (h + (oh - h)) / 2;	
-        $(this).css("margin-top", "-" + mt + "px");	
-        $(this).css("top", "50%");
-        $(this).css("position", "absolute");	
-        });	
-    };
-})(jQuery);
-
 getTwitters('last_tweet', {
 	id: 'androirc', 
 	count: 1, 

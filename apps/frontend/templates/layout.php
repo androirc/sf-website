@@ -12,6 +12,20 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
         <?php include_javascripts() ?>
+        <script type="text/javascript">
+            (function ($) {
+                $.fn.vAlign = function() {
+                    return this.each(function(i){
+                    var h = $(this).height();
+                    var oh = $(this).outerHeight();
+                    var mt = (h + (oh - h)) / 2;	
+                    $(this).css("margin-top", "-" + mt + "px");	
+                    $(this).css("top", "50%");
+                    $(this).css("position", "absolute");	
+                    });	
+                };
+            })(jQuery);
+        </script>
     </head>
     <body>
         <div id="up">
