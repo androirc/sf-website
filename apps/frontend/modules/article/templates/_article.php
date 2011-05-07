@@ -11,7 +11,7 @@
 
     <div class="footer">
         <div class="share addthis_toolbox addthis_default_style" 
-             addthis:url="http://www.androirc.com<?php echo urlencode(url_for('article_show', $a)) ?>"
+             addthis:url="<?php echo url_for('article_show', $a, true) ?>"
              addthis:title="<?php echo $a->getTitle() ?> - AndroIRC (Android IRC Client)">
 
             <a class="addthis_counter addthis_pill_style"></a>
