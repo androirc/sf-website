@@ -2,4 +2,7 @@
 # http://www.symfony-project.org/reference/1_4/en/11-App
 
 # default values
-#all:
+all:
+  recaptcha:
+    public_key:     6Ld1LMQSAAAAAByelXPRcuSdV_7A7o-f4y0-6Fop
+    private_key:    6Ld1LMQSAAAAADMzao7y13_fDadtrc0tVNan0yZ_

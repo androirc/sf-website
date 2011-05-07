@@ -17,7 +17,8 @@ class ContactForm extends sfForm
         $this->setWidgets(array(
             'name'      => new sfWidgetFormInputText(),
             'email'     => new sfWidgetFormInputText(),
-            'message'   => new sfWidgetFormTextarea()
+            'message'   => new sfWidgetFormTextarea(),
+            'captcha'   => new sfAnotherWidgetFormReCaptcha()
         ));
         
         $this->widgetSchema->setNameFormat('contact[%s]');
@@ -27,5 +28,7 @@ class ContactForm extends sfForm
             'email'     => new sfValidatorEmail(),
             'message'   => new sfValidatorString(array('max_length' => 1000)),
         ));
+        
+        $this->mergePostValidator(new sfAnotherValidatorSchemaReCaptcha($this, 'captcha'));
     }
 }
