@@ -4,6 +4,7 @@
         <title><?php include_slot('title') ?> - AndroIRC (Android IRC Client)</title>
         <?php include_http_metas() ?>
         <?php include_metas() ?>
+        <meta name="google-site-verification" content="NxLzVTaSpM7YMWZ_DqGdF19nVKrNl4IcQxcT3jtACqw" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
         <?php include_stylesheets() ?>
