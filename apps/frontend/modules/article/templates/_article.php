@@ -5,9 +5,9 @@
         <p class="meta"><?php echo $a->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $a->getSfGuardUser() ?></p>
     </div>
 
-    <p class="content">
+    <div class="content">
         <?php echo auto_link_text(esc_raw($a->getContent())) ?>
-    </p>
+    </div>
 
     <div class="footer">
         <div class="share addthis_toolbox addthis_default_style" 
