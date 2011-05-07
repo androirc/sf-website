@@ -15,6 +15,7 @@ generator:
       actions: ~
       fields:  ~
       list:
+        sort: [count, desc]
         object_actions:
           resolved:      ~
           _edit:         ~

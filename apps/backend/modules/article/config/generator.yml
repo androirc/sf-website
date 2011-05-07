@@ -21,8 +21,8 @@ generator:
         is_visible:
           label: Visible 
       list:
-        display: [sf_guard_user, =title, is_visible]
-        max_per_page: 5
+        display: [sf_guard_user, =title, created_at, is_visible]
+        max_per_page: 15
         sort: [created_at, desc]
       filter:
         display: [sf_guard_user_id, title, is_visible]
