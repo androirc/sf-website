@@ -72,13 +72,15 @@ strong {
 
 #informations {
 	float: left;
-	margin: 15px 0 0 10px;
+	margin: 4px 0 0 10px;
     width: 400px;
+    height: 111px;
     text-align: center;
+    position: relative;
 }
 
 #loader {
-    padding-top:40px;
+    padding-top:45px;
 }
 
 #last_tweet ul {

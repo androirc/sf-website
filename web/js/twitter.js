@@ -396,6 +396,19 @@ if (typeof renderTwitters != 'function') (function () {
     }
 })();
 
+(function ($) {
+    $.fn.vAlign = function() {
+        return this.each(function(i){
+        var h = $(this).height();
+        var oh = $(this).outerHeight();
+        var mt = (h + (oh - h)) / 2;	
+        $(this).css("margin-top", "-" + mt + "px");	
+        $(this).css("top", "50%");
+        $(this).css("position", "absolute");	
+        });	
+    };
+})(jQuery);
+
 getTwitters('last_tweet', {
 	id: 'androirc', 
 	count: 1, 
@@ -406,5 +419,8 @@ getTwitters('last_tweet', {
  		this.innerHTML = 'Humm.. Twitter is down right now! Sorry.';
 	}, 
 	ignoreReplies: true,
+    callback: function() {
+        $("#last_tweet").vAlign();
+    },
 	template: '%text% (<span class="twitter_time">%time%</span>)<p style="font-weight: bold;">Follow <a href="http://twitter.com/androirc">@AndroIRC</a> on Twitter.</p>'
 });
