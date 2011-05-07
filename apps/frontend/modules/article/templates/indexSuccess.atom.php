@@ -13,7 +13,7 @@
         <entry>
             <title><?php echo $article->getTitle() ?></title>
             <link href="<?php echo url_for('article_show', $article, true) ?>" />
-            <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
+            <id><?php echo sha1(url_for('article_show', $article, true)) ?></id>
             <updated><?php echo gmstrftime('%Y-%m-%dT%H:%M:%SZ', $article->getDateTimeObject('created_at')->format('U')) ?></updated>
             <summary><?php echo $article->getSummary() ?></summary>
         </entry>
