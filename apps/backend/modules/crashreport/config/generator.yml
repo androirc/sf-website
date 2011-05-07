@@ -16,9 +16,10 @@ generator:
       fields:  ~
       list:
         object_actions:
-          resolved:   ~
+          resolved:      ~
+          _edit:         ~
           _delete:       ~
-        display: [androirc_version, android_version, error_message, is_resolved]
+        display: [androirc_version, android_version, error_message, count, is_resolved]
         actions: []
       filter:
         display: [androirc_version, android_version, is_resolved]
