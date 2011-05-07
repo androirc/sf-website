@@ -2,7 +2,8 @@
 /config/databases.yml
 /cache/*
 /log/*
-/web/*_dev.php
+/web/frontend_dev.php
+/web/backend_dev.php
 /web/uploads/*
 
 # SCM files
