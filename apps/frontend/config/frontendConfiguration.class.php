@@ -11,5 +11,7 @@ class frontendConfiguration extends sfApplicationConfiguration
     public function configureMobileFormat(sfEvent $event)
     {
         $request = $event['request'];
+        
+        $request->setRequestFormat('mobile');
     }
 }
