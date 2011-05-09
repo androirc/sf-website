@@ -19,6 +19,9 @@ RewriteRule    ^tips\.htm(l)? tips.php
   RewriteRule ^([^.]+)$ $1.html [QSA]
   RewriteCond %{REQUEST_FILENAME} !-f
 
+  RewriteCond %{HTTP_HOST} ^admin\.androirc\.com$
+  RewriteRule ^(.*)$ backend.php [QSA,L]
+
   # no, so we redirect to our front web controller
   RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
