@@ -36,6 +36,20 @@ class betaActions extends sfActions
         
         $download->save();
         
-        $this->redirect('/uploads/betas/' . $beta->getFile());
+        $file = sfConfig::get('sf_upload_dir') . '/betas/' . $beta->getFile();
+        
+        session_write_close();
+        
+        $this->getResponse()->setContentType('application/force-download');
+        $this->getResponse()->setHttpHeader('Content-Disposition', 'attachment; filename="' . basename($file).'"');
+        $this->getResponse()->setHttpHeader('Content-Transfer-Encoding', 'binary');
+        $this->getResponse()->setHttpHeader('Content-Length', filesize($file));
+        $this->getResponse()->setHttpHeader('Connection', 'close');
+        
+        $this->getResponse()->sendHttpHeaders();
+        
+        @readfile($file);
+        
+        throw new sfStopException();
     }
 }
