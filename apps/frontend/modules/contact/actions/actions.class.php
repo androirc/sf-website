@@ -22,21 +22,12 @@ class contactActions extends sfActions
             
             if ($this->form->isValid())
             {
-                $user_ip = $this->getRequest()->getHttpHeader ('addr','remote');
-                $user_host = gethostbyaddr($user_ip);
                 $datas = $request->getParameter('contact');
                 
                 $text = <<<EOF
-Bonjour,
-{$datas['name']} vient d'utiliser le formulaire du site web.
-                
-    Son adresse IP :   {$user_ip}
-    Son host :         {$user_host}
-    
-Voici son message :
-    
-    {$datas['message']}
-    
+{$datas['name']} used the web form to contact us :
+
+{$datas['message']}    
 --
 AndroIRC
     
