@@ -36,7 +36,7 @@ EOF;
                 $message = $this->getMailer()->compose(
                     array('noreply@androirc.com' => 'AndroIRC'),
                     'contact@androirc.com',
-                    '[Contact] Nouveau message du site web',
+                    "[AndroIRC] {$datas['name']} used the web form to contact us",
                     $text
                 );
                 
