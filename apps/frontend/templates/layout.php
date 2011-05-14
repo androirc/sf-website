@@ -54,7 +54,7 @@
                     <li><a href="http://wiki.androirc.com/">Wiki</a></li>
                     <li><?php echo link_to('Screenshots', '@screenshots') ?></li>
                     <li><?php echo link_to('Contact', '@contact') ?></li>
-                    <li><a href="http://market.android.com/details?id=com.androirc">Download AndroIRC</a></li>
+                    <li><a href="http://market.android.com/details?id=com.androirc">Download</a></li>
                     <li><?php echo link_to('EULA', '@eula') ?></li>
                     <li class="last"><?php echo link_to('Donate', '@donate') ?></li>
                 </ul>
@@ -63,6 +63,11 @@
 
         <div id="page">
             <div id="content">
+                <?php if ('mobile' === $sf_user->getFrom()): ?>
+                    <div id="switch_format">
+                        <a class="button blue" href="<?php echo url_for('@format') ?>">Come back to the mobile version</a>
+                    </div>
+                <?php endif ?>
                 <?php echo $sf_content ?>
             </div>
             <div id="sidebar"> 

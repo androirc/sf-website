@@ -10,15 +10,30 @@
  * file that was distributed with this source code.
  */
 
-class MobileFilter extends sfFilter
+class MobileFilter extends sfFilter 
 {
-    public function execute($filterChain)
+    public function execute($filterChain) 
     {
         $user = $this->getContext()->getUser();
         $request = $this->getContext()->getRequest();
+
+        $user->setFrom(null);
+
+        $uamatches = array('midp', 'j2me', 'avantg', 'docomo', 'novarra', 'palmos', 'palmsource', '240x320', 'opwv', 'chtml', 'pda', 'windows ce', 'mmp\/', 'blackberry', 'mib\/', 'symbian', 'wireless', 'nokia', 'hand', 'mobi', 'phone', 'cdm', 'up\.b', 'audio', 'SIE\-', 'SEC\-', 'samsung', 'HTC', 'mot\-', 'mitsu', 'sagem', 'sony', 'alcatel', 'lg', 'erics', 'vx', 'NEC', 'philips', 'mmm', 'xx', 'panasonic', 'sharp', 'wap', 'sch', 'rover', 'pocket', 'benq', 'java', 'pt', 'pg', 'vox', 'amoi', 'bird', 'compal', 'kg', 'voda', 'sany', 'kdd', 'dbt', 'sendo', 'sgh', 'webos');
+
+        foreach ($uamatches as $uastring) {
+            if (preg_match('/' . $uastring . '/i', $request->getHttpHeader('User-Agent'))) {
+                $user->setFrom('mobile');
+                break;
+            }
+        }
         
-        $user->setFormat($request->getRequestFormat());
+        if (!$user->hasFormat()) {
+            $user->setFormat($user->getFrom());
+        }
         
+        $request->setRequestFormat($user->getFormat());
+
         $filterChain->execute();
     }
 }

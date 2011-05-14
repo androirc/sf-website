@@ -12,20 +12,54 @@
 
 class myUser extends sfBasicSecurityUser
 {
-    protected $format;
+    protected $from;
     
     public function setFormat($format)
     {
-        $this->format = $format;
+        $this->setAttribute('format', $format);
     }
     
     public function getFormat()
     {
-        return $this->format;
+        return $this->getAttribute('format');
     }
     
-    public function isMobile()
+    public function isFromMobile()
     {
-        return 'mobile' === $this->format;
+        return 'mobile' === $this->from;
+    }
+    
+    public function getFrom()
+    {
+        return $this->from;
+    }
+    
+    public function setFrom($from)
+    {
+        $this->from = $from;
+    }
+    
+    public function displayMobileVersion()
+    {
+        return 'mobile' === $this->getAttribute('format');
+    }
+    
+    public function switchFormat()
+    {
+        $format = $this->getFormat();
+        
+        if ('mobile' === $format) {
+            $format = null;
+        }
+        else {
+            $format = 'mobile';
+        }
+        
+        $this->setFormat($format);
+    }
+    
+    public function hasFormat()
+    {
+        return $this->hasAttribute('format');
     }
 }

@@ -62,3 +62,7 @@ changelog:
 crashreport:
   url: /crashreport
   params: { module: crashreport, action: index }
+  
+format:
+  url: /format
+  params: { module: default, action: format }
