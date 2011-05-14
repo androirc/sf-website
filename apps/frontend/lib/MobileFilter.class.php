@@ -10,22 +10,15 @@
  * file that was distributed with this source code.
  */
 
-class myUser extends sfBasicSecurityUser
+class MobileFilter extends sfFilter
 {
-    protected $format;
-    
-    public function setFormat($format)
+    public function execute($filterChain)
     {
-        $this->format = $format;
-    }
-    
-    public function getFormat()
-    {
-        return $this->format;
-    }
-    
-    public function isMobile()
-    {
-        return 'mobile' === $this->format;
+        $user = $this->getContext()->getUser();
+        $request = $this->getContext()->getRequest();
+        
+        $user->setFormat($request->getRequestFormat());
+        
+        $filterChain->execute();
     }
 }

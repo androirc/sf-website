@@ -34,5 +34,4 @@ class articleActions extends sfActions
 
         $this->getResponse()->addMeta('title', $this->a->getTitle() . " - AndroIRC (Android IRC Client)");
     }
-
 }
