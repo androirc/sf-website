@@ -14,16 +14,6 @@ class myUser extends sfBasicSecurityUser
 {
     protected $from;
     
-    public function setFormat($format)
-    {
-        $this->setAttribute('format', $format);
-    }
-    
-    public function getFormat()
-    {
-        return $this->getAttribute('format');
-    }
-    
     public function isFromMobile()
     {
         return 'mobile' === $this->from;
@@ -38,28 +28,14 @@ class myUser extends sfBasicSecurityUser
     {
         $this->from = $from;
     }
-    
-    public function displayMobileVersion()
+
+    public function isFirstVisit()
     {
-        return 'mobile' === $this->getAttribute('format');
+        return $this->getAttribute('first_visit', true);
     }
     
-    public function switchFormat()
+    public function setFirstVisit($firstVisit)
     {
-        $format = $this->getFormat();
-        
-        if ('mobile' === $format) {
-            $format = null;
-        }
-        else {
-            $format = 'mobile';
-        }
-        
-        $this->setFormat($format);
-    }
-    
-    public function hasFormat()
-    {
-        return $this->hasAttribute('format');
+        $this->setAttribute('first_visit', $firstVisit);
     }
 }

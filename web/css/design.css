@@ -1,17 +1,10 @@
 
 /* General configuration */
 
-html {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #8A8A8A;
-    background-color: #fff;
-}
-
 h1, h2, h3 {
-	margin: 0;
-	font-weight: normal;
-	color: #026995;
+    margin: 0;
+    font-weight: normal;
+    color: #026995;
 }
 
 h1 { 
@@ -23,56 +16,33 @@ h2 {
     margin-bottom: 10px;
 }
 
-h3 { 
-}
-
-p, ul, ol {
-	margin-top: 0;
-	text-align: justify;
-    line-height: 1.9;
-}
-
 p {
     margin-bottom: 10px;
-}
-
-a { 
-    color: #026995; 
-    text-decoration: none; 
-    
-}
-
-a:hover { 
-    text-decoration: underline; 
-}
-
-strong {
-    font-weight: bold;
 }
 
 /* Global design */
 
 #up {
-	background-image: url("/images/up.png");
-	height: 202px;
+    background-image: url("/images/up.png");
+    height: 202px;
 }
 
 #header {
-	width: 800px;
-	margin: auto;
-	height: 115px;
+    width: 800px;
+    margin: auto;
+    height: 115px;
 }
 
 /* Twitter */
 
 #twitter{
-	margin-top: 20px;
+    margin-top: 20px;
     float: left;
 }
 
 #informations {
-	float: left;
-	margin: 4px 0 0 10px;
+    float: left;
+    margin: 4px 0 0 10px;
     width: 400px;
     height: 111px;
     text-align: center;
@@ -94,9 +64,9 @@ strong {
 /* Menu */
 
 #logo {
-	width: 284px;
-	height: 75px;
-	float: right;
+    width: 284px;
+    height: 75px;
+    float: right;
     margin: 20px 10px 0 0;
     position: relative;
 }
@@ -108,37 +78,37 @@ strong {
 }
 
 #menu {
-	width: 800px;
-	height: 43px;
-	margin: auto;
+    width: 800px;
+    height: 43px;
+    margin: auto;
 }
 
 #menu ul {
-	margin: 0;
-	padding: 0px 0px 0px 0px;
-	list-style: none;
-	line-height: normal;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    line-height: normal;
 }
 
 #menu li {
-	display: block;
-	float: left;
+    display: block;
+    float: left;
 }
 
 #menu a {
-	display: block;
-	float: left;
-	height: 30px;
-	margin: 0;
-	padding: 13px 30px 0px 30px;
-	background: url("/images/border.png") no-repeat left top;
-	text-decoration: none;
-	text-align: center;
-	text-transform: capitalize;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	font-weight: bold;
-	color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 0;
+    padding: 13px 30px 0px 30px;
+    background: url("/images/border.png") no-repeat left top;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 
 #menu .last {
@@ -169,63 +139,57 @@ strong {
     padding: 0 20px;
 }
 
-.famfamfam {
-    position: relative;
-    top: 3px;
-    margin-right: 7px;
-}
-
 /* Content */
 
 #content {
-	float: right;
-	width: 550px;
+    float: right;
+    width: 550px;
 }
 
 #content ul {
-	margin: 10px 0 10px 40px;
+    margin: 10px 0 10px 40px;
 }
 
 #content li{
-	list-style-type: none;
-	background-image: url("/images/puce.png");
-	background-repeat: no-repeat;
-	background-position: 0 2px;
-	padding-left: 22px;
-	display : list-item;
-	list-style-position:inside;
-	padding-bottom: 2px;
+    list-style-type: none;
+    background-image: url("/images/puce.png");
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    padding-left: 22px;
+    display : list-item;
+    list-style-position:inside;
+    padding-bottom: 2px;
 }
 
 /* Side bar */
 
 #sidebar {
-	float: left;
-	width: 230px;
+    float: left;
+    width: 230px;
 }
 
 #sidebar ul {
-	list-style: none;
-	line-height: normal;
+    list-style: none;
+    line-height: normal;
 }
 
 #sidebar li {
-	margin-bottom: 30px;
-	padding: 0 0 10px 0px;
+    margin-bottom: 30px;
+    padding: 0 0 10px 0px;
 }
 
 #sidebar li ul {
-	margin: 0px 14px;
+    margin: 0px 14px;
 }
 
 #sidebar li li {
-	margin: 0;
-	padding: 12px 0px;
-	border-bottom: 1px solid #E9E8DD;
+    margin: 0;
+    padding: 12px 0px;
+    border-bottom: 1px solid #E9E8DD;
 }
 
 #sidebar li li a {
-	padding-left: 20px;
+    padding-left: 20px;
 }
 
 .author {
@@ -239,9 +203,9 @@ strong {
 /* Others */
 
 #page {
-	width: 800px;
-	margin: 0 auto;
-	padding-top: 30px;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 30px;
 }
 
 .ok {
@@ -249,12 +213,4 @@ strong {
     color: #618C04;
     font-weight: bold;
     margin: 10px 0;
-}
-
-.clear {
-    clear: both;
-}
-
-.center {
-    text-align: center;
 }

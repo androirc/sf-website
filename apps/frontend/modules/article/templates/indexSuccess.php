@@ -20,8 +20,8 @@
 <p id="introduction">AndroIRC is an <strong>Android IRC client</strong> which can connect to several server (secured or not) at the same time. Features: supports <a href="http://www.mirc.com">mIRC</a> colors, auto join channels on startup, nickserv/sasl auth, logging, themes... You can see screenshots <a href="<?php echo url_for('@screenshots') ?>">here</a>! Feel free to contact us via the <a href="<?php echo url_for('@contact') ?>">online form</a>.
 </p>
 
-<?php foreach ($articles as $a): ?>
-    <?php include_partial('article/article', array('a' => $a, 'showComments' => true)) ?>
+<?php foreach ($articles as $article): ?>
+    <?php include_partial('article/article', array('article' => $article, 'showComments' => true)) ?>
 <?php endforeach; ?> 
 
 <script type="text/javascript">

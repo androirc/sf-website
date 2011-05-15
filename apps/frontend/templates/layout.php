@@ -65,7 +65,7 @@
             <div id="content">
                 <?php if ('mobile' === $sf_user->getFrom()): ?>
                     <div id="switch_format">
-                        <a class="button blue" href="<?php echo url_for('@format') ?>">Come back to the mobile version</a>
+                        <a class="button blue" href="<?php echo str_replace('www.', 'm.', $sf_request->getUri()) ?>">Come back to the mobile version</a>
                     </div>
                 <?php endif ?>
                 <?php echo $sf_content ?>

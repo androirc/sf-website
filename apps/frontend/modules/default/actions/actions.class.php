@@ -15,15 +15,4 @@ class defaultActions extends sfActions
     public function executeError404(sfWebRequest $request)
     {
     }
-    
-    public function executeFormat(sfWebRequest $request)
-    {
-        $user = $this->getUser();
-        
-        if ($user->isFromMobile()) {
-            $user->switchFormat();
-        }
-        
-        $this->redirect('@homepage');
-    }
 }
