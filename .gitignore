@@ -3,4 +3,4 @@ log/*
 config/databases.yml
 web/uploads/*
 web/changelog/*
-data/sql/schema.sql
+data/sql/*
