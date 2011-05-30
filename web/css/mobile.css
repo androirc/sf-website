@@ -1,7 +1,12 @@
+/* Menu length */
+
+#menu ul {
+    width: 300px;
+}
 
 #header {
+    padding-top: 20px;
     text-align: center;
-    margin: 15px 0;
 }
 
 #logo {
@@ -12,12 +17,16 @@
 }
 
 #content {
-    padding: 5px;
+    padding: 10px;
 }
 
 #switch {
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px;
+}
+
+#footer {
+    text-align: center;
 }
 
 /* Article */

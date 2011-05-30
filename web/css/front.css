@@ -22,23 +22,23 @@
 }
 
 .post h1 {
-	padding-left: 15px;
+    padding-left: 15px;
 }
 
 .post h1 a {
-	text-decoration: none;
-	font-size: 30px;
-	color: #026995;
+    text-decoration: none;
+    font-size: 30px;
+    color: #026995;
 }
 
 .post .date {
 }
 
 .post .meta {
-	padding: 0px 30px 2px 15px;
-	border-bottom: 1px solid #D4D8CB;
-	font-size: 10px;
-	color: #66665E;
+    padding: 0px 30px 2px 15px;
+    border-bottom: 1px solid #D4D8CB;
+    font-size: 10px;
+    color: #66665E;
 }
 
 .post .content {
@@ -57,14 +57,14 @@
 }
 
 .post .meta span {
-	display: block;
+    display: block;
 }
 
 .post .entry {
 }
 
 .post {
-   margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .addthis_counter {
