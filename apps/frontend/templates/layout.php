@@ -133,7 +133,7 @@
                         <li><?php echo image_tag('bug.png', array('class' => 'famfamfam')) ?> <a href="http://bugs.androirc.com/">Bug tracker website</a></li>
                         <li><?php echo image_tag('feed.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@article_atom', true) ?>">RSS Feed</a></li>
                         <li><?php echo image_tag('coins.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@donate') ?>">Make a donation</a></li>
-                        <li><?php echo image_tag('book_open.png', array('class' => 'famfamfam')) ?> <a href="http://trans.androirc.com/">Help us to translate AndroIRC</a></li>
+                        <li><?php echo image_tag('book_open.png', array('class' => 'famfamfam')) ?> <a href="http://translation.androirc.com/">Help us to translate AndroIRC</a></li>
                         <li><?php echo image_tag('mail-open.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@contact') ?>">Contact us</a></li>
                     </ul>
                 </div>
