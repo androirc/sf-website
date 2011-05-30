@@ -1,7 +1,7 @@
-<h2><?php echo $a->getTitle() ?></h2>
-<span><?php echo $a->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $a->getSfGuardUser() ?></span>
+<?php slot('title', $article->getTitle()) ?>
+<?php use_helper('Text') ?>
 
-<p><?php echo $a->getContent() ?></p>
+<?php include_partial('article/article', array('article' => $article, 'showComments' => false)) ?>
 
 <div id="disqus_thread"></div>
 
@@ -11,8 +11,8 @@
     var disqus_shortname = 'androirc'; // required: replace example with your forum shortname
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
-    var disqus_identifier = <?php echo $a->getId() ?>;
-    var disqus_url = '<?php echo url_for('article_show', $a, true) ?>';
+    var disqus_identifier = <?php echo $article->getId() ?>;
+    var disqus_url = '<?php echo url_for('article_show', $article, true) ?>';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

@@ -1,7 +1,7 @@
-<?php slot('title',$a->getTitle()) ?>
+<?php slot('title', $article->getTitle()) ?>
 <?php use_helper('Text') ?>
 
-<?php include_partial('article/article', array('a' => $a, 'showComments' => false)) ?>
+<?php include_partial('article/article', array('article' => $article, 'showComments' => false)) ?>
 
 <div id="ads"> 
     <script type="text/javascript"><!--
@@ -25,8 +25,8 @@
     var disqus_shortname = 'androirc'; // required: replace example with your forum shortname
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
-    var disqus_identifier = <?php echo $a->getId() ?>;
-    var disqus_url = '<?php echo url_for('article_show', $a, true) ?>';
+    var disqus_identifier = <?php echo $article->getId() ?>;
+    var disqus_url = '<?php echo url_for('article_show', $article, true) ?>';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

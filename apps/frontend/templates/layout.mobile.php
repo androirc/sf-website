@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
     <head>
-        <title><?php include_slot('title') ?> - AndroIRC (Android IRC Client)</title>
+        <title><?php include_slot('title', 'Home') ?> - AndroIRC (Android IRC Client)</title>
         <?php include_http_metas() ?>
         <?php include_metas() ?>
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/> 
@@ -14,26 +14,30 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     </head>
     <body>
-        <div id="header">
-            <div id="logo">
-                <?php echo image_tag('logo.png') ?>
-                <span>Android IRC Client</span>
+        <div id="up">
+            <div id="header">
+                <div id="logo">
+                    <?php echo image_tag('logo.png') ?>
+                    <span>Android IRC Client</span>
+                </div>
             </div>
         </div>
         <div id="menu">
             <ul>
                 <li><a href="">Download</a></li>
                 <li><a href="">EULA</a></li>
-                <li><a href="">Beta</a></li>
+                <li class="last"><a href="">Beta</a></li>
             </ul>
         </div>
         <div id="content">
             <div id="switch">
                 <a href="#" class="button blue">Switch to the web version</a>
             </div>
+            
             <?php echo $sf_content ?>
         </div>
         <div class="clear"></div>
+        
         <div id="footer">
             Copyright &copy; AndroIRC.com. All rights reserved. Powered by <?php echo image_tag('symfony.gif', array('class' => 'famfamfam')) ?>
         </div>
