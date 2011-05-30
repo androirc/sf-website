@@ -5,10 +5,16 @@
         <?php include_http_metas() ?>
         <?php include_metas() ?>
         <meta name="google-site-verification" content="NxLzVTaSpM7YMWZ_DqGdF19nVKrNl4IcQxcT3jtACqw" />
+        
         <link rel="shortcut icon" href="/favicon.ico" />
+        
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
-        <?php include_stylesheets() ?>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/design.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/front.css" /> 
+        
         <link href="<?php echo url_for('@article_atom', true) ?>" type="application/atom+xml" rel="alternate" title="Last articles" />
+        
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
         <?php include_javascripts() ?>
