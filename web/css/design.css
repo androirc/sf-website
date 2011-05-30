@@ -16,24 +16,17 @@ h2 {
     margin-bottom: 10px;
 }
 
-p {
-    margin-bottom: 10px;
-}
-
-/* Global design */
-
-#up {
-    background-image: url("/images/up.png");
-    height: 202px;
-}
+/* Header configuration */
 
 #header {
     width: 800px;
     margin: auto;
-    height: 115px;
 }
 
-/* Twitter */
+#space {
+    height: 44px;
+    background: url('/images/header_bottom.png');
+}
 
 #twitter{
     margin-top: 20px;
@@ -61,58 +54,12 @@ p {
     font-style:italic;
 }
 
-/* Menu */
-
 #logo {
     width: 284px;
     height: 75px;
     float: right;
     margin: 20px 10px 0 0;
     position: relative;
-}
-
-#logo span {
-    position: absolute;
-    top: 62px;
-    right:10px;
-}
-
-#menu {
-    width: 800px;
-    height: 43px;
-    margin: auto;
-}
-
-#menu ul {
-    margin: 0;
-    padding: 0px 0px 0px 0px;
-    list-style: none;
-    line-height: normal;
-}
-
-#menu li {
-    display: block;
-    float: left;
-}
-
-#menu a {
-    display: block;
-    float: left;
-    height: 30px;
-    margin: 0;
-    padding: 13px 30px 0px 30px;
-    background: url("/images/border.png") no-repeat left top;
-    text-decoration: none;
-    text-align: center;
-    text-transform: capitalize;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-
-#menu .last {
-    background: url("/images/border.png") no-repeat right top;
 }
 
 /* Footer */

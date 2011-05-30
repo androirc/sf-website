@@ -48,25 +48,29 @@
                         </div>
                     </div>
                 </div>
-
+                    
                 <div id="logo">
                     <?php echo image_tag('logo.png') ?>
                     <span><em>Android IRC Client</em></span>
                 </div>
             </div>
-            <div id="menu">
-                <ul>
-                    <li><?php echo link_to('News', '@homepage') ?></li>
-                    <li><a href="http://wiki.androirc.com/">Wiki</a></li>
-                    <li><?php echo link_to('Screenshots', '@screenshots') ?></li>
-                    <li><?php echo link_to('Contact', '@contact') ?></li>
-                    <li><a href="http://market.android.com/details?id=com.androirc">Download</a></li>
-                    <li><?php echo link_to('EULA', '@eula') ?></li>
-                    <li class="last"><?php echo link_to('Donate', '@donate') ?></li>
-                </ul>
-            </div>
         </div>
-
+        
+        <div id="menu">
+            <ul>
+                <li><?php echo link_to('News', '@homepage') ?></li>
+                <li><a href="http://wiki.androirc.com/">Wiki</a></li>
+                <li><?php echo link_to('Screenshots', '@screenshots') ?></li>
+                <li><?php echo link_to('Contact', '@contact') ?></li>
+                <li><a href="http://market.android.com/details?id=com.androirc">Download</a></li>
+                <li><?php echo link_to('EULA', '@eula') ?></li>
+                <li class="last"><?php echo link_to('Donate', '@donate') ?></li>
+            </ul>
+        </div>
+        
+        <div id="space">
+        </div>
+        
         <div id="page">
             <div id="content">
                 <?php if ('mobile' === $sf_user->getFrom()): ?>

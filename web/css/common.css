@@ -24,6 +24,60 @@ strong {
     font-weight: bold;
 }
 
+p {
+    margin-bottom: 10px;
+}
+
+/* Logo */
+
+#logo span {
+    position: absolute;
+    top: 62px;
+    right:10px;
+}
+
+/* Header */
+
+#up {
+    background: url('/images/header_up.png');
+    height: 115px;
+}
+
+#menu {
+    height: 43px;
+    background-image: url('/images/menu.png');
+    text-align: center;
+}
+
+#menu ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    line-height: normal;
+}
+
+#menu li {
+    float: left;
+    width: 100px;
+}
+
+#menu a {
+    display: block;
+    height: 30px;
+    margin: 0;
+    padding-top: 13px;
+    background: url("/images/border.png") no-repeat left top;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#menu .last {
+    background: url("/images/border.png") no-repeat right top;
+}
+
 /* Others */
 
 .button {
