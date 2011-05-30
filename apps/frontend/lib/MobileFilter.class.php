@@ -30,22 +30,21 @@ class MobileFilter extends sfFilter
                     break;
                 }
             }
-
-            if (!preg_match('/^m\./i', $request->getHost()))
+            
+            if (sfConfig::get('app_mobile_display_always', false) || preg_match('/^m\./i', $request->getHost())) 
             {
-                if ($user->isFirstVisit() && $user->isFromMobile())
-                {
-                    $user->setFirstVisit(false);
-
-                    if (sfConfig::get('app_mobile_force_redirection', true)) {
-                        $controller->redirect(str_replace('www.', 'm.', $request->getUri()), 0, 302);
-                    }
-                }
-            }
-            else {
                 $request->setRequestFormat('mobile');
             }
+            else if ($user->isFirstVisit() && $user->isFromMobile()) 
+            {
+                $user->setFirstVisit(false);
+
+                if (sfConfig::get('app_mobile_force_redirection', true)) {
+                    $controller->redirect(str_replace('www.', 'm.', $request->getUri()), 0, 302);
+                }
+            }
         }
+
         $filterChain->execute();
     }
 }

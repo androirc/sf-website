@@ -8,3 +8,4 @@ all:
     private_key:    6Ld1LMQSAAAAADMzao7y13_fDadtrc0tVNan0yZ_
   mobile:
     force_redirection: true
+    display_always: false
