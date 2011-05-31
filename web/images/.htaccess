@@ -1,4 +1,0 @@
-<FilesMatch "\.(jpg|jpeg|gif|png|js|css)$"> 
-	Header set Etag 
-	Header set Cache-control "public, max-age=600" 
-</FilesMatch>
