@@ -33,7 +33,7 @@
         </div>
         <div id="content">
             <div id="switch">
-                <a href="#" class="button blue">Switch to the web version</a>
+                <a href="<?php echo str_replace('m.', 'www.', $sf_request->getUri()) ?>" class="button blue">Switch to the web version</a>
             </div>
             
             <?php echo $sf_content ?>
