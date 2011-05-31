@@ -168,7 +168,7 @@ p {
     list-style-type: none;
     background-image: url("/images/puce.png");
     background-repeat: no-repeat;
-    background-position: 0 2px;
+    background-position: 0 -2px;
     padding-left: 22px;
     display : list-item;
     list-style-position:inside;
