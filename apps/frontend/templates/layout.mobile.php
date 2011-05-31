@@ -26,9 +26,9 @@
         </div>
         <div id="menu">
             <ul>
-                <li><a href="">Download</a></li>
-                <li><a href="">EULA</a></li>
-                <li class="last"><a href="">Beta</a></li>
+                <li><a href="http://market.android.com/details?id=com.androirc">Download</a></li>
+                <li><?php echo link_to('EULA', '@eula') ?></li>
+                <li class="last"><?php echo link_to('Donate', '@donate') ?></li>
             </ul>
         </div>
         <div id="content">

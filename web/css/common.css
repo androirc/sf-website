@@ -11,6 +11,23 @@ p, ul, ol {
     line-height: 1.6;
 }
 
+/* General configuration */
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: normal;
+    color: #026995;
+}
+
+h1 { 
+    font-size: 25px; 
+}
+
+h2 { 
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 a { 
     color: #026995; 
     text-decoration: none; 
@@ -141,4 +158,19 @@ p {
 
 .center {
     text-align: center;
+}
+
+#content ul {
+    margin: 10px 0 10px 40px;
+}
+
+#content li{
+    list-style-type: none;
+    background-image: url("/images/puce.png");
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    padding-left: 22px;
+    display : list-item;
+    list-style-position:inside;
+    padding-bottom: 2px;
 }
