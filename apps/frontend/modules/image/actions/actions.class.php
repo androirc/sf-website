@@ -18,6 +18,31 @@ class imageActions extends sfActions
         
         $this->forward404Unless($image);
         
-        // have fun!
+        $path = sfConfig::get('sf_upload_dir') . '/' .$image;
+        
+        if (! file_exists($path))
+            $this->forward404();
+
+        $is_mobile = $request->getRequestFormat() != null;
+        if ($is_mobile)
+            $max_size = sfConfig::get('app_max_thumbnail_size', 200);
+        else
+            $max_size = sfConfig::get('app_max_thumbnail_size', 400);
+
+        try {
+            $im = new Imagick($path);
+            $im->thumbnailImage($max_size, $max_size, true);
+
+            $response = $this->getResponse();
+            $response->setHttpHeader('Content-Type', $im->getImageMimeType(), true);
+            $response->sendHttpHeaders();
+    
+            echo $im;
+
+        } catch(ImagickException $e) {
+            $this->forward404();
+        }
+        
+        return sfView::NONE;
     }
 }
