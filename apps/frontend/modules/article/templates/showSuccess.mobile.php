@@ -1,7 +1,7 @@
 <?php slot('title', $article->getTitle()) ?>
 <?php use_helper('Text') ?>
 
-<?php include_partial('article/article', array('article' => $article, 'showComments' => false)) ?>
+<?php include_partial('article/article', array('article' => $article, 'sumup' => false)) ?>
 
 <div id="disqus_thread"></div>
 

@@ -18,7 +18,7 @@
             <a class="addthis_button_tweet" tw:via="androirc"></a>
             <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
         </div>
-        <?php if ($showComments) : ?>
+        <?php if ($sumup) : ?>
             <div class="comments">
                 <?php echo image_tag('comment.png') ?>
                 <a href="<?php echo url_for('article_show', $article, true) ?>#disqus_thread" data-disqus-identifier="<?php echo $article->getId() ?>">Comments</a>

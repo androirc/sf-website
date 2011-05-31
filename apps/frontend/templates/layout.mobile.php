@@ -17,7 +17,9 @@
         <div id="up">
             <div id="header">
                 <div id="logo">
-                    <?php echo image_tag('logo.png') ?>
+                    <a href="<?php echo url_for('@homepage') ?>">
+                        <?php echo image_tag('logo.png') ?>
+                    </a>
                     <span>Android IRC Client</span>
                 </div>
             </div>

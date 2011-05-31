@@ -22,7 +22,7 @@
 
 #switch {
     text-align: center;
-    margin: 10px;
+    margin: 10px 0 20px 0;
 }
 
 #footer {
@@ -32,14 +32,42 @@
 /* Article */
 
 .article {
-    -webkit-border-radius: .6em; 
-    -moz-border-radius: .6em;
-    border-radius: .6em;
     background-color: #ddd;
-    margin: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.06, rgb(232,232,232)),color-stop(0.52, rgb(245,245,245)));
+    background-image: -moz-linear-gradient(center bottom, rgb(232,232,232) 6%, rgb(245,245,245) 52%);
+    border-radius: 10px;  
+    -moz-border-radius: 10px;  
+    -webkit-border-radius: 10px;  
+}
+
+.article .title {
+    font-size: 19px;
+    color: #026995;
+    padding: 0 0 5px 10px;
+}
+
+.article .by {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.06, rgb(77,77,77)), color-stop(0.52, rgb(61,61,61)));
+    background-image: -moz-linear-gradient(center bottom, rgb(77,77,77) 6%, rgb(61,61,61) 52%);
     padding: 5px 10px;
+    color: white;
+    font-size: 9px;
+    border-radius: 4px;  
+    -moz-border-radius: 4px;  
+    -webkit-border-radius: 4px;  
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.article .content {
+    line-height: 1.6;
+    text-align: justify;
+    text-shadow: 1px 1px 1px #fff;
 }
 
 .article .comments {
     text-align: right;
+    text-shadow: 2px 1px 2px #fff;
 }
