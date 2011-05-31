@@ -21,50 +21,13 @@
     margin: 15px 0;
 }
 
-.post h1 {
-    padding-left: 15px;
-}
-
-.post h1 a {
-    text-decoration: none;
-    font-size: 30px;
-    color: #026995;
-}
-
-.post .date {
-}
-
-.post .meta {
-    padding: 0px 30px 2px 15px;
-    border-bottom: 1px solid #D4D8CB;
-    font-size: 10px;
-    color: #66665E;
-}
-
-.post .content {
+.article .content {
     margin-bottom: 10px;
-    text-align: justify;
-    line-height: 1.9;
 }
 
-.post .comments {
-    float: right;
-}
-
-.post .share {
+.article .share {
     float: left;
     width: 400px;
-}
-
-.post .meta span {
-    display: block;
-}
-
-.post .entry {
-}
-
-.post {
-    margin-bottom: 25px;
 }
 
 .addthis_counter {

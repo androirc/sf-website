@@ -1,8 +1,10 @@
 <?php use_helper('Text') ?>
-<div class="post">
-    <div class="header">
-        <h1><a href="<?php echo url_for('article_show', $article) ?>"><?php echo $article->getTitle() ?></a></h1>
-        <p class="meta"><?php echo $article->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $article->getSfGuardUser() ?></p>
+<div class="article">
+    <div class="title">
+        <a href="<?php echo url_for('article_show', $article) ?>"><?php echo $article->getTitle() ?></a>
+    </div>
+    <div class="by">
+        <?php echo $article->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $article->getSfGuardUser() ?>
     </div>
 
     <div class="content">
