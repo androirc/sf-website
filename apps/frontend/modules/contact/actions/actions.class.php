@@ -10,8 +10,8 @@
  * file that was distributed with this source code.
  */
 
-class contactActions extends sfActions
-{
+class contactActions extends androWebActions
+{    
     public function executeIndex(sfWebRequest $request)
     {
         $this->form = new ContactForm();

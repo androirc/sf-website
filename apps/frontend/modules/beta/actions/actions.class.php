@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class betaActions extends sfActions
+class betaActions extends androWebActions
 {
     public function executeIndex(sfWebRequest $request)
     {

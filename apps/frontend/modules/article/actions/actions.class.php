@@ -19,19 +19,19 @@ class articleActions extends sfActions
 
     public function executeShow(sfWebRequest $request)
     {
-        $this->a = Doctrine_Core::getTable('Article')->find(array($request->getParameter('id')));
+        $this->article = Doctrine_Core::getTable('Article')->find(array($request->getParameter('id')));
         
-        $this->forward404Unless($this->a);
+        $this->forward404Unless($this->article);
 
         sfProjectConfiguration::getActive()->loadHelpers(array('Text'));
 
-        $content = strip_tags($this->a->getContent());
+        $content = strip_tags($this->article->getContent());
 
         $content = str_replace("\n", " ", $content);
         $content = str_replace("\r", " ", $content);
 
         $this->getResponse()->addMeta('description', truncate_text($content, 200));
 
-        $this->getResponse()->addMeta('title', $this->a->getTitle() . " - AndroIRC (Android IRC Client)");
+        $this->getResponse()->addMeta('title', $this->article->getTitle() . " - AndroIRC (Android IRC Client)");
     }
 }

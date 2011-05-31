@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class quickstartActions extends sfActions
+class quickstartActions extends androWebActions
 {
     public function executeIndex(sfWebRequest $request)
     {

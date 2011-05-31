@@ -10,8 +10,8 @@
  * file that was distributed with this source code.
  */
 
-class eulaActions extends sfActions
-{
+class eulaActions extends androWebActions
+{   
     public function executeIndex(sfWebRequest $request)
     {
     }

@@ -10,9 +10,12 @@
  * file that was distributed with this source code.
  */
 
-class donateActions extends androWebActions
+class androWebActions extends sfActions
 {
-    public function executeIndex(sfWebRequest $request)
+    public function preExecute()
     {
+        $request = $this->getRequest();
+        
+        $request->setRequestFormat(null);
     }
 }
