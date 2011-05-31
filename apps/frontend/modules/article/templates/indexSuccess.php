@@ -21,7 +21,7 @@
 </p>
 
 <?php foreach ($articles as $article): ?>
-    <?php include_partial('article/article', array('article' => $article, 'sumpup' => true)) ?>
+    <?php include_partial('article/article', array('article' => $article, 'sumup' => true)) ?>
 <?php endforeach; ?> 
 
 <script type="text/javascript">
