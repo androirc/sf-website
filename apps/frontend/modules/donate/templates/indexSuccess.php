@@ -12,3 +12,10 @@
         <img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
     </form>
 </div>
+
+<p>Many thanks to :</p>
+<ul>
+    <?php foreach ($donators as $donator): ?>
+        <li><strong><?php echo $donator->getName() ?></strong> ($<?php echo $donator->getAmount() ?>)</li>
+    <?php endforeach; ?>
+</ul>

@@ -10,10 +10,6 @@
  * file that was distributed with this source code.
  */
 
-class donateActions extends sfActions
+class donatorGeneratorConfiguration extends BaseDonatorGeneratorConfiguration
 {
-    public function executeIndex(sfWebRequest $request)
-    {
-        $this->donators = DonatorTable::getInstance()->getAll();
-    }
 }

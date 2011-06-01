@@ -24,6 +24,9 @@ sfGuardPermission:
   sgp_can_manage_crashs:
     name: can_manage_crashs
     description: Crashs management
+  sgp_can_manage_donators:
+    name: can_manage_donators
+    description: Donators management
     
 sfGuardGroup:
   sgg_reviewer:

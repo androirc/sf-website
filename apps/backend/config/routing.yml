@@ -1,3 +1,12 @@
+donator:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Donator
+    module:               donator
+    prefix_path:          /donator
+    column:               id
+    with_wildcard_routes: true
+
 crash_report:
   class: sfDoctrineRouteCollection
   options:

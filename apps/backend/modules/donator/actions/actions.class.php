@@ -10,10 +10,9 @@
  * file that was distributed with this source code.
  */
 
-class donateActions extends sfActions
+require_once dirname(__FILE__).'/../lib/donatorGeneratorConfiguration.class.php';
+require_once dirname(__FILE__).'/../lib/donatorGeneratorHelper.class.php';
+
+class donatorActions extends autoDonatorActions
 {
-    public function executeIndex(sfWebRequest $request)
-    {
-        $this->donators = DonatorTable::getInstance()->getAll();
-    }
 }

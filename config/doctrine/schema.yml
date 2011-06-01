@@ -95,5 +95,5 @@ Donator:
     Timestampable: ~
   columns:
     id:                       { type: integer, primary: true, autoincrement: true }
-    name:                     { type: string(200) }
-    amount:                   { type: float }
+    name:                     { type: string(200), notnull: true }
+    amount:                   { type: float, notnull: true }

@@ -24,8 +24,8 @@ abstract class BaseDonatorForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'       => new sfValidatorString(array('max_length' => 200, 'required' => false)),
-      'amount'     => new sfValidatorNumber(array('required' => false)),
+      'name'       => new sfValidatorString(array('max_length' => 200)),
+      'amount'     => new sfValidatorNumber(),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));

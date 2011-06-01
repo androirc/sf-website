@@ -33,10 +33,12 @@ abstract class BaseDonator extends sfDoctrineRecord
              ));
         $this->hasColumn('name', 'string', 200, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 200,
              ));
         $this->hasColumn('amount', 'float', null, array(
              'type' => 'float',
+             'notnull' => true,
              ));
     }
 
