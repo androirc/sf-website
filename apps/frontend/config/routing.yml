@@ -67,8 +67,8 @@ format:
   url: /format
   params: { module: default, action: format }
   
-image_get:
-  url: /image/get/:image
-  param: { module: image, action: get }
+image_thumbnail:
+  url: /image/thumbnail/:image
+  param: { module: image, action: thumbnail }
   options:
     segment_separators: [/]

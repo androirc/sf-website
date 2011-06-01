@@ -12,7 +12,7 @@
 
 class imageActions extends sfActions
 {
-    public function executeGet(sfWebRequest $request)
+    public function executeThumbnail(sfWebRequest $request)
     {
         $sizes = array(
             'web' => 400,
