@@ -28,7 +28,7 @@ class imageActions extends sfActions
         if (! file_exists($path))
             $this->forward404();
 
-        $format = ($request->getRequestFormat() === null) ? 'web' : $request->getRequestFormat();
+        $format = (null === $request->getRequestFormat()) ? 'web' : $request->getRequestFormat();
         
         $max_size = sfConfig::get('app_max_thumbnail_size_' . $format, $sizes[$format]);
 
