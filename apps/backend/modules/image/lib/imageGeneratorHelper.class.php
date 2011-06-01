@@ -10,9 +10,6 @@
  * file that was distributed with this source code.
  */
 
-class DonatorFormFilter extends BaseDonatorFormFilter
+class imageGeneratorHelper extends BaseImageGeneratorHelper
 {
-    public function configure()
-    {
-    }
 }

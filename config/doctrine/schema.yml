@@ -97,3 +97,18 @@ Donator:
     id:                       { type: integer, primary: true, autoincrement: true }
     name:                     { type: string(200), notnull: true }
     amount:                   { type: float, notnull: true }
+    
+Image:
+  tableName: androirc_image
+  actAs:
+    Timestampable: ~
+  columns:
+    id:                       { type: integer, primary: true, autoincrement: true }
+    sf_guard_user_id:         { type: integer }
+    name:                     { type: string(200) }
+    path:                     { type: string(200), notnull: true }
+  relations:
+    sfGuardUser:
+      onDelete: SET NULL
+      onUpdate: CASCADE
+      foreignAlias: Images

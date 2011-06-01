@@ -27,6 +27,9 @@ sfGuardPermission:
   sgp_can_manage_donators:
     name: can_manage_donators
     description: Donators management
+  sgp_can_manage_images:
+    name: can_manage_images
+    description: Images management
     
 sfGuardGroup:
   sgg_reviewer:
@@ -37,6 +40,9 @@ sfGuardGroupPermission:
   sggp_redacteurs:
     Group: sgg_reviewer
     Permission: sgp_can_manage_articles
+  sggp_redacteurs2:
+    Group: sgg_reviewer
+    Permission: sgp_can_manage_images
     
 TipHoliday:
   bonnee_annee_en:

@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Image
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          image
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        sf_guard_user_id:             { label: User }
+        sf_guard_user:                { label: User }
+      list:
+        display: [sf_guard_user, name]
+      filter:
+        display: [sf_guard_user_id]
+      form:    ~
+      edit:    ~
+      new:     ~
