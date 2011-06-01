@@ -10,8 +10,8 @@
  * file that was distributed with this source code.
  */
 
-class screenshotsActions extends sfActions
-{
+class screenshotsActions extends androWebActions
+{    
     public function executeIndex(sfWebRequest $request)
     {
     }

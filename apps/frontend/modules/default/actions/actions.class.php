@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-class defaultActions extends sfActions
+class defaultActions extends androWebActions
 {
     public function executeError404(sfWebRequest $request)
     {

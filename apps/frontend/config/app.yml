@@ -6,3 +6,9 @@ all:
   recaptcha:
     public_key:     6Ld1LMQSAAAAAByelXPRcuSdV_7A7o-f4y0-6Fop
     private_key:    6Ld1LMQSAAAAADMzao7y13_fDadtrc0tVNan0yZ_
+  mobile:
+    force_redirection: true
+    display_always: false
+  max_thumbnail_size:
+    web: 400
+    mobile: 200

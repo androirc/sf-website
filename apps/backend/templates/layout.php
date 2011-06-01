@@ -18,8 +18,10 @@
                     <span><em>Android IRC Client</em></span>
                 </div>
             </div>
-            <div id="menu">
-                <?php if($sf_user->isAuthenticated()): ?>
+        </div>
+
+        <div id="menu">
+            <?php if ($sf_user->isAuthenticated()): ?>
                 <ul>
                     <li><?php echo link_to('Article', 'article/index') ?></li>
                     <li><?php echo link_to('User', 'sf_guard_user') ?></li>
@@ -30,8 +32,10 @@
                     <li><?php echo link_to('ChangeLog', 'changelog/index') ?></li>
                     <li class="last"><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
                 </ul>
-                <?php endif ?>
-            </div>
+            <?php endif ?>
+        </div>
+
+        <div id="space">
         </div>
 
         <div id="page">

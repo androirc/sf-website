@@ -1,54 +1,10 @@
+/* Menu length */
+
+#menu ul {
+    width: 700px;
+}
 
 /* Beta page */
-
-.button {
-	display: inline-block;
-	outline: none;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	font: 14px/100% Arial, Helvetica, sans-serif;
-	padding: .5em 2em .55em;
-	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-	-webkit-border-radius: .5em; 
-	-moz-border-radius: .5em;
-	border-radius: .5em;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	box-shadow: 0 1px 2px rgba(0,0,0,.2);
-}
-
-.button:hover {
-	text-decoration: none;
-}
-
-.button:active {
-	position: relative;
-	top: 1px;
-}
-
-.blue {
-	color: #d9eef7;
-	border: solid 1px #0076a3;
-	background: #0095cd;
-	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
-}
-
-.blue:hover {
-	background: #007ead;
-	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
-}
-
-.blue:active {
-	color: #80bed6;
-	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
-	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
-}
 
 #beta {
     text-align: center;
@@ -65,50 +21,13 @@
     margin: 15px 0;
 }
 
-.post h1 {
-	padding-left: 15px;
-}
-
-.post h1 a {
-	text-decoration: none;
-	font-size: 30px;
-	color: #026995;
-}
-
-.post .date {
-}
-
-.post .meta {
-	padding: 0px 30px 2px 15px;
-	border-bottom: 1px solid #D4D8CB;
-	font-size: 10px;
-	color: #66665E;
-}
-
-.post .content {
+.article .content {
     margin-bottom: 10px;
-    text-align: justify;
-    line-height: 1.9;
 }
 
-.post .comments {
-    float: right;
-}
-
-.post .share {
+.article .share {
     float: left;
     width: 400px;
-}
-
-.post .meta span {
-	display: block;
-}
-
-.post .entry {
-}
-
-.post {
-   margin-bottom: 25px;
 }
 
 .addthis_counter {
@@ -121,10 +40,14 @@
     margin-top: 10px;
 }
 
-
 /* Others */
 
 #ads {
-	text-align: center;
-	margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#switch_format {
+    text-align: center;
+    margin-bottom: 15px;
 }

@@ -5,10 +5,16 @@
         <?php include_http_metas() ?>
         <?php include_metas() ?>
         <meta name="google-site-verification" content="NxLzVTaSpM7YMWZ_DqGdF19nVKrNl4IcQxcT3jtACqw" />
+        
         <link rel="shortcut icon" href="/favicon.ico" />
+        
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
-        <?php include_stylesheets() ?>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/design.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/front.css" /> 
+        
         <link href="<?php echo url_for('@article_atom', true) ?>" type="application/atom+xml" rel="alternate" title="Last articles" />
+        
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
         <?php include_javascripts() ?>
@@ -42,27 +48,36 @@
                         </div>
                     </div>
                 </div>
-
+                    
                 <div id="logo">
                     <?php echo image_tag('logo.png') ?>
                     <span><em>Android IRC Client</em></span>
                 </div>
             </div>
-            <div id="menu">
-                <ul>
-                    <li><?php echo link_to('News', '@homepage') ?></li>
-                    <li><a href="http://wiki.androirc.com/">Wiki</a></li>
-                    <li><?php echo link_to('Screenshots', '@screenshots') ?></li>
-                    <li><?php echo link_to('Contact', '@contact') ?></li>
-                    <li><a href="http://market.android.com/details?id=com.androirc">Download AndroIRC</a></li>
-                    <li><?php echo link_to('EULA', '@eula') ?></li>
-                    <li class="last"><?php echo link_to('Donate', '@donate') ?></li>
-                </ul>
-            </div>
         </div>
-
+        
+        <div id="menu">
+            <ul>
+                <li><?php echo link_to('News', '@homepage') ?></li>
+                <li><a href="http://wiki.androirc.com/">Wiki</a></li>
+                <li><?php echo link_to('Screenshots', '@screenshots') ?></li>
+                <li><?php echo link_to('Contact', '@contact') ?></li>
+                <li><a href="http://market.android.com/details?id=com.androirc">Download</a></li>
+                <li><?php echo link_to('EULA', '@eula') ?></li>
+                <li class="last"><?php echo link_to('Donate', '@donate') ?></li>
+            </ul>
+        </div>
+        
+        <div id="space">
+        </div>
+        
         <div id="page">
             <div id="content">
+                <?php if ('mobile' === $sf_user->getFrom()): ?>
+                    <div id="switch_format">
+                        <a class="button blue" href="<?php echo str_replace('www.', 'm.', $sf_request->getUri()) ?>">Come back to the mobile version</a>
+                    </div>
+                <?php endif ?>
                 <?php echo $sf_content ?>
             </div>
             <div id="sidebar"> 

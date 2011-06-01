@@ -10,9 +10,12 @@
  * file that was distributed with this source code.
  */
 
-class eulaActions extends sfActions
-{   
-    public function executeIndex(sfWebRequest $request)
+class androWebActions extends sfActions
+{
+    public function preExecute()
     {
+        $request = $this->getRequest();
+        
+        $request->setRequestFormat(null);
     }
 }

@@ -10,13 +10,11 @@
  * file that was distributed with this source code.
  */
 
-class crashreportActions extends sfActions
-{
+class crashreportActions extends androWebActions
+{    
     public function executeIndex(sfWebRequest $request)
-    {
-        if (!$request->isMethod('post')) {
-            $this->forward404();
-        }
+    {   
+        $this->forward404Unless($request->isMethod('post'));
         
         $phoneModel = $request->getParameter('phone_model');
         $androidVersion = $request->getParameter('android_version');
@@ -60,12 +58,12 @@ class crashreportActions extends sfActions
         $text = <<<EOF
 Nouveau rapport de crash :
     
-    Phone model :        {$cr->getPhoneModel()}
-    Android version :    {$cr->getAndroidVersion()}
-    Thread name :        {$cr->getThreadName()}
-    Error Message :      {$cr->getErrorMessage()}
-    AndroIRC version :   {$cr->getAndroircVersion()}
-    Callstack :
+    Phone model        : {$cr->getPhoneModel()}
+    Android version    : {$cr->getAndroidVersion()}
+    Thread name        : {$cr->getThreadName()}
+    Error Message      : {$cr->getErrorMessage()}
+    AndroIRC version   : {$cr->getAndroircVersion()}
+    Callstack          :
     
     {$cr->getCallstack()}
         

@@ -10,10 +10,10 @@
  * file that was distributed with this source code.
  */
 
-class changelogActions extends sfActions
+class changelogActions extends androWebActions
 {
     public function executeIndex(sfWebRequest $request)
-    {
+    {        
         $this->setLayout(false);
         sfConfig::set('sf_web_debug', false);
         
