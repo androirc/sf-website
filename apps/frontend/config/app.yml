@@ -9,3 +9,6 @@ all:
   mobile:
     force_redirection: true
     display_always: false
+  max_thumbnail_size:
+    web: 400
+    mobile: 200

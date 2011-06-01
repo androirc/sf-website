@@ -14,20 +14,23 @@ class imageActions extends sfActions
 {
     public function executeGet(sfWebRequest $request)
     {
+        $sizes = array(
+            'web' => 400,
+            'mobile' => 200
+        );
+        
         $image = $request->getParameter('image');
         
         $this->forward404Unless($image);
         
-        $path = sfConfig::get('sf_upload_dir') . '/' .$image;
+        $path = sfConfig::get('sf_upload_dir') . '/images/' .$image;
         
         if (! file_exists($path))
             $this->forward404();
 
-        $is_mobile = $request->getRequestFormat() != null;
-        if ($is_mobile)
-            $max_size = sfConfig::get('app_max_thumbnail_size', 200);
-        else
-            $max_size = sfConfig::get('app_max_thumbnail_size', 400);
+        $format = ($request->getRequestFormat() === null) ? 'web' : $request->getRequestFormat();
+        
+        $max_size = sfConfig::get('app_max_thumbnail_size_' . $format, $sizes[$format]);
 
         try {
             $im = new Imagick($path);
