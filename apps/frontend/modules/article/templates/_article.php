@@ -1,4 +1,4 @@
-<?php use_helper('Text') ?>
+<?php use_helper('Text', 'Thumbnail') ?>
 <div class="article">
     <div class="title">
         <a href="<?php echo url_for('article_show', $article) ?>"><?php echo $article->getTitle() ?></a>
@@ -8,7 +8,7 @@
     </div>
 
     <div class="content">
-        <?php echo auto_link_text(esc_raw($article->getContent())) ?>
+        <?php echo auto_link_text(androGenerateThumbnail(esc_raw($article->getContent()))) ?>
     </div>
 
     <div class="footer">
