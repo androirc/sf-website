@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="/css/design.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="/css/front.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/form.css" /> 
         
         <link href="<?php echo url_for('@article_atom', true) ?>" type="application/atom+xml" rel="alternate" title="Last articles" />
         
