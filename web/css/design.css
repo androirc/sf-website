@@ -45,30 +45,6 @@
     position: relative;
 }
 
-/* Footer */
-
-#footer {
-    margin-top: 15px;
-    background: none repeat scroll 0 0 #EEEEEE;
-    left: 0;
-    position: absolute;
-    width: 100%;
-}
-
-#footer > div {
-    color: #777777;
-    display: table;
-    margin: 0 auto;
-    padding: 20px 0 40px 0;
-
-}
-
-#footer .cell {
-    display: table-cell;
-    width: 200px;
-    padding: 0 20px;
-}
-
 /* Content */
 
 #content {

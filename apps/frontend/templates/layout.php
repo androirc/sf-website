@@ -133,16 +133,16 @@
         <div class="clear"></div>
         <div id="footer">
             <div>
-                <div class="cell">
+                <div class="column">
                     <h2>Community</h2>
                     <p>You can join us on IRC. We're on <a href="irc://irc.epiknet.org">EpiKnet</a>, channel #AndroIRC</p>
                     <ul>
                         <li><?php echo image_tag('facebook_small.png', array('class' => 'famfamfam')) ?> <a href="http://facebook.com/androirc">Facebook page</a></li>
                         <li><?php echo image_tag('twitter_small.png', array('class' => 'famfamfam')) ?> <a href="http://twitter.com/androirc">Follow us on twitter</a></li>
                     </ul>
-                        
+                    
                 </div>
-                <div class="cell">
+                <div class="column">
                     <h2>Other pages</h2>
                     <ul>
                         <li><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@beta') ?>">Participate to the lastest beta</a></li>
@@ -153,13 +153,14 @@
                         <li><?php echo image_tag('mail-open.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@contact') ?>">Contact us</a></li>
                     </ul>
                 </div>
-                <div class="cell">
+                <div class="column">
                     <h2>Copyright</h2>
                     <p>
                         Copyright &copy; AndroIRC.com. All rights reserved. Powered by <?php echo image_tag('symfony.gif', array('class' => 'famfamfam')) ?>
                     </p>
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
         <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
