@@ -217,3 +217,14 @@ p {
     text-align: right;
     text-shadow: 2px 1px 2px #fff;
 }
+
+/* Beta page */
+
+#beta {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#beta .button {
+    margin-bottom: 10px;
+}
