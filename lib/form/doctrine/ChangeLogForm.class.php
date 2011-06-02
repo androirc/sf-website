@@ -26,7 +26,7 @@ class ChangeLogForm extends BaseChangeLogForm
         
         $this->validatorSchema['file'] = new sfValidatorFile(array(
             'required' => false,
-            'path' => sfConfig::get('sf_upload_dir') . '/changelogs/' . $this->getObject()->getFile()
+            'path' => sfConfig::get('sf_upload_dir') . '/changelogs'
         )) ; 
     }
 }
