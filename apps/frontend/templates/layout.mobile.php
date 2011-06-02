@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="http://market.android.com/details?id=com.androirc">Download</a></li>
                 <li><?php echo link_to('EULA', '@eula') ?></li>
-                <li class="last"><?php echo link_to('Donate', '@donate') ?></li>
+                <li class="last"><?php echo link_to('Beta', '@beta') ?></li>
             </ul>
         </div>
         <div id="content">
