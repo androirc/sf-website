@@ -1,3 +1,6 @@
+# Add correct mime type for .apk
+AddType application/vnd.android.package-archive apk
+
 Options +FollowSymLinks +ExecCGI
 
 RewriteRule    ^tips\.htm(l)? tips.php
