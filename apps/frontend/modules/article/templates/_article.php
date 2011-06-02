@@ -17,9 +17,9 @@
              addthis:title="<?php echo $article->getTitle() ?> - AndroIRC (Android IRC Client)">
 
             <a class="addthis_counter addthis_pill_style"></a>
-            <a class="addthis_button_google_plusone"></a>
             <a class="addthis_button_tweet" tw:via="androirc"></a>
             <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_google_plusone"></a>
         </div>
         <?php if ($sumup) : ?>
             <div class="comments">
