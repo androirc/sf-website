@@ -40,7 +40,7 @@ class betaActions extends androWebActions
         
         session_write_close();
         
-        $this->getResponse()->setContentType('application/force-download');
+        $this->getResponse()->setContentType('application/vnd.android.package-archive');
         $this->getResponse()->setHttpHeader('Content-Disposition', 'attachment; filename="' . basename($file).'"');
         $this->getResponse()->setHttpHeader('Content-Transfer-Encoding', 'binary');
         $this->getResponse()->setHttpHeader('Content-Length', filesize($file));
