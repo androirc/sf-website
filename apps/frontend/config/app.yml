@@ -12,3 +12,5 @@ all:
   max_thumbnail_size:
     web: 400
     mobile: 200
+  admob:
+    test: false
