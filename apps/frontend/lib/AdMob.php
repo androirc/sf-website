@@ -12,6 +12,9 @@
 
 class AdMob
 {
+    private $request;
+    private $response;
+    
     protected $publisher_id;
     protected $analytics_id;
     protected $ad_request;
@@ -22,18 +25,21 @@ class AdMob
     
     protected static $pixel_sent;
     
-    public function __construct()
+    public function __construct(sfWebRequest $request, sfWebResponse $response)
     {
-        $this->publisher_id = 'a14de4eeeb0ee01';
-        $this->analytics_id = 'a14debd8eddb7a3';
+        $this->request = $request;
+        $this->response = $response;
         
-        $this->ad_request = true;
-        $this->analytics_request = false;
-        $this->test_mode = sfConfig::get('app_admob_test', true);
+        $this->publisher_id = sfConfig::get('app_admob_publisher_id', '');
+        $this->analytics_id = sfConfig::get('app_admob_analytics_id', '');
+        
+        $this->ad_request = sfConfig::get('app_admob_ad_request', true);
+        $this->analytics_request = sfConfig::get('app_admob_analytics_request', false);
+        $this->test_mode = sfConfig::get('app_admob_test_mode', true);
         $this->optional = array();
     }
     
-    public function request(sfWebRequest $request)
+    public function request()
     {
         self::$pixel_sent = false;
         
@@ -43,12 +49,12 @@ class AdMob
         $analytics_mode = false;
         if (!empty($this->analytics_request) && !empty($this->analytics_id) && !$pixel_sent) $analytics_mode = true;
         
-        $protocol = ($request->isSecure()) ? 'https' : 'http';
+        $protocol = ($this->request->isSecure()) ? 'https' : 'http';
   
         $rt = $ad_mode ? ($analytics_mode ? 2 : 0) : ($analytics_mode ? 1 : -1);
         if ($rt == -1) return '';
   
-        $path = $request->getPathInfoArray();
+        $path = $this->request->getPathInfoArray();
         
         list($usec, $sec) = explode(' ', microtime()); 
         $params = array('rt=' . $rt,
@@ -63,7 +69,7 @@ class AdMob
         if (!empty($sid)) $params[] = 't=' . md5($sid);
         if ($ad_mode) $params[] = 's=' . $this->publisher_id;
         if ($analytics_mode) $params[] = 'a=' . $this->analytics_id;
-        if ($request->getCookie('admobuu')) $params[] = 'o=' . $request->getCookie('admobuu');
+        if ($this->request->getCookie('admobuu')) $params[] = 'o=' . $this->request->getCookie('admobuu');
         if (!empty($this->test_mode)) $params[] = 'm=test';
 
         if (!empty($this->optional)) {
@@ -116,7 +122,7 @@ class AdMob
                   . '&amp;z=' . ($sec + $usec)
                   . '&amp;a=' . ($analytics_mode ? $this->analytics_id : '')
                   . '&amp;s=' . ($ad_mode ? $this->publisher_id : '')
-                  . '&amp;o=' . (!$request->getCookie('admobuu') ? '' : $request->getCookie('admobuu'))
+                  . '&amp;o=' . (!$this->request->getCookie('admobuu') ? '' : $this->request->getCookie('admobuu'))
                   . '&amp;lt=' . ($sec_end + $usec_end - $sec_start - $usec_start)
                   . '&amp;to=' . $curl_timeout
                   . '" alt="" width="1" height="1"/>';
@@ -125,15 +131,15 @@ class AdMob
         return $contents;
     }
     
-    public function setCookie(sfWebResponse $response, sfWebRequest $request, $domain = '', $path = '/')
+    public function setCookie($domain = '', $path = '/')
     {
-        if (!$request->getCookie('admobuu')) 
+        if (!$this->request->getCookie('admobuu')) 
         {
             $value = md5(uniqid(rand(), true));
             
             if (!empty($domain) && $domain[0] != '.') $domain = ".$domain";
             
-            $response->setCookie('admobuu', $value, mktime(0, 0, 0, 1, 1, 2038), $path, $domain);
+            $this->response->setCookie('admobuu', $value, mktime(0, 0, 0, 1, 1, 2038), $path, $domain);
             
         }
     }

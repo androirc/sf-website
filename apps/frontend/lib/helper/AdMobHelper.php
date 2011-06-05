@@ -2,9 +2,9 @@
 
 function admob_request(sfWebRequest $request, sfWebResponse $response)
 {
-    $admob = new AdMob();
+    $admob = new AdMob($request, $response);
     
-    $admob->setCookie($response, $request);
+    $admob->setCookie();
     
-    return $admob->request($request);
+    return $admob->request();
 }

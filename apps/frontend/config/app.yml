@@ -13,4 +13,6 @@ all:
     web: 400
     mobile: 200
   admob:
-    test: false
+    publisher_id: a14de4eeeb0ee01
+    analytics_id: a14debd8eddb7a3
+    test_mode: false
