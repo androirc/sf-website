@@ -16,3 +16,4 @@ all:
     publisher_id: a14de4eeeb0ee01
     analytics_id: a14debd8eddb7a3
     test_mode: false
+    analytics_request: true

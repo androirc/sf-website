@@ -30,8 +30,8 @@ class AdMob
         $this->request = $request;
         $this->response = $response;
         
-        $this->publisher_id = sfConfig::get('app_admob_publisher_id', '');
-        $this->analytics_id = sfConfig::get('app_admob_analytics_id', '');
+        $this->publisher_id = sfConfig::get('app_admob_publisher_id');
+        $this->analytics_id = sfConfig::get('app_admob_analytics_id');
         
         $this->ad_request = sfConfig::get('app_admob_ad_request', true);
         $this->analytics_request = sfConfig::get('app_admob_analytics_request', false);
@@ -44,10 +44,10 @@ class AdMob
         self::$pixel_sent = false;
         
         $ad_mode = false;
-        if (!empty($this->ad_request) && !empty($this->publisher_id)) $ad_mode = true;
+        if ($this->ad_request && $this->publisher_id) $ad_mode = true;
   
         $analytics_mode = false;
-        if (!empty($this->analytics_request) && !empty($this->analytics_id) && !$pixel_sent) $analytics_mode = true;
+        if ($this->analytics_request && $this->analytics_id && !self::$pixel_sent) $analytics_mode = true;
         
         $protocol = ($this->request->isSecure()) ? 'https' : 'http';
   
