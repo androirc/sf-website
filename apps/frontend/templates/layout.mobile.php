@@ -5,12 +5,14 @@
         <?php include_http_metas() ?>
         <?php include_metas() ?>
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/> 
+        
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link href="<?php echo url_for('@article_atom', true) ?>" type="application/atom+xml" rel="alternate" title="Last articles" />
         
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="/css/mobile.css" /> 
-        <link href="<?php echo url_for('@article_atom', true) ?>" type="application/atom+xml" rel="alternate" title="Last articles" />
+        
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     </head>
     <body>
