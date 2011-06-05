@@ -7,18 +7,15 @@
         <meta name="google-site-verification" content="NxLzVTaSpM7YMWZ_DqGdF19nVKrNl4IcQxcT3jtACqw" />
         
         <link rel="shortcut icon" href="/favicon.ico" />
-        
-        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/common.css" /> 
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/design.css" /> 
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/front.css" /> 
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/form.css" /> 
-        
         <link href="<?php echo url_for('@article_atom', true) ?>" type="application/atom+xml" rel="alternate" title="Last articles" />
         
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
+        <?php include_stylesheets() ?>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
         <?php include_javascripts() ?>
+        
         <script type="text/javascript">
             (function ($) {
                 $.fn.vAlign = function() {

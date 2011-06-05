@@ -1,4 +1,5 @@
 <?php slot('title','Screenshots') ?>
+<?php use_javascript('simpleviewer.js') ?>
 
 <script type="text/javascript">
 	jQuery(document).ready(function () {

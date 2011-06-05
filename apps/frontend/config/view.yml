@@ -13,9 +13,9 @@ default:
     language:     en
     robots:       index, follow
 
-  stylesheets:    [design.css, front.css, form.css]
+  stylesheets:    [common.css, design.css, front.css, form.css]
 
-  javascripts:    [twitter.js, simpleviewer.js]
+  javascripts:    [twitter.js]
 
   has_layout:     true
   layout:         layout
