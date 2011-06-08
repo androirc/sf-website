@@ -53,7 +53,9 @@
                 </div>
                     
                 <div id="logo">
-                    <?php echo image_tag('logo.png') ?>
+                    <a href="<?php echo url_for('@homepage', true) ?>">
+                        <?php echo image_tag('logo.png') ?>
+                    </a>
                     <span><em>Android IRC Client</em></span>
                 </div>
             </div>
