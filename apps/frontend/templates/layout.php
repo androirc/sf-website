@@ -34,15 +34,20 @@
     <body>
         <div id="up">
             <div id="header">
-                <div id="twitter">
+                <div id="twitter_logo">
                     <a href="http://twitter.com/androirc">
                         <?php echo image_tag('twitter.png') ?>
                     </a>
                 </div>
-                <div id="informations">
-                    <div id="last_tweet">
-                        <div id="loader">
-                            <?php echo image_tag('ajax-loader.gif') ?>
+                <div id="twitter">
+                    <div id="tweet">
+                        <div id="tweet_text">
+                            <div id="loader">
+                                <?php echo image_tag('ajax-loader.gif') ?>
+                            </div>
+                        </div>
+                        <div id="tweet_follow">
+                            <a href="http://twitter.com/androirc" class="twitter-follow-button">Follow @androirc</a> <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
                         </div>
                     </div>
                 </div>

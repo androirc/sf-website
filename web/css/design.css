@@ -11,30 +11,31 @@
     background: url('/images/header_bottom.png');
 }
 
-#twitter{
-    margin-top: 20px;
+#twitter_logo {
+    margin-top: 15px;
     float: left;
 }
 
-#informations {
+#twitter {
     float: left;
     margin: 4px 0 0 10px;
     width: 400px;
     height: 111px;
-    text-align: center;
     position: relative;
 }
 
 #loader {
     padding-top:45px;
+    text-align: center;
 }
 
-#last_tweet ul {
-    line-height: 1.8;
-}
 
-#last_tweet .twitter_time {
+#tweet_text .time {
     font-style:italic;
+}
+
+#tweet_follow {
+    margin-top: 7px;
 }
 
 #logo {

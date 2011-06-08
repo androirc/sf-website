@@ -396,7 +396,7 @@ if (typeof renderTwitters != 'function') (function () {
     }
 })();
 
-getTwitters('last_tweet', {
+getTwitters('tweet_text', {
 	id: 'androirc', 
 	count: 1, 
 	withFriends: true, // currently disabled due to change in Twitter API
@@ -407,7 +407,7 @@ getTwitters('last_tweet', {
 	}, 
 	ignoreReplies: true,
     callback: function() {
-        $("#last_tweet").vAlign();
+        $("#tweet").vAlign();
     },
-	template: '%text% (<span class="twitter_time">%time%</span>)<p style="font-weight: bold;">Follow <a href="http://twitter.com/androirc">@AndroIRC</a> on Twitter.</p>'
+	template: '%text% (<span class="time">%time%</span>)'
 });
