@@ -149,7 +149,7 @@
                 <div class="column">
                     <h2>Other pages</h2>
                     <ul>
-                        <li><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@beta') ?>">Participate to the lastest beta</a></li>
+                        <li><?php echo image_tag('marker.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@beta') ?>">Get involved! Download the latest beta</a></li>
                         <li><?php echo image_tag('bug.png', array('class' => 'famfamfam')) ?> <a href="http://bugs.androirc.com/">Bug tracker website</a></li>
                         <li><?php echo image_tag('feed.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@article_atom', true) ?>">RSS Feed</a></li>
                         <li><?php echo image_tag('coins.png', array('class' => 'famfamfam')) ?> <a href="<?php echo url_for('@donate') ?>">Make a donation</a></li>
