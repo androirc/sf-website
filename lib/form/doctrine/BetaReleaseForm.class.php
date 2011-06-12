@@ -16,8 +16,12 @@ class BetaReleaseForm extends BaseBetaReleaseForm
     {
         unset($this['created_at'], $this['updated_at']);
         
-        $this->widgetSchema['file'] = new sfWidgetFormInputFile(array (
-            'label' => 'File'
+        $this->widgetSchema['file'] = new sfWidgetFormInputFileEditable(array(
+            'label' => 'File',
+            'edit_mode' => !$this->isNew(),
+            'with_delete' => false,
+            'is_image' => false,
+            'file_src' => '/betas/' . $this->getObject()->getFile(),
         ));
                 
         $this->validatorSchema['file'] = new sfValidatorFile(array(

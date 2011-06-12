@@ -20,5 +20,5 @@ generator:
         display: [version]
       form:    ~
       edit:
-        display: [version, revision, is_downloadable]
+        display: [version, revision, is_downloadable, file]
       new:     ~
