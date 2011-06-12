@@ -25,7 +25,7 @@ class BetaReleaseForm extends BaseBetaReleaseForm
         ));
                 
         $this->validatorSchema['file'] = new sfValidatorFile(array(
-            'required' => true,
+            'required' => false,
             'path' => sfConfig::get('sf_upload_dir') . '/betas',
             'validated_file_class' => 'myValidatedFile',            
         ));
