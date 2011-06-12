@@ -8,17 +8,20 @@
  * @property integer $id
  * @property string $version
  * @property boolean $is_downloadable
+ * @property integer $revision
  * @property string $file
  * @property Doctrine_Collection $Downloads
  * 
  * @method integer             getId()              Returns the current record's "id" value
  * @method string              getVersion()         Returns the current record's "version" value
  * @method boolean             getIsDownloadable()  Returns the current record's "is_downloadable" value
+ * @method integer             getRevision()        Returns the current record's "revision" value
  * @method string              getFile()            Returns the current record's "file" value
  * @method Doctrine_Collection getDownloads()       Returns the current record's "Downloads" collection
  * @method BetaRelease         setId()              Sets the current record's "id" value
  * @method BetaRelease         setVersion()         Sets the current record's "version" value
  * @method BetaRelease         setIsDownloadable()  Sets the current record's "is_downloadable" value
+ * @method BetaRelease         setRevision()        Sets the current record's "revision" value
  * @method BetaRelease         setFile()            Sets the current record's "file" value
  * @method BetaRelease         setDownloads()       Sets the current record's "Downloads" collection
  * 
@@ -45,6 +48,10 @@ abstract class BaseBetaRelease extends sfDoctrineRecord
         $this->hasColumn('is_downloadable', 'boolean', null, array(
              'type' => 'boolean',
              'default' => true,
+             ));
+        $this->hasColumn('revision', 'integer', null, array(
+             'type' => 'integer',
+             'notnull' => true,
              ));
         $this->hasColumn('file', 'string', 255, array(
              'type' => 'string',

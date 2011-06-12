@@ -25,6 +25,7 @@ BetaRelease:
     id:                       { type: integer, primary: true, autoincrement: true}
     version:                  { type: string(100), notnull: true }
     is_downloadable:          { type: boolean, default: true }
+    revision:                 { type: integer, notnull: true }
     file:                     { type: string(255), notnull: true }
     
 BetaDownload:
