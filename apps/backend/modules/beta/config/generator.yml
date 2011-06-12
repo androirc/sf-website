@@ -15,10 +15,10 @@ generator:
       actions: ~
       fields:  ~
       list:
-        display: [version, _downloads, is_downloadable]
+        display: [version, _downloads, revision, is_downloadable]
       filter:
         display: [version]
       form:    ~
       edit:
-        display: [version, is_downloadable]
+        display: [version, revision, is_downloadable]
       new:     ~
