@@ -35,6 +35,10 @@ beta:
   url: /beta
   param: { module: beta, action: index }
   
+beta_latest:
+  url: /beta/latest
+  param: { module: beta, action: latest }
+  
 beta_download:
   url: /beta/download
   param: { module: beta, action: download }

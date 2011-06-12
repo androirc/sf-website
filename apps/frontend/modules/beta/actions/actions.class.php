@@ -19,6 +19,18 @@ class betaActions extends sfActions
         $this->beta = $bt->getLastBeta();
     }
     
+    public function executeLatest(sfWebRequest $request)
+    {
+        $this->setLayout(false);
+        sfConfig::set('sf_web_debug', false);
+        
+        $bt = BetaReleaseTable::getInstance();
+        
+        $beta = $bt->getLastBeta();
+        
+        $this->revision = ($beta) ? $beta->getRevision() : -1;
+    }
+    
     public function executeDownload(sfWebRequest $request)
     {
         $bt = BetaReleaseTable::getInstance();
