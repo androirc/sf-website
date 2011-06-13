@@ -32,4 +32,11 @@ class CrashReportTable extends Doctrine_Table
         
         return false;
     }
+    
+    public function deleteAll()
+    {
+        return $this->createQuery('c')
+                    ->delete()
+                    ->execute();
+    }
 }

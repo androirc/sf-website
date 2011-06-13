@@ -14,15 +14,7 @@ require_once dirname(__FILE__).'/../lib/crashreportGeneratorConfiguration.class.
 require_once dirname(__FILE__).'/../lib/crashreportGeneratorHelper.class.php';
 
 class crashreportActions extends autoCrashreportActions
-{
-    public function executeResolved(sfWebRequest $request)
-    {
-        $crashreport = $this->getRoute()->getObject();
-        
-        var_dump($crashreport);
-        die();
-    }
-    
+{    
     public function executeNew(sfWebRequest $request)
     {
         $this->redirect('crashreport/index');
@@ -36,6 +28,24 @@ class crashreportActions extends autoCrashreportActions
         $crashreport->save();
         
         $this->getUser()->setFlash('notice', 'The selected crashreport has been resolved successfully.');
+        
+        $this->redirect('crashreport/index');
+    }
+    
+    public function executeListDeleteAll(sfWebRequest $request)
+    {
+        $crt = CrashReportTable::getInstance();
+        
+        $nb = $crt->deleteAll();
+        
+        if ($nb)
+        {
+            $this->getUser()->setFlash('notice', sprintf('%d crashs have been deleted successfully.', $nb));
+        }
+        else
+        {
+            $this->getUser()->setFlash('notice', 'No crash to delete.');
+        }
         
         $this->redirect('crashreport/index');
     }
