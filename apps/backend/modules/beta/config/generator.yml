@@ -15,7 +15,9 @@ generator:
       actions: ~
       fields:  ~
       list:
-        display: [version, _downloads, revision, is_downloadable]
+        display: [=version, _downloads, revision, is_downloadable]
+        sort: [revision, desc]
+        max_per_page: 15
       filter:
         display: [version]
       form:    ~

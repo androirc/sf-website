@@ -21,7 +21,7 @@ class BetaReleaseTable extends Doctrine_Table
     {
         return $this->createQuery('b')
                     ->where('b.is_downloadable = ?', true)
-                    ->orderBy('b.created_at desc')
+                    ->orderBy('b.revision desc')
                     ->execute()
                     ->getFirst();
     }
