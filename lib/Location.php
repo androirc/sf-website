@@ -14,25 +14,25 @@ class Location
 {
     private $ip;
     private $location;
-    
+
     public function __construct($ip)
     {
         $this->ip = $ip;
     }
-    
+
     public function getIp()
     {
         return $this->ip;
     }
-    
+
     public function getLocation()
     {
         if ($this->location) {
             return $this->location;
         }
-        
+
         $this->location = file_get_contents('http://geoip.wtanaka.com/cc/' . $this->ip);
-        
+
         return $this->location;
     }
 }

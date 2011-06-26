@@ -11,41 +11,41 @@
  */
 
 class contactActions extends androWebActions
-{    
+{
     public function executeIndex(sfWebRequest $request)
     {
         $this->form = new ContactForm();
-    
+
         if ($request->isMethod('post'))
         {
             $this->form->bind($request->getParameter('contact'));
-            
+
             if ($this->form->isValid())
             {
                 $datas = $request->getParameter('contact');
-                
+
                 $text = <<<EOF
 {$datas['name']} used the web form to contact us :
 
-{$datas['message']}    
+{$datas['message']}
 --
 AndroIRC
-    
+
 EOF;
-                
+
                 $message = $this->getMailer()->compose(
                     array('contact@androirc.com' => 'AndroIRC'),
                     'contact@androirc.com',
                     "[AndroIRC] {$datas['name']} used the web form to contact us",
                     $text
                 );
-                
+
                 $message->setReplyTo($datas['email']);
-                
+
                 $this->getMailer()->send($message);
-                
+
                 $this->getUser()->setFlash('notice', 'Your message has been sent!');
-                
+
                 $this->form = new ContactForm();
             }
         }

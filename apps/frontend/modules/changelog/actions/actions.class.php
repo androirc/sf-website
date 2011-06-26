@@ -13,16 +13,16 @@
 class changelogActions extends androWebActions
 {
     public function executeIndex(sfWebRequest $request)
-    {        
+    {
         $this->setLayout(false);
         sfConfig::set('sf_web_debug', false);
-        
+
         $version = $request->getParameter('version');
-        
+
         $this->forward404Unless($version);
-        
+
         $clt = ChangeLogTable::getInstance();
-        
+
         $this->changelog = $clt->findOneBy('version', $version);
     }
 }

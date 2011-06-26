@@ -13,15 +13,15 @@
 class BetaRelease extends BaseBetaRelease
 {
     private $downloads;
-    
+
     public function getDownloads()
     {
         if ($this->downloads) {
             return $this->downloads;
         }
-        
+
         $bdt = BetaDownloadTable::getInstance();
-        
+
         return $this->downloads = $bdt->getDownloadsFromBeta($this);
     }
 }

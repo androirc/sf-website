@@ -16,7 +16,7 @@ class TipTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Tip');
     }
-    
+
     public function getTip($lang = 'en')
     {
         return $this->createQuery('p')

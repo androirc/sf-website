@@ -16,7 +16,7 @@ class ArticleTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Article');
     }
-    
+
     public function getLastArticles($limit = 10)
     {
         return $this->createQuery('a')

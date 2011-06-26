@@ -11,7 +11,7 @@
  */
 
 class eulaActions extends sfActions
-{   
+{
     public function executeIndex(sfWebRequest $request)
     {
     }

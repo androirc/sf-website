@@ -16,26 +16,26 @@ class TipHolidayTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('TipHoliday');
     }
-    
+
     public function getTip($date, $lang = 'en')
     {
         if (null === $date) {
             return null;
         }
-        
+
         list($year, $month, $day) = explode('-', $date);
-        
+
         $tip = $this->createQuery('t')
                     ->where('t.language = ?', $lang)
                     ->andWhere('month(t.date) = ?', $month)
                     ->andWhere('day(t.date) = ?', $day)
                     ->execute()
                     ->getFirst();
-        
+
         if (false === $tip) {
             return null;
         }
-        
+
         return $tip;
     }
 }

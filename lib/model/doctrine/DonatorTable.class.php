@@ -16,7 +16,7 @@ class DonatorTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Donator');
     }
-    
+
     public function getAll()
     {
         return $this->createQuery('d')

@@ -13,27 +13,27 @@
 class ChangeLog extends BaseChangeLog
 {
     private $changes;
-    
+
     public function getChanges()
     {
         if ($this->changes) {
             return $this->changes;
         }
-        
+
         $file = file(sfConfig::get('sf_upload_dir') . '/changelogs/' . $this->getFile());
-        
+
         if (null === $file) {
             return null;
         }
-        
+
         $changes = array();
-        
-        foreach($file as $change) 
+
+        foreach($file as $change)
         {
             if ('#' === substr($change, 0, 1)) {
                 continue;
             }
-            
+
             $pos = strpos($change, ':');
 
             if (false === $pos) {
@@ -44,24 +44,24 @@ class ChangeLog extends BaseChangeLog
             }
             else {
                 list($key, $value) = explode(':', $change);
-                
+
                 $changes[] = array(
                     'key' => $key,
                     'content' => trim($value)
                 );
             }
         }
-        
+
         usort($changes, array('ChangeLog', 'sortChanges'));
-        
+
         return $this->changes = $changes;
     }
-    
+
     private function sortChanges($a, $b)
     {
         return self::typeToInteger($b['key']) - self::typeToInteger($a['key']);
     }
-    
+
     public static function typeToInteger($type)
     {
         switch($type)

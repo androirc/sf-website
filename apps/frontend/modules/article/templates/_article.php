@@ -12,7 +12,7 @@
     </div>
 
     <div class="footer">
-        <div class="share addthis_toolbox addthis_default_style" 
+        <div class="share addthis_toolbox addthis_default_style"
              addthis:url="<?php echo url_for('article_show', $article, true) ?>"
              addthis:title="<?php echo $article->getTitle() ?> - AndroIRC (Android IRC Client)">
 

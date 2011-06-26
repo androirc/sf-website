@@ -16,16 +16,16 @@ class quickstartActions extends androWebActions
     {
         $this->setLayout(false);
         sfConfig::set('sf_web_debug', false);
-        
+
         $this->quickstart = null;
-        
+
         $lang = $request->getParameter('lang', 'en');
         $version = $request->getParameter('version');
-        
+
         if ($version)
         {
             $qst = QuickStartTable::getInstance();
-            
+
             $this->quickstart = $qst->getQuickStart($version, $lang);
         }
     }

@@ -3,7 +3,7 @@
 
 <?php include_partial('article/article', array('article' => $article, 'sumup' => false)) ?>
 
-<div id="ads"> 
+<div id="ads">
     <script type="text/javascript"><!--
         google_ad_client = "pub-1704888906932150";
         /* AndroIRC */
@@ -11,11 +11,11 @@
         google_ad_width = 468;
         google_ad_height = 60;
         //-->
-    </script> 
+    </script>
     <script type="text/javascript"
-        src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
-    </script> 
-</div>                
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+</div>
 
 <div id="disqus_thread"></div>
 

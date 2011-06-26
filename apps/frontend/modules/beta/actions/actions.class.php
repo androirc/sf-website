@@ -15,53 +15,53 @@ class betaActions extends sfActions
     public function executeIndex(sfWebRequest $request)
     {
         $bt = BetaReleaseTable::getInstance();
-        
+
         $this->beta = $bt->getLastBeta();
     }
-    
+
     public function executeLatest(sfWebRequest $request)
     {
         $this->setLayout(false);
         sfConfig::set('sf_web_debug', false);
-        
+
         $bt = BetaReleaseTable::getInstance();
-        
+
         $beta = $bt->getLastBeta();
-        
+
         $this->revision = ($beta) ? $beta->getRevision() : -1;
     }
-    
+
     public function executeDownload(sfWebRequest $request)
     {
         $bt = BetaReleaseTable::getInstance();
-        
+
         $beta = $bt->getLastBeta();
         $ip = $request->getHttpHeader('addr', 'remote');
-        
+
         $this->forward404Unless($beta);
-        
+
         $download = new BetaDownload();
         $location = new Location($ip);
-        
+
         $download->setBetaRelease($beta);
         $download->setLocation($location->getLocation());
-        
+
         $download->save();
-        
+
         $file = sfConfig::get('sf_upload_dir') . '/betas/' . $beta->getFile();
-        
+
         session_write_close();
-        
+
         $this->getResponse()->setContentType('application/vnd.android.package-archive');
         $this->getResponse()->setHttpHeader('Content-Disposition', 'attachment; filename="' . basename($file).'"');
         $this->getResponse()->setHttpHeader('Content-Transfer-Encoding', 'binary');
         $this->getResponse()->setHttpHeader('Content-Length', filesize($file));
         $this->getResponse()->setHttpHeader('Connection', 'close');
-        
+
         $this->getResponse()->sendHttpHeaders();
-        
+
         @readfile($file);
-        
+
         throw new sfStopException();
     }
 }

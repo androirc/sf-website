@@ -20,7 +20,7 @@ class articleActions extends sfActions
     public function executeShow(sfWebRequest $request)
     {
         $this->article = Doctrine_Core::getTable('Article')->find(array($request->getParameter('id')));
-        
+
         $this->forward404Unless($this->article);
 
         sfProjectConfiguration::getActive()->loadHelpers(array('Text'));

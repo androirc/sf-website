@@ -15,15 +15,15 @@ class QuickStart extends BaseQuickStart
     public static function versionToInteger($version)
     {
         $version = str_replace('.', '', $version);
-        
+
         if (0 == $version) {
             return 0;
         }
-        
+
         while (strlen($version) != 3) {
             $version *= 10;
         }
-        
+
         return $version;
     }
 }

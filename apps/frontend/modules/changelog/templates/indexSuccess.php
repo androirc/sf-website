@@ -26,7 +26,7 @@
                 <?php foreach ($changelog->getChanges() as $change): ?>
                     <li>
                         <?php if ($change['key'] != ''): ?>
-                            <strong><?php echo $change['key'] ?></strong>: 
+                            <strong><?php echo $change['key'] ?></strong>:
                         <?php endif ?>
                         <?php echo $change['content'] ?>
                     </li>

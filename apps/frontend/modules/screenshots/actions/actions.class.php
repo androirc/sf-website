@@ -11,7 +11,7 @@
  */
 
 class screenshotsActions extends androWebActions
-{    
+{
     public function executeIndex(sfWebRequest $request)
     {
     }

@@ -8,7 +8,7 @@
 
 <?php foreach ($articles as $article): ?>
     <?php include_partial('article/article', array('article' => $article, 'sumup' => true)) ?>
-<?php endforeach; ?> 
+<?php endforeach; ?>
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

@@ -16,29 +16,29 @@ class QuickStartTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('QuickStart');
     }
-    
+
     public function getQuickStart($version, $lang = 'en')
-    {   
+    {
         $version = QuickStart::versionToInteger($version);
- 
+
         $quickstarts = $this->createQuery('q')
                             ->where('q.language = ?', $lang)
                             ->execute();
-        
+
         if (false === $quickstarts) {
             return null;
         }
-        
+
         foreach ($quickstarts as $quickstart)
         {
             $versionMin = QuickStart::versionToInteger($quickstart->getVersionMin());
             $versionMax = QuickStart::versionToInteger($quickstart->getVersionMax());
-            
+
             if ($versionMin <= $version && $version <= $versionMax) {
                 return $quickstart;
             }
         }
-        
+
         return null;
     }
 }
