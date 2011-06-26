@@ -106,19 +106,19 @@
                         <h2>AndroIRC Team</h2>
                         <ul>
                             <li>
-                                MewT <em>(WebMaster)</em>
+                                Julien Brochet <em>(WebMaster)</em>
                                 <div class="author">
                                     <a href="http://twitter.com/aerialls">@aerialls</a>
                                 </div>
                             </li>
                             <li>
-                                S&eacute;bastien <em>(Lead Programmer)</em>
+                                Sébastien Brochet <em>(Programmer)</em>
                                 <div class="author">
                                     <a href="http://twitter.com/blinkseb">@blinkseb</a>
                                 </div>
                             </li>
                             <li>
-                                Maxx <em>(Graphic Designer)</em>
+                                Maxx Maury <em>(Graphic Designer)</em>
                                 <div class="author">
                                     <a href="http://twitter.com/maxxmx">@MaxxMx</a>
                                 </div>
