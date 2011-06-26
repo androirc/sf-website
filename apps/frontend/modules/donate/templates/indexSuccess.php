@@ -3,7 +3,7 @@
 <div class="center">
     <?php echo image_tag('donate.png') ?>
 
-    <p id="donate">AndroIRC is <strong>free</strong> and you can download it <strong>FOR FREE</strong> in the Market. But we have <strong>charges</strong> concerning the server administration. This is why a <strong>donation</strong> would be welcomed and extremely appreciated (this is <strong>not</strong> an obligation).</p>
+    <p id="donate">AndroIRC is <strong>free</strong> and you can download it <strong>FOR FREE</strong> in the Market. But we have <strong>charges</strong> concerning the server administration. If you want to support AndroIRC, you have currently two ways :</p>
 
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="cmd" value="_s-xclick" />
@@ -19,3 +19,5 @@
         <li><strong><?php echo $donator->getName() ?></strong> ($<?php echo $donator->getAmount() ?>)</li>
     <?php endforeach; ?>
 </ul>
+
+<p>You can also download the premium application "<strong>AndroIRC premium</strong>". This application just disable ads on AndroIRC. More information <a href="https://market.android.com/details?id=com.androirc.premium">here</a></p>
