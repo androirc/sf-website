@@ -89,7 +89,7 @@
                 <ul>
                     <li>
                         <h2>Android Market</h2>
-                        <p>You can download AndroIRC directly from the Android Market or scan the following barcode.</p>
+                        <p>You can download AndroIRC directly from the Android Market or scan the following barcodes :</p>
                         <div class="app">
                             <div class="title">
                                 AndroIRC
