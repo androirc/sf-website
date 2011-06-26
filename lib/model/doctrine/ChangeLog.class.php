@@ -20,7 +20,7 @@ class ChangeLog extends BaseChangeLog
             return $this->changes;
         }
 
-        $file = file(sfConfig::get('sf_upload_dir') . '/changelogs/' . $this->getFile());
+        $file = @file(sfConfig::get('sf_upload_dir') . '/changelogs/' . $this->getFile(), FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
         if (null === $file) {
             return null;
@@ -43,7 +43,7 @@ class ChangeLog extends BaseChangeLog
                 );
             }
             else {
-                list($key, $value) = explode(':', $change);
+                list($key, $value) = explode(':', $change, 2);
 
                 $changes[] = array(
                     'key' => $key,
@@ -52,7 +52,7 @@ class ChangeLog extends BaseChangeLog
             }
         }
 
-        usort($changes, array('ChangeLog', 'sortChanges'));
+        usort($changes, array($this, 'sortChanges'));
 
         return $this->changes = $changes;
     }
