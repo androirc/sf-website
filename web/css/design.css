@@ -92,6 +92,15 @@
     text-align: center;
 }
 
+.app {
+    text-align: center;
+}
+
+.app .title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
 /* Others */
 
 #page {

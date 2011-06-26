@@ -20,12 +20,12 @@
             (function ($) {
                 $.fn.vAlign = function() {
                     return this.each(function(i){
-                    var h = $(this).height();
-                    var oh = $(this).outerHeight();
-                    var mt = (h + (oh - h)) / 2;
-                    $(this).css("margin-top", "-" + mt + "px");
-                    $(this).css("top", "50%");
-                    $(this).css("position", "absolute");
+                        var h = $(this).height();
+                        var oh = $(this).outerHeight();
+                        var mt = (h + (oh - h)) / 2;
+                        $(this).css("margin-top", "-" + mt + "px");
+                        $(this).css("top", "50%");
+                        $(this).css("position", "absolute");
                     });
                 };
             })(jQuery);
@@ -90,8 +90,17 @@
                     <li>
                         <h2>Android Market</h2>
                         <p>You can download AndroIRC directly from the Android Market or scan the following barcode.</p>
-                        <div class="center">
+                        <div class="app">
+                            <div class="title">
+                                AndroIRC
+                            </div>
                             <img src="http://chart.apis.google.com/chart?cht=qr&chs=170x170&chl=market://search?q=pname:com.androirc" alt="AndroIRC" />
+                        </div>
+                        <div class="app">
+                            <div class="title">
+                                AndroIRC premium
+                            </div>
+                            <img src="http://chart.apis.google.com/chart?cht=qr&chs=170x170&chl=market://search?q=pname:com.androirc.premium" alt="AndroIRC" />
                         </div>
                         <div class="center">
                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -172,9 +181,9 @@
             _gaq.push(['_trackPageview']);
 
             (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
         </script>
         <script type="text/javascript">
