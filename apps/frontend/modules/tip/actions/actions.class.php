@@ -14,22 +14,23 @@ class tipActions extends androWebActions
 {
     public function executeIndex(sfWebRequest $request)
     {
-        $this->setLayout(false);
         sfConfig::set('sf_web_debug', false);
-        
+
         $lang = $request->getParameter('lang');
         $date = $request->getParameter('date');
-        
-        $this->tip = null;
-        
+
+        $tip = null;
+
         if ($date) {
             $tht = TipHolidayTable::getInstance();
-            $this->tip = $tht->getTip($date, $lang);
+            $tip = $tht->getTip($date, $lang);
         }
-        
-        if (!$this->tip) {
+
+        if (!$tip) {
             $tt = TipTable::getInstance();
-            $this->tip = $tt->getTip($lang);
+            $tip = $tt->getTip($lang);
         }
+
+        return $this->renderText($tip ? $tip->getContent() : 'Hum ... the website seems down');
     }
 }

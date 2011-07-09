@@ -1,1 +1,0 @@
-<?php echo (!$tip) ? 'The website seems down..!' : $tip->getContent() ?>

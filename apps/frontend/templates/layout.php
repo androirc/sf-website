@@ -12,11 +12,11 @@
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
         <?php include_stylesheets() ?>
 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
+        <script async="async" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script async="async" type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
         <?php include_javascripts() ?>
 
-        <script type="text/javascript">
+        <script async="async" type="text/javascript">
             (function ($) {
                 $.fn.vAlign = function() {
                     return this.each(function(i){
