@@ -2,7 +2,7 @@
 <div class="article">
     <div class="title"><?php echo $article->getTitle() ?></div>
     <div class="by">
-        <?php echo $article->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $article->getSfGuardUser() ?>
+        <?php echo $article->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $article->getAuthor() ?>
     </div>
     <div class="content">
         <?php if ($sumup): ?>

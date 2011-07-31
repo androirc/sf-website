@@ -4,7 +4,7 @@
         <a href="<?php echo url_for('article_show', $article) ?>"><?php echo $article->getTitle() ?></a>
     </div>
     <div class="by">
-        <?php echo $article->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $article->getSfGuardUser() ?>
+        <?php echo $article->getDateTimeObject('created_at')->format('m/d/Y') ?>  | News posted by <?php echo $article->getAuthor() ?>
     </div>
 
     <div class="content">

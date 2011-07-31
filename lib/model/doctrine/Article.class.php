@@ -12,20 +12,8 @@
 
 class Article extends BaseArticle
 {
-    private $summary;
-
-    public function getSummary()
+    public function getAuthor()
     {
-        if ($this->summary) {
-            return $this->summary;
-        }
-
-        $summary = strip_tags($this->getContent());
-
-        if (strlen($summary) >= 200) {
-            $summary = substr($summary, 0, 197) . '...';
-        }
-
-        return $this->summary = $summary;
+        return $this->getSfGuardUser();
     }
 }

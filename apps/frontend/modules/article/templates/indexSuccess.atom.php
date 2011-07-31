@@ -15,7 +15,10 @@
             <link href="<?php echo url_for('article_show', $article, true) ?>" />
             <id><?php echo sha1(url_for('article_show', $article, true)) ?></id>
             <updated><?php echo gmstrftime('%Y-%m-%dT%H:%M:%SZ', $article->getDateTimeObject('created_at')->format('U')) ?></updated>
-            <summary><?php echo $article->getSummary() ?></summary>
+            <content type="html"><![CDATA[<?php echo $article->getContent() ?>]]></content>
+            <author>
+                <name><?php echo $article->getAuthor() ?></name>
+            </author>
         </entry>
     <?php endforeach ?>
 </feed>

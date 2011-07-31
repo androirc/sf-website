@@ -20,6 +20,7 @@ class ArticleTable extends Doctrine_Table
     public function getLastArticles($limit = 10)
     {
         return $this->createQuery('a')
+                    ->leftJoin('a.sfGuardUser u')
                     ->where('a.is_visible = ?', true)
                     ->orderBy('id desc')
                     ->limit($limit)
