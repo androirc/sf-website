@@ -4,7 +4,7 @@
 default:
   http_metas:
     content-type: text/html
-    
+
 
   metas:
     title:        AndroIRC - Android IRC Client
@@ -15,7 +15,7 @@ default:
 
   stylesheets:    [common.css, design.css, front.css, form.css]
 
-  javascripts:    [twitter.js]
+  javascripts:    [androirc.js, twitter.js]
 
   has_layout:     true
   layout:         layout

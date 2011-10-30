@@ -12,24 +12,8 @@
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" />
         <?php include_stylesheets() ?>
 
-        <script async="async" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-        <script async="async" type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
-        <?php include_javascripts() ?>
-
-        <script async="async" type="text/javascript">
-            (function ($) {
-                $.fn.vAlign = function() {
-                    return this.each(function(i){
-                        var h = $(this).height();
-                        var oh = $(this).outerHeight();
-                        var mt = (h + (oh - h)) / 2;
-                        $(this).css("margin-top", "-" + mt + "px");
-                        $(this).css("top", "50%");
-                        $(this).css("position", "absolute");
-                    });
-                };
-            })(jQuery);
-        </script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mewt"></script>
     </head>
     <body>
         <div id="up">
@@ -175,6 +159,7 @@
             </div>
             <div class="clear"></div>
         </div>
+        <?php include_javascripts() ?>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-133630-2']);
@@ -185,20 +170,6 @@
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
-        </script>
-        <script type="text/javascript">
-            var addthis_config = {
-                data_track_clickback : true,
-                data_ga_tracker: pageTracker,
-                ui_click: true,
-                ui_cobrand: 'AndroIRC'
-
-            }
-            var addthis_share = {
-                templates: {
-                    twitter: '{{title}} - {{url}} (from @androirc)'
-                }
-            }
         </script>
     </body>
 </html>
