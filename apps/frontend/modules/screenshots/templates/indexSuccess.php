@@ -22,7 +22,7 @@
 </script>
 
 <ul id="slider">
-    <?php for ($i = 1 ; $i < 29 ; $i++): ?>
+    <?php for ($i = 1 ; $i <= 29 ; $i++): ?>
         <li>
             <div class="device">
                 <?php echo image_tag('device/device-' . sprintf("%02d", $i) .'.png') ?>
@@ -32,7 +32,7 @@
 </ul>
 
 <div class="thumbs">
-    <?php for ($i = 1 ; $i < 29 ; $i++): ?>
+    <?php for ($i = 1 ; $i <= 29 ; $i++): ?>
         <a href="#"><?php echo image_tag('device/thumbnail/device-' . sprintf("%02d", $i) .'.png') ?></a>
     <?php endfor; ?>
 </div>
