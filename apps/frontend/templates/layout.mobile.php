@@ -37,6 +37,8 @@
             <div id="switch">
                 <a href="<?php echo str_replace('m.', 'www.', $sf_request->getUri()) ?>" class="button blue">Switch to the web version</a>
             </div>
+            <div id="ads">
+            </div>
 
             <?php echo $sf_content ?>
         </div>
@@ -55,6 +57,19 @@
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
+        </script>
+        <script type="text/javascript">
+            var admob_vars = {
+                bgcolor: 'FFFFFF',
+                text: '026995',
+                pubid: '<?php echo sfConfig::get('app_admob_publisher_id') ?>',
+                test: <?php echo sfConfig::get('app_admob_test_mode', true) ? 'true' : 'false' ?>,
+                manual_mode: true
+            };
+        </script>
+        <script type="text/javascript" src="http://mm.admob.com/static/iphone/iadmob.js"></script>
+        <script type="text/javascript">
+            _admob.fetchAd(document.getElementById('ads'));
         </script>
     </body>
 </html>

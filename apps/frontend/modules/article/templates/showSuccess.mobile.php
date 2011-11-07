@@ -3,10 +3,6 @@
 
 <?php include_partial('article/article', array('article' => $article, 'sumup' => false)) ?>
 
-<div id="ads">
-    <?php echo admob_request($sf_request, $sf_response) ?>
-</div>
-
 <div id="disqus_thread"></div>
 
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
